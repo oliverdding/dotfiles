@@ -1,4 +1,4 @@
-function bujar --description 'assembly jar file of QAPM/emr'
+function jar_build --description 'assembly jar file of QAPM/emr'
     if not set -q QAPM_HOME
         echo "🤔 cannot find environment variable QAPM_HOME"
         return 1

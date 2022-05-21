@@ -1,4 +1,4 @@
-function chc -a target_cluster -d "clickhouse client for easily connecting to cluster"
+function cli_ch -a target_cluster -d "clickhouse client for easily connecting to cluster"
     switch $target_cluster
         case 'gr'
             set -f HOST '10.16.0.85'

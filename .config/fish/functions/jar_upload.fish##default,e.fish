@@ -1,0 +1,48 @@
+function jar_upload -a cluster -d "upload jar file of QAPM/emr to HDFS"
+    if not set -q QAPM_HOME
+        echo "Cannot find environment variable QAPM_HOME. Have you clone the repository?"
+        return 1
+    end
+
+    if not contains $cluster "tencent_public" "cloud_public" "qq" "gray" "test"
+        echo "Unknown target cluster '$cluster', only support 'tencent', 'public', 'qq', 'gray' and 'test' now."
+        return 2
+    end
+    set -f JAR_PATH "/bin/tdem/$cluster/spark/QAPMSparkProject-assembly-6.1.jar"
+
+    function upjar_deploy -a target_path
+        set -l CLIENT_POD (kp -n default get pods | rg 'kdl-client' | head -1 | awk '{print $1}')
+        if not set -q CLIENT_POD
+            echo "Cannot get client pod, is it running?"
+            return 3
+        end
+        if test ! -e $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar
+            echo "Jar file not exists, have you execute bujar before?"
+            return 4
+        end
+
+        if test INTRANET_PROXY_JUMP_SERVERS = ''
+            kubectl -n default cp $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $CLIENT_POD:/tmp/qapm-jar-by-oliverdding
+            kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -mkdir -p $(dirname $target_path)"
+            kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -rm -f $target_path"
+            kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/qapm-jar-by-oliverdding $target_path"
+        else
+            scp $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $INTRANET_PROXY_JUMP_SERVERS:/tmp/qapm-jar-by-oliverdding
+            ssh $INTRANET_PROXY_JUMP_SERVERS "fish -c \"
+            kubectl -n default cp /tmp/qapm-jar-by-oliverdding $CLIENT_POD:/tmp/qapm-jar-by-oliverdding
+            kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -mkdir -p $(dirname $target_path)\"
+            kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -rm -f $target_path\"
+            kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/qapm-jar-by-oliverdding $target_path\"
+            \"
+            "
+        end
+        functions -e upjar_deploy
+    end
+
+    upjar_deploy $JAR_PATH
+    if test $status = 0
+        echo "🥳 upjar finished with jar file to cluster $cluster"
+    else
+        echo "☹️ upjar failed with error code $statue"
+    end
+end
