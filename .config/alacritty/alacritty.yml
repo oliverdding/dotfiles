@@ -1,0 +1,41 @@
+import:
+  - ~/.config/alacritty/config.d/10-window.yml
+  - ~/.config/alacritty/config.d/20-colors.yml
+  - ~/.config/alacritty/config.d/30-font.yml
+  - ~/.config/alacritty/config.d/40-keys.yml
+  - ~/.config/alacritty/config.d/99-os.yml
+
+env:
+  TERM: xterm-256color
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 40960
+
+  # Scrolling distance multiplier.
+  #multiplier: 3
+
+debug:
+  # Display the time it takes to redraw each frame.
+  render_timer: false
+
+  # Keep the log file after quitting Alacritty.
+  persistent_logging: false
+
+  # Log level
+  #
+  # Values for `log_level`:
+  #   - Off
+  #   - Error
+  #   - Warn
+  #   - Info
+  #   - Debug
+  #   - Trace
+  log_level: Warn
+
+  # Print all received window events.
+  print_events: false
+
+  # Highlight window damage information.
+  highlight_damage: false
