@@ -3,7 +3,7 @@ function jar_build --description 'assembly jar file of QAPM/emr'
         echo "🤔 cannot find environment variable QAPM_HOME"
         return 1
     end
-    {% if yadm.os == "Darwin" %}
+{% if yadm.os == "Darwin" %}
     fish -c "
     cd $QAPM_HOME/emr/spark/scala/QAPMSparkProject
     sbt assembly &>/dev/null
@@ -25,7 +25,7 @@ function jar_build --description 'assembly jar file of QAPM/emr'
                 -message "bujar failed with error code $statue"
         end
     end
-    {% else %}
+{% else %}
     fish -c "
     cd $QAPM_HOME/emr/spark/scala/QAPMSparkProject
     sbt assembly
@@ -35,5 +35,5 @@ function jar_build --description 'assembly jar file of QAPM/emr'
     else
         echo "☹️ bujar failed with error code $statue"
     end
-    {% endif %}
+{% endif %}
 end

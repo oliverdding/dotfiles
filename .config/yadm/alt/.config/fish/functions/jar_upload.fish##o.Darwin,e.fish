@@ -10,7 +10,7 @@ function jar_upload -a cluster -d "upload jar file of QAPM/emr to HDFS"
     end
     set -f JAR_PATH "/bin/tdem/$cluster/spark/QAPMSparkProject-assembly-6.1.jar"
 
-    {% if yadm.os == "Darwin" %}
+{% if yadm.os == "Darwin" %}
     upload2hdfs $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $JAR_PATH &
     function upjar_ended --on-process-exit $last_pid
         if test $argv[3] = 0
@@ -29,12 +29,12 @@ function jar_upload -a cluster -d "upload jar file of QAPM/emr to HDFS"
                 -message "upjar failed with error code $statue"
         end
     end
-    {% else %}
+{% else %}
     upload2hdfs $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $JAR_PATH
     if test $status = 0
         echo "🥳 upjar finished with jar file to cluster $cluster"
     else
         echo "☹️ upjar failed with error code $statue"
     end
-    {% endif %}
+{% endif %}
 end
