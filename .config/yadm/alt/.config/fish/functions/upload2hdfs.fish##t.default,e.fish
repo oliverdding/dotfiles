@@ -1,8 +1,8 @@
 function upload2hdfs -a src_path,dst_path -d "upload file to HDFS with proxy jump"
     if test INTRANET_PROXY_JUMP_SERVERS = ''
-        set -l CLIENT_POD (kubectl -n default get pods | rg 'kdl-client' | head -1 | awk '{print $1}')
+        set -f CLIENT_POD (kubectl -n default get pods | rg 'kdl-client' | head -1 | awk '{print $1}')
     else
-        set -l CLIENT_POD (ssh $INTRANET_PROXY_JUMP_SERVERS "exec kubectl -n default get pods" | rg 'kdl-client' | head -1 | awk '{print $1}')
+        set -f CLIENT_POD (ssh $INTRANET_PROXY_JUMP_SERVERS "exec kubectl -n default get pods" | rg 'kdl-client' | head -1 | awk '{print $1}')
     end
     if not set -q CLIENT_POD
         echo "Cannot get client pod, is it running?"
