@@ -1,4 +1,4 @@
-function upload2hdfs -a src_path,dst_path -d "upload file to HDFS with proxy jump"
+function upload2hdfs -a src_path dst_path -d "upload file to HDFS with proxy jump"
     if test INTRANET_PROXY_JUMP_SERVERS = ''
         set -f CLIENT_POD (kubectl -n default get pods | rg 'kdl-client' | head -1 | awk '{print $1}')
     else
@@ -20,12 +20,11 @@ function upload2hdfs -a src_path,dst_path -d "upload file to HDFS with proxy jum
         kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/upload_by_$HOST $dst_path"
     else
         scp $src_path $INTRANET_PROXY_JUMP_SERVERS:"/tmp/upload_by_$HOST"
-        ssh $INTRANET_PROXY_JUMP_SERVERS "exec fish -c \"
-        kubectl -n default cp "/tmp/upload_by_$HOST" $CLIENT_POD:"/tmp/upload_by_$HOST"
+        ssh $INTRANET_PROXY_JUMP_SERVERS bash -c "'
+        kubectl -n default cp \"/tmp/upload_by_$HOST\" $CLIENT_POD:\"/tmp/upload_by_$HOST\"
         kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -mkdir -p $(dirname $dst_path)\"
         kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -rm -f $dst_path\"
         kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/upload_by_$HOST $dst_path\"
-        \"
-        "
+        '"
     end
 end
