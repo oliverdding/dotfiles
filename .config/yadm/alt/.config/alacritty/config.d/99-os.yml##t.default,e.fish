@@ -1,1 +1,1 @@
-{% include "os/{{ yadm.os }}.yml" %}
+{% include "$HOME/.config/alacritty/config.d/{{ yadm.os }}.yml" %}
