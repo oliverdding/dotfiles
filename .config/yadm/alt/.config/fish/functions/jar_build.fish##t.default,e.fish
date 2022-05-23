@@ -6,23 +6,23 @@ function jar_build --description 'assembly jar file of QAPM/emr'
 {% if yadm.os == "Darwin" %}
     fish -c "
     cd $QAPM_HOME/emr/spark/scala/QAPMSparkProject
-    sbt assembly &>/dev/null
-    " &
+    sbt assembly
+    " &>/dev/null &
     function bujar_ended --on-process-exit $last_pid
         if test $argv[3] = 0
-            terminal-notifier -title 'bujar' \
+            terminal-notifier -title 'build jar' \
                 -subtitle '🥳' \
                 -group qapm \
                 -ignoreDnD \
                 -sender $__CFBundleIdentifier \
-                -message "bujar finished with assembly file at $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar"
+                -message "jar_build finished with assembly file at $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar"
         else
-            terminal-notifier -title 'bujar' \
+            terminal-notifier -title 'build jar' \
                 -subtitle '☹️' \
                 -group qapm \
                 -ignoreDnD \
                 -sender $__CFBundleIdentifier \
-                -message "bujar failed with error code $statue"
+                -message "jar_build failed with error code $statue"
         end
     end
 {% else %}
@@ -31,9 +31,9 @@ function jar_build --description 'assembly jar file of QAPM/emr'
     sbt assembly
     "
     if test $status = 0
-        echo "🥳 bujar finished with assembly file at $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar"
+        echo "🥳 jar_build finished with assembly file at $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar"
     else
-        echo "☹️ bujar failed with error code $statue"
+        echo "☹️ jar_build failed with error code $statue"
     end
 {% endif %}
 end
