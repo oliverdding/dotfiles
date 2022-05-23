@@ -13,3 +13,6 @@ if test (defaults read -g AppleInterfaceStyle 2>/dev/null) != "Dark"
     set -gx MCFLY_LIGHT TRUE
 end
 {% endif %}
+set -gx FZF_DEFAULT_COMMAND "fd --type file --follow --hidden --exclude .git --color=always"
+set -gx FZF_DEFAULT_OPTS "--ansi"
+set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
