@@ -12,7 +12,7 @@ function upload2hdfs -a src_path dst_path -d "upload file to HDFS with proxy jum
 {% if yadm.hostname == "devcloud" %}
     cp $src_path "/tmp/file_to_hdfs_by_$(uname -n)"
 {% else %}
-    scp $src_path devcloud:"/tmp/upload_by_$(uname -n)"
+    scp $src_path devcloud:"/tmp/file_to_hdfs_by_$(uname -n)"
 {% endif %}
     execute_in_devcloud bash -c "'
     kubectl -n default cp \"/tmp/file_to_hdfs_by_$HOST\" $CLIENT_POD:\"/tmp/file_to_hdfs_by_$(uname -n)\"
