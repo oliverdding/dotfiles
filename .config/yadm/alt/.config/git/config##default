@@ -1,0 +1,15 @@
+[include]
+	path = ~/.config/git/common
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[user]
+	name = oliver ding
+	email = oliverdding@outlook.com
+	signingkey = 8C328989EA488819\!
+
+# vim:ft=ini

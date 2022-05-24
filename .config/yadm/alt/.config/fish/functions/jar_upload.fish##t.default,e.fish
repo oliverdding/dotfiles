@@ -9,7 +9,7 @@ function jar_upload -a cluster -d "upload jar file of QAPM/emr to HDFS"
         return 2
     end
     set -f JAR_PATH "/bin/tdem/$cluster/spark/QAPMSparkProject-assembly-6.1.jar"
-    if ! confirmation_make "Are your sure to upload assemblied jar to HDFS and overwrite $JAR_PATH?"
+    if ! confirmation_make "Are your sure to upload assemblied jar to HDFS on cluster $cluster?"
         return 3
     end
 

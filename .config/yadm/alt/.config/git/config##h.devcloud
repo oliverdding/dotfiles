@@ -1,0 +1,14 @@
+[include]
+	path = ~/.config/git/common
+
+[commit]
+	gpgsign = false
+
+[tag]
+	gpgsign = false
+
+[user]
+	name = oliverdding
+	email = oliverdding@tencent.com
+
+# vim:ft=ini
