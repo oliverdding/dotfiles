@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>org.gnupg.gpg-agent</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/sh</string>
+      <string>-c</string>
+      <string>
+        /opt/local/bin/gpg-connect-agent reloadagent /bye
+        # /bin/ln -sf $HOME/.gnupg/S.gpg-agent.ssh $SSH_AUTH_SOCK
+        /bin/launchctl setenv SSH_AUTH_SOCK "$HOME/.gnupg/S.gpg-agent.ssh"
+        /bin/launchctl setenv GPG_AGENT_INFO "$HOME/.gnupg/S.gpg-agent:0:1"
+      </string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+  </dict>
+</plist>
