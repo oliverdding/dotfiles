@@ -10,7 +10,7 @@
       <string>-c</string>
       <string>
         /opt/local/bin/gpg-connect-agent reloadagent /bye
-        /bin/ln -sf $HOME/.gnupg/S.gpg-agent.ssh $SSH_AUTH_SOCK
+        /bin/ln -sf /Users/{{ yadm.user }}/.gnupg/S.gpg-agent.ssh $SSH_AUTH_SOCK
         # /bin/launchctl setenv SSH_AUTH_SOCK "$HOME/.gnupg/S.gpg-agent.ssh"
         /bin/launchctl setenv GPG_AGENT_INFO "/Users/{{ yadm.user }}/.gnupg/S.gpg-agent:0:1"
       </string>
