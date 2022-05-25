@@ -4,11 +4,16 @@ This repository contains all my dotfiles for mac, arch and centos...
 
 ## Usage
 
-```fish
-yadm clone https://github.com/oliverdding/dotfiles.git
-```
+### MacOS
 
-## Relate
+1. Install XCode tools
+2. Install macport
+3. Install dotfiles
+    ```fish
+    yadm clone https://github.com/oliverdding/dotfiles.git
+    ```
+
+## Others
 
 ### generate gpg key in ed25519 with different purpose subkeys
 
