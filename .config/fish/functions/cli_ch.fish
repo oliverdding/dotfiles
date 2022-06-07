@@ -10,5 +10,9 @@ function cli_ch -a target_cluster -d "clickhouse client for easily connecting to
             echo " Unknown target cluster '$target_cluster', only support 'gr', 'gd' and 'br' now."
             return 1
     end
-    execute_in_intranet "clickhouse-client -h $HOST -u default -m $argv[2..-1]"
+    if set -q CLICK_HOUSE_PASSWORD
+        execute_in_intranet "clickhouse-client -h $HOST -u root --password $CLICK_HOUSE_PASSWORD -m $argv[2..-1]"
+    else
+        execute_in_intranet "clickhouse-client -h $HOST -u root --ask-password -m $argv[2..-1]"
+    end
 end
