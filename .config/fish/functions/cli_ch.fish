@@ -1,11 +1,11 @@
 function cli_ch -a target_cluster -d "clickhouse client for easily connecting to cluster"
     switch $target_cluster
-        case gr
+        case r
             set -f HOST '10.16.0.85'
-        case gd
+        case t
             set -f HOST '10.16.30.14'
-        case br
-            set -f HOST '10.90.0.15'
+        case r2
+            set -f HOST '10.16.30.12'
         case '*'
             echo " Unknown target cluster '$target_cluster', only support 'gr', 'gd' and 'br' now."
             return 1
