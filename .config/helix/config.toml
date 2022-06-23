@@ -10,3 +10,7 @@ select = "underline"
 
 [editor.lsp]
 display-messages = true
+
+[editor.whitespace]
+render = "all"
+
