@@ -9,8 +9,15 @@ set -gx MCFLY_KEY_SCHEME vim
 set -gx MCFLY_FUZZY 2
 set -gx MCFLY_RESULTS 50
 {% if yadm.os == "Darwin" %}
-if test (defaults read -g AppleInterfaceStyle 2>/dev/null) != "Dark"
-    set -gx MCFLY_LIGHT TRUE
+if test (defaults read -g AppleInterfaceStyleSwitchesAutomatically 2>/dev/null) = 1
+    defaults read -g AppleInterfaceStyle 2>/dev/null
+    if test $status = 1
+        set -gx MCFLY_LIGHT TRUE
+    end
+else
+    if test (defaults read -g AppleInterfaceStyle 2>/dev/null) != "Dark"
+        set -gx MCFLY_LIGHT TRUE
+    end
 end
 {% endif %}
 set -gx FZF_DEFAULT_COMMAND "fd --type file --follow --hidden --exclude .git --color=always"
