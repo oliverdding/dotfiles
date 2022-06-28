@@ -1,5 +1,10 @@
 set -gx PASSWORD_STORE_CHARACTER_SET 'a-zA-Z0-9~!@#$%^&*()-_=+[]{};:,.<>?'
 set -gx PASSWORD_STORE_GENERATED_LENGTH '20'
+{% if yadm.os == "Darwin" %}
+set -gx C_INCLUDE_PATH /opt/local/include
+set -gx CPLUS_INCLUDE_PATH /opt/local/include
+set -gx LIBRARY_PATH /opt/local/lib
+{% endif %}
 set -gx GOPATH "$HOME/.local/share/go"
 {% if yadm.os == "Darwin" %}
 set -gx JAVA_HOME '/Library/Java/JavaVirtualMachines/openjdk8-zulu/Contents/Home/'
