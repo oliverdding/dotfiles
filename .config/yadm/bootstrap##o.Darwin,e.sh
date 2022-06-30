@@ -13,6 +13,14 @@ dotfiles_dir="$(
 )"
 cd "$dotfiles_dir"
 
+# WARN: arrange this code
+
+#npm install -g @taplo/cli
+#pip3 install --user python-lsp-server
+#npm i -g bash-language-server
+#npm install -g dockerfile-language-server-nodejs
+#npm install -g yaml-language-server
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
