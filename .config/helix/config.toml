@@ -11,6 +11,8 @@ select = "underline"
 [editor.lsp]
 display-messages = true
 
-[editor.whitespace]
-render = "all"
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
 
