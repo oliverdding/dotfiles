@@ -1,9 +1,0 @@
-{
-    "!encryption-password": "password",
-    "!root-password": "password",
-    "!superusers": {
-        "charmer": {
-            "!password": "password"
-        }
-    }
-}
