@@ -3,7 +3,7 @@ function cli_ch -a target_cluster -d "clickhouse client for easily connecting to
         case r # release
             set -f HOST '10.16.0.85'
         case t # test
-            set -f HOST '10.16.30.14'
+            set -f HOST '10.16.30.2'
         case b # backup
             set -f HOST '10.16.30.12'
         case tke1.8 # tke1.8
