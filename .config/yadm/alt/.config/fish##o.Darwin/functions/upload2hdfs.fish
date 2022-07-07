@@ -9,11 +9,11 @@ function upload2hdfs -a src_path dst_path -d "upload file to HDFS with proxy jum
         return 2
     end
 
-    scp $src_path devcloud:"/tmp/file_to_hdfs_by_{{ yadm.hostname }}"
+    scp $src_path devcloud:"/tmp/file_to_hdfs_by_oliver"
     execute_in_devcloud bash -c "'
-    kubectl -n default cp \"/tmp/file_to_hdfs_by_{{ yadm.hostname }}\" $CLIENT_POD:\"/tmp/file_to_hdfs_by_{{ yadm.hostname }}\"
+    kubectl -n default cp \"/tmp/file_to_hdfs_by_oliver\" $CLIENT_POD:\"/tmp/file_to_hdfs_by_oliver\"
     kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -mkdir -p $(dirname $dst_path)\"
     kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -rm -f $dst_path\"
-    kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/file_to_hdfs_by_{{ yadm.hostname }} $dst_path\"
+    kubectl -n default exec $CLIENT_POD -- bash -c \"hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/file_to_hdfs_by_oliver $dst_path\"
     '"
 end
