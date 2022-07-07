@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-gpg-connect-agent updatestartuptty /bye >/dev/null
+[[ $PS1 ]] && gpg-connect-agent updatestartuptty /bye >/dev/null
 
 [[ $PS1 ]] && source /usr/share/fzf/key-bindings.bash
 
