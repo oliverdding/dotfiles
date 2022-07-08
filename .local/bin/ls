@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
+command -v exa >/dev/null 2>&1 || { echo >&2 "Cannot find exa in your PATH"; exit 1; }
+
 exa "$@"

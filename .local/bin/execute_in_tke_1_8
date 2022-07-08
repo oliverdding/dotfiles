@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+[[ -z "$INTRANET_PROXY_JUMP_SERVER" ]] && { error "intranet jump server does not define."; return 1 }
+[[ -z "$TKE_1_8_PROXY_JUMP_SERVER" ]] && { error "tke1.8 jump server does not define."; return 2 }
+
+ssh -J devcloud,$INTRANET_PROXY_JUMP_SERVER -t $TKE_1_8_PROXY_JUMP_SERVER "exec $@"

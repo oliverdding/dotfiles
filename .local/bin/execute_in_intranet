@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+[[ -z "$INTRANET_PROXY_JUMP_SERVER" ]] && { error "intranet jump server does not define."; return 1 }
+
+ssh -J devcloud -t $INTRANET_PROXY_JUMP_SERVER "exec $@"
