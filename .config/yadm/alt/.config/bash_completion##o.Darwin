@@ -2,7 +2,7 @@ eval "$(kaf completion bash)"
 eval "$(helm completion bash)"
 eval "$(limactl completion bash)"
 eval "$(colima completion bash)"
-eval "$(starship completion bash)"
+eval "$(starship completions bash)"
 # compat_dir=/opt/local/share/bash-completion/completions/
 # if [[ -d $compat_dir && -r $compat_dir && -x $compat_dir ]]; then
 #     for i in "$compat_dir"/*; do
