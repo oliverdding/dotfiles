@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -uo pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
@@ -26,11 +26,10 @@ copy() {
     echo "$dest_file <= $orig_file"
 }
 
-copy "opt/local/etc/profile.d/10-xdg-base.sh"
-copy "opt/local/etc/profile.d/20-system.sh"
-copy "opt/local/etc/profile.d/30-xdg-program.sh"
-copy "opt/local/etc/profile.d/40-path.sh"
-copy "opt/local/etc/profile.d/50-program.sh"
-copy "opt/local/etc/profile.d/60-macport.sh"
-copy "opt/local/etc/profile.d/70-work.sh"
-copy "opt/local/etc/profile"
+copy "root/etc/profile.d/10-xdg-base.sh"
+copy "root/etc/profile.d/20-system.sh"
+copy "root/etc/profile.d/30-xdg-program.sh"
+copy "root/etc/profile.d/40-path.sh"
+copy "root/etc/profile.d/50-program.sh"
+copy "root/etc/sudoers.d/override"
+copy "root/etc/locale.conf"

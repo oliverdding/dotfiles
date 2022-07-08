@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 command -v exa >/dev/null 2>&1 || { echo >&2 "Cannot find exa in your PATH"; exit 1; }
 

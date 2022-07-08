@@ -1,21 +1,34 @@
 #!/usr/bin/env bash
 
-function help()
-{
+function help() {
     echo -e "Upload local file to hdfs.\nUsage: $0 [source] [destination]"
 }
 
-[[ $# -ne 2 ]] && { error "Need two parameters."; help; return 1; }
+[[ $# -ne 2 ]] && {
+    error "Need two parameters."
+    help
+    exit 1
+}
 
-[[ -f "$1" ]] || { error "Cannot find source file, does it exist?"; return 2 }
-[[ -z "$2" ]] && { error "Destination is needed."; return 3 }
+[[ -f "$1" ]] || {
+    error "Cannot find source file, does it exist?"
+    exit 2
+}
+[[ -z "$2" ]] && {
+    error "Destination is needed."
+    exit 3
+}
 
 CLIENT_POD=$(execute_in_devcloud "kubectl -n default get pods" | rg 'kdl-client' | head -1 | awk '{print $1}')
 
-[[ -z "${CLIENT_POD}" ]] && { error "Cannot get client pod, is it running?"; return 4 }
+[[ -z "${CLIENT_POD}" ]] && {
+    error "Cannot get client pod, is it running?"
+    exit 4
+}
 
 scp $1 devcloud:"/tmp/file_to_hdfs_by_$HOSTNAME"
-script=$(cat <<EOF
+script=$(
+    cat <<EOF
 kubectl -n default cp "/tmp/file_to_hdfs_by_$HOSTNAME" $CLIENT_POD:"/tmp/file_to_hdfs_by_$HOSTNAME"
 kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -mkdir -p $(dirname $2)"
 kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -rm -f $2"

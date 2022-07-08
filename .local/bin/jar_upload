@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+function help()
+{
+    echo -e "Upload assemblied jar file of QAPM Spark to HDFS.\nUsage: $0 [tencent_public|cloud_public|qq|gray|test]"
+}
+
+[[ $# -ne 1 ]] && {
+    error "Should specify a cluster."
+    help
+    exit 1
+}
+
+[[ -z "$QAPM_HOME" ]] && {
+    error "Cannot find environment variable QAPM_HOME."
+    help
+    exit 2
+}
+
+[[ contains "tencent_public cloud_public qq gray test" $1 ]] || {
+    error "Cannot recognize given cluster: $1."
+    help
+    exit 3
+}
+
+JAR_PATH="/bin/tdem/$1/spark/QAPMSparkProject-assembly-6.1.jar"
+upload2hdfs $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $JAR_PATH
+
+[[ $? -eq 0 ]] && {
+     echo -e "jar_upload finished with jar file to cluster $1"
+} || {
+    echo -e "jar_upload failed with error code $?"
+}

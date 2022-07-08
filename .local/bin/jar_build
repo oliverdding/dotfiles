@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+function help()
+{
+    echo -e "Build QAPM Spark and assembly a jar file.\nUsage: $0"
+}
+
+[[ -z "$QAPM_HOME" ]] && {
+    error "Cannot find environment variable QAPM_HOME"
+    help
+    exit 1
+}
+
+cd $QAPM_HOME/emr/spark/scala/QAPMSparkProject
+sbt assembly
+
+[[ $? -eq 0 ]] && {
+     echo -e "jar_build finished with assembly file at $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar"
+} || {
+    echo -e "jar_build failed with error code $?"
+}
