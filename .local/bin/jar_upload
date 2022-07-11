@@ -17,14 +17,14 @@ function help
     exit 2
 }
 
-[[ contains "tencent_public cloud_public qq gray test" $1 ]] || {
+contains "tencent_public cloud_public qq gray test" "$1" || {
     error "Cannot recognize given cluster: $1."
     help
     exit 3
 }
 
 JAR_PATH="/bin/tdem/$1/spark/QAPMSparkProject-assembly-6.1.jar"
-upload2hdfs $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar $JAR_PATH
+upload2hdfs $QAPM_HOME/emr/spark/scala/QAPMSparkProject/target/scala-2.11/QAPMSparkProject-assembly-6.1.jar "$JAR_PATH"
 
 [[ $? -eq 0 ]] && {
      echo -e "jar_upload finished with jar file to cluster $1"

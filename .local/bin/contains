@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-local list="$1"
-local item="$2"
+list="$1"
+item="$2"
 if [[ ! $list =~ (^|[[:space:]])"$item"($|[[:space:]]) ]]; then
     exit 1
 fi

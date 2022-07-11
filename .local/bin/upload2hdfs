@@ -9,7 +9,6 @@ function help {
     help
     exit 1
 }
-
 [[ -f "$1" ]] || {
     error "Cannot find source file, does it exist?"
     exit 2
@@ -35,4 +34,6 @@ kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom
 kubectl -n default exec $CLIENT_POD -- bash -c "hdfs --config /etc/hadoop-custom-conf/ dfs -put /tmp/file_to_hdfs_by_$HOSTNAME $2"
 EOF
 )
-execute_in_devcloud bash -c $script
+
+execute_in_devcloud "$script"
+

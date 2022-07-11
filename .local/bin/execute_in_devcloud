@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-ssh -t devcloud "exec $@"
+ssh -t devcloud "$@"
+

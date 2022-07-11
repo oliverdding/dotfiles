@@ -3,4 +3,4 @@
 [[ -z "$INTRANET_PROXY_JUMP_SERVER" ]] && { error "intranet jump server does not define."; exit 1; }
 [[ -z "$TKE_1_8_PROXY_JUMP_SERVER" ]] && { error "tke1.8 jump server does not define."; exit 2; }
 
-ssh -J devcloud,$INTRANET_PROXY_JUMP_SERVER -t $TKE_1_8_PROXY_JUMP_SERVER "exec $@"
+ssh -J devcloud,$INTRANET_PROXY_JUMP_SERVER -t $TKE_1_8_PROXY_JUMP_SERVER "$@"
