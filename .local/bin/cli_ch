@@ -13,12 +13,19 @@ function help() {
 case $1 in
 r | release)
     CLICK_HOUSE_HOST='10.16.0.85'
+    CLICK_HOUSE_USER='root'
     ;;
 t | test)
     CLICK_HOUSE_HOST='10.16.30.2'
+    CLICK_HOUSE_USER='root'
     ;;
 b | backup)
     CLICK_HOUSE_HOST='10.16.30.12'
+    CLICK_HOUSE_USER='root'
+    ;;
+tke1.8)
+    CLICK_HOUSE_HOST='127.0.0.1'
+    CLICK_HOUSE_USER='qapm'
     ;;
 *)
     error "Unknown target dataabse"
@@ -28,8 +35,4 @@ b | backup)
 esac
 
 shift 1
-[[ -z "$CLICK_HOUSE_PASSWORD" ]] && {
-    execute_in_intranet "clickhouse-client -h $CLICK_HOUSE_HOST -u root --ask-password -m $@"
-} || {
-    execute_in_intranet "clickhouse-client -h $CLICK_HOUSE_HOST -u root --password $CLICK_HOUSE_PASSWORD -m $@"
-}
+execute_in_intranet "clickhouse-client -h $CLICK_HOUSE_HOST -u $CLICK_HOUSE_USER --ask-password -m $@"
