@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function help()
+function help
 {
     echo -e "Upload assemblied jar file of QAPM Spark to HDFS.\nUsage: $0 [tencent_public|cloud_public|qq|gray|test]"
 }

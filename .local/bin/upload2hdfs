@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function help() {
+function help {
     echo -e "Upload local file to hdfs.\nUsage: $0 [source] [destination]"
 }
 

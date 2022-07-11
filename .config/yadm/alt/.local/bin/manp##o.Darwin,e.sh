@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-function help()
-{
+function help {
     echo -e "Open specified man page in Preview.app.\nUsage: $0 [entry]"
 }
 

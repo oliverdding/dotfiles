@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-function help()
-{
+function help {
     echo -e "Quick Look a specified file or directory.\nUsage: $0 [entry]"
 }
 

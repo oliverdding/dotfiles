@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function help() {
+function help {
     echo -e "ClickHouse client for quickly access database online.\nUsage: $0 [r,t,b,tke1.8] [...]"
 }
 
