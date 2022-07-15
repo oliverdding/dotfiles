@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-command -v kubectl >/dev/null 2>&1 || { echo >&2 "Cannot find kubectl in your PATH"; exit 1; }
+command -v kubectl >/dev/null 2>&1 || {
+    echo >&2 "Cannot find kubectl in your PATH"
+    exit 1
+}
 
 kubectl "$@"

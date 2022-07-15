@@ -36,4 +36,3 @@ EOF
 )
 
 execute_in_devcloud "$script"
-
