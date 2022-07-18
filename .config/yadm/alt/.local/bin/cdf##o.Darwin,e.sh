@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-cd (pfd)
+cd "$(pfd)"
