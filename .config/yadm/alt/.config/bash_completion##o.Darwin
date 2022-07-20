@@ -3,5 +3,4 @@ command -v helm >/dev/null 2>&1 && eval "$(helm completion bash)"
 command -v limactl >/dev/null 2>&1 && eval "$(limactl completion bash)"
 command -v colima >/dev/null 2>&1 && eval "$(colima completion bash)"
 command -v starship >/dev/null 2>&1 && eval "$(starship completions bash)"
-command -v mc >/dev/null 2>&1 && complete -C /opt/local/bin/mc mc
 
