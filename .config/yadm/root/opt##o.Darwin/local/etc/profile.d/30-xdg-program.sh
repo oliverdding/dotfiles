@@ -1,6 +1,17 @@
 #!/usr/bin/env sh
 
 export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash_completion"
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+[[ ! -f "$HISTFILE" ]] && mkdir -p $(dirname $HISTFILE)
+
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+export MACHINE_STORAGE_PATH="$XDG_DATA_HOME/docker-machine"
+
+export FFMPEG_DATADIR="$XDG_CONFIG_HOME/ffmpeg"
+
+export MINIKUBE_HOME="$XDG_DATA_HOME/minikube"
+
+export LIMA_HOME="$XDG_CONFIG_HOME/lima"
 
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
@@ -8,8 +19,6 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 
 export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
-
-export HISTFILE="$XDG_STATE_HOME/bash/history"
 
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 
