@@ -14,7 +14,7 @@ archinstall_dir="$(
 cd "$archinstall_dir"
 
 copy() {
-    orig_file="$archinstall_dir/$1"
+    orig_file="$archinstall_dir/root/$1"
     dest_file="/$1"
 
     mkdir -p "$(dirname "$orig_file")"
@@ -26,11 +26,11 @@ copy() {
     echo "$dest_file <= $orig_file"
 }
 
-copy "root/opt/local/etc/profile.d/10-xdg-base.sh"
-copy "root/opt/local/etc/profile.d/20-system.sh"
-copy "root/opt/local/etc/profile.d/30-xdg-program.sh"
-copy "root/opt/local/etc/profile.d/40-path.sh"
-copy "root/opt/local/etc/profile.d/50-program.sh"
-copy "root/opt/local/etc/profile.d/60-macport.sh"
-copy "root/opt/local/etc/profile.d/70-work.sh"
-copy "root/opt/local/etc/profile"
+copy "opt/local/etc/profile.d/10-xdg-base.sh"
+copy "opt/local/etc/profile.d/20-system.sh"
+copy "opt/local/etc/profile.d/30-xdg-program.sh"
+copy "opt/local/etc/profile.d/40-path.sh"
+copy "opt/local/etc/profile.d/50-program.sh"
+copy "opt/local/etc/profile.d/60-macport.sh"
+copy "opt/local/etc/profile.d/70-work.sh"
+copy "opt/local/etc/profile"

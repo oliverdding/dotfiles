@@ -14,7 +14,7 @@ archinstall_dir="$(
 cd "$archinstall_dir"
 
 copy() {
-    orig_file="$archinstall_dir/$1"
+    orig_file="$archinstall_dir/root/$1"
     dest_file="/$1"
 
     mkdir -p "$(dirname "$orig_file")"
@@ -26,10 +26,10 @@ copy() {
     echo "$dest_file <= $orig_file"
 }
 
-copy "root/etc/profile.d/10-xdg-base.sh"
-copy "root/etc/profile.d/20-system.sh"
-copy "root/etc/profile.d/30-xdg-program.sh"
-copy "root/etc/profile.d/40-path.sh"
-copy "root/etc/profile.d/50-program.sh"
-copy "root/etc/sudoers.d/override"
-copy "root/etc/locale.conf"
+copy "etc/profile.d/10-xdg-base.sh"
+copy "etc/profile.d/20-system.sh"
+copy "etc/profile.d/30-xdg-program.sh"
+copy "etc/profile.d/40-path.sh"
+copy "etc/profile.d/50-program.sh"
+copy "etc/sudoers.d/override"
+copy "etc/locale.conf"
