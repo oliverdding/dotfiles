@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>fun.charmer.xdg</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/sh</string>
+      <string>-c</string>
+      <string>
+        /bin/launchctl setenv XDG_CACHE_HOME "$HOME/.cache"
+        /bin/launchctl setenv XDG_CONFIG_HOME "$HOME/.config"
+        /bin/launchctl setenv XDG_DATA_HOME "$HOME/.local/share"
+        /bin/launchctl setenv XDG_STATE_HOME "$HOME/.local/state"
+
+        /bin/launchctl setenv BASH_COMPLETION_USER_FILE "$XDG_CONFIG_HOME/bash_completion"
+        /bin/launchctl setenv GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
+        /bin/launchctl setenv NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
+        /bin/launchctl setenv NODE_REPL_HISTORY "$XDG_DATA_HOME/node_repl_history"
+        /bin/launchctl setenv WORKON_HOME "$XDG_DATA_HOME/virtualenvs"
+        /bin/launchctl setenv HISTFILE "$XDG_STATE_HOME/bash/history"
+        /bin/launchctl setenv INPUTRC "$XDG_CONFIG_HOME/readline/inputrc"
+        /bin/launchctl setenv RIPGREP_CONFIG_PATH "$XDG_CONFIG_HOME/ripgrep/config"
+        /bin/launchctl setenv GDBHISTFILE "$XDG_DATA_HOME/gdb/history"
+        /bin/launchctl setenv RUSTUP_HOME "$XDG_DATA_HOME/rustup"
+        /bin/launchctl setenv CARGO_HOME "$XDG_DATA_HOME/cargo"
+        /bin/launchctl setenv GOPATH "$XDG_DATA_HOME/go"
+        /bin/launchctl setenv PYLINTHOME "$XDG_CACHE_HOME/pylint"
+        /bin/launchctl setenv PASSWORD_STORE_DIR "$XDG_DATA_HOME/pass"
+        /bin/launchctl setenv K9SCONFIG "$XDG_CONFIG_HOME/k9s"
+        /bin/launchctl setenv TEXMFHOME "$XDG_DATA_HOME/texmf"
+        /bin/launchctl setenv TEXMFVAR "$XDG_CACHE_HOME/texlive/texmf-var"
+        /bin/launchctl setenv TEXMFCONFIG "$XDG_CONFIG_HOME/texlive/texmf-config"
+      </string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+  </dict>
+</plist>
