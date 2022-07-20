@@ -26,6 +26,7 @@ b | backup)
 tke1.8)
     CLICK_HOUSE_HOST='127.0.0.1'
     CLICK_HOUSE_USER='qapm'
+    shift 1
     execute_in_tke_1_8 "kubectl -n tmf exec -it chi-qapm-ck-replicated-0-0-0 -- clickhouse-client -h $CLICK_HOUSE_HOST -u $CLICK_HOUSE_USER --ask-password -m $@"
     exit 0
     ;;
