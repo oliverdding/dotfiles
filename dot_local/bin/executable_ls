@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if which eza >/dev/null 2>&1; then
+    eza "$@"
+else
+    /usr/bin/ls "$@"
+fi

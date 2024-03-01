@@ -1,0 +1,3 @@
+[".local/share/pass"]
+  type = "git-repo"
+  url = "git@github.com:oliverdding/pass.git"
