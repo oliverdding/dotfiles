@@ -1,0 +1,5 @@
+{{- if .is_plasma -}}
+{{-   include "miniapps.plasma.list" -}}
+{{- else if .is_gnome -}}
+{{-   include "miniapps.gnome.list" -}}
+{{- end -}}

@@ -1,6 +1,17 @@
 {{- $gitname := promptStringOnce . "gitname" "Git Name" -}}
 {{- $gitmail := promptStringOnce . "gitmail" "Git Mail Address" -}}
+{{- $gpgagent := promptBoolOnce . "gpgagent" "Use gnupg agent instead of ssh agent? [Y/n]" false -}}
+
+{{- $is_gnome := lookPath "gnome-shell" | not | not -}}
+{{- $is_plasma := lookPath "plasma-desktop" | not | not -}}
 
 [data]
   gitname = {{ $gitname | quote }}
   gitmail = {{ $gitmail | quote }}
+  is_gnome = {{ $is_gnome }}
+  is_plasma = {{ $is_plasma }}
+  use_gpg_agent = {{ $gpgagent }}
+
+encryption = "gpg"
+[gpg]
+    recipient = "oliverdding@outlook.com"

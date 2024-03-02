@@ -1,0 +1,15 @@
+[
+    {
+        "command": "editor.action.deleteLines",
+        "key": "ctrl+shift+d",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "todo-tree-view.focus",
+        "key": "ctrl+shift+r"
+    },
+    {
+        "command": "findJump.activate",
+        "key": "shift+enter"
+    },
+]

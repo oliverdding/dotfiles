@@ -1,0 +1,4 @@
+[window]
+dimensions = { columns = 120, lines = 40 }
+padding = { x = 10, y = 10 }
+opacity = 0.9

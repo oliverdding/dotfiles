@@ -1,0 +1,3 @@
+[generate]
+	length = 16
+	symbols = true

@@ -1,0 +1,19 @@
+right_format = """$status"""
+
+add_newline = true
+
+[sudo]
+disabled = false
+
+[git_metrics]
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = 50
+
+[status]
+disabled = false
+
+[package]
+disabled = true

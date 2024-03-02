@@ -1,8 +1,33 @@
 README.md
 LICENSE
+
 {{- if ne .chezmoi.os "darwin" }}
 Library/Application Support/
 {{- end }}
-{{- if ne .chezmoi.os "linux" }}
 
+{{- if ne .chezmoi.os "linux" }}
+.config/Code - OSS
+.config/environment.d
+.config/fzf
+.config/plasma-workspace
+.config/paru
+.config/chrome-flags.conf
+.config/code-flags.conf
+.config/electron-flags.conf
+.config/electron25-flags.conf
+.config/electron26-flags.conf
+.config/electron28-flags.conf
+.config/mimeapps.*
+.config/user-dirs.locale
+.local/bin/git-credential-with-kwallet
+{{- else }}
+{{- if ne .chezmoi.osRelease.id "tencentos" }}
+.config/fzf
+{{- end }}
+{{- if not .is_plasma }}
+.config/plasma-workspace
+{{- end }}
+{{- if ne .chezmoi.osRelease.id "arch" }}
+.config/paru
+{{- end }}
 {{- end }}

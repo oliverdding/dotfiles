@@ -1,0 +1,20 @@
+[include]
+	path = ~/.config/git/common
+
+[commit]
+	gpgsign = {{ .use_gpg_agent }}
+
+[tag]
+	gpgsign = {{ .use_gpg_agent }}
+
+[user]
+	name = oliver ding
+	email = oliverdding@outlook.com
+{{- if .use_gpg_agent }}
+	signingkey = 8DCF873C32DE2E45!
+{{- end }}
+
+{{- if .is_plasma }}
+[credential]
+	helper = with-kwallet
+{{- end }}

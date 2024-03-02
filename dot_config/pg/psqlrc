@@ -1,0 +1,16 @@
+\set QUIET ON
+
+\pset pager always
+
+\pset null 'NULL'
+
+\set HISTSIZE 50000
+
+\timing
+
+\encoding unicode
+
+\set PROMPT1 '(%n@%M:%>) [%/] > '
+\set PROMPT2 ''
+
+\set QUIET OFF

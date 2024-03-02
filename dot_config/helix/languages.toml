@@ -1,0 +1,36 @@
+use-grammars = { except = ["gemini"] }
+
+[[language]]
+name = "rust"
+
+[[language]]
+name = "go"
+
+[language-server.gopls.config]
+gofumpt = true
+analyses = { "fieldalignment" = true, "nilness" = true, "unusedvariable" = true }
+staticcheck = true
+vulncheck = "Imports"
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier" }
+auto-format = true
+
+[[language]]
+name = "toml"
+formatter = { command = "prettier" }
+auto-format = true
+
+[[language]]
+name = "yaml"
+formatter = { command = "prettier" }
+auto-format = true
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.clangd]
+args = [ "--background-index", "--compile-commands-dir=build", "-j=12", "--query-driver=/opt/local/bin/clang++", "--clang-tidy", "--all-scopes-completion", "--completion-style=detailed", "--function-arg-placeholders", "--header-insertion=iwyu", "--pch-storage=memory", "-std=c++11", "-Wc++11-extensions" ]
+config = { "fallbackFlags" = [ "-std=c++11", "-Wc++11-extensions" ] }

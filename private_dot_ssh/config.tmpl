@@ -1,0 +1,12 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Include config.d/*
+
+{{- if .use_gpg_agent }}
+Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"
+{{- end }}
+
+Host *
+  ServerAliveInterval 60
+  Compression yes
+  ControlMaster auto
+  ExitOnForwardFailure yes
