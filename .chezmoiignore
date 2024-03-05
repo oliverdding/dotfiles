@@ -26,6 +26,7 @@ Library/Application Support/
 {{- end }}
 {{- if not .is_plasma }}
 .config/plasma-workspace
+.local/bin/git-credential-with-kwallet
 {{- end }}
 {{- if ne .chezmoi.osRelease.id "arch" }}
 .config/paru
