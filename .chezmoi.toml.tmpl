@@ -7,11 +7,11 @@
 {{- $pass     := promptBoolOnce   . "pass"     "Clone pass store? [Y/n]"                     false                     -}}
 
 [data]
-  gitname  = {{- $gitname  | quote -}}
-  gitmail  = {{- $gitmail  | quote -}}
-  hosttype = {{- $hosttype | quote -}}
-  gpgagent = {{- $gpgagent -}}
-  pass     = {{- $pass -}}
+  gitname  = {{ $gitname  | quote }}
+  gitmail  = {{ $gitmail  | quote }}
+  hosttype = {{ $hosttype | quote }}
+  gpgagent = {{ $gpgagent }}
+  pass     = {{ $pass }}
 
 encryption = "gpg"
 [gpg]
