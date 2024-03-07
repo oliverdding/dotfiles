@@ -1,16 +1,17 @@
-{{- $gitname := promptStringOnce . "gitname" "Git Name" "oliver ding" -}}
-{{- $gitmail := promptStringOnce . "gitmail" "Git Mail Address" "oliverdding@outlook.com" -}}
-{{- $choices := list "desktop" "server" -}}
+{{- $choices  := list "desktop" "server" -}}
 {{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $choices "server" -}}
-{{- $gpgagent := promptBoolOnce . "gpgagent" "Use gnupg agent instead of ssh agent? [Y/n]" false -}}
-{{- $pass := promptBoolOnce . "pass" "Clone pass store? [Y/n]" false -}}
+
+{{- $gitname  := promptStringOnce . "gitname"  "Git Name"                                    "oliver ding"             -}}
+{{- $gitmail  := promptStringOnce . "gitmail"  "Git Mail Address"                            "oliverdding@outlook.com" -}}
+{{- $gpgagent := promptBoolOnce   . "gpgagent" "Use gnupg agent instead of ssh agent? [Y/n]" false                     -}}
+{{- $pass     := promptBoolOnce   . "pass"     "Clone pass store? [Y/n]"                     false                     -}}
 
 [data]
-  gitname = {{- $gitname | quote -}}
-  gitmail = {{- $gitmail | quote -}}
+  gitname  = {{- $gitname  | quote -}}
+  gitmail  = {{- $gitmail  | quote -}}
   hosttype = {{- $hosttype | quote -}}
   gpgagent = {{- $gpgagent -}}
-  pass = {{- $pass -}}
+  pass     = {{- $pass -}}
 
 encryption = "gpg"
 [gpg]

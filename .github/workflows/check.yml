@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install dotfiles
-      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty --no-pager --keep-going --debug oliverdding --apply --promptDefaults
+      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty -v --no-pager --keep-going --debug oliverdding --apply --promptDefaults
     - name: Check system
       run: chezmoi doctor
