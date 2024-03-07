@@ -2,19 +2,19 @@
 	path = ~/.config/git/common
 
 [commit]
-	gpgsign = {{ .use_gpg_agent }}
+	gpgsign = {{ .gpgagent }}
 
 [tag]
-	gpgsign = {{ .use_gpg_agent }}
+	gpgsign = {{ .gpgagent }}
 
 [user]
-	name = oliver ding
-	email = oliverdding@outlook.com
-{{- if .use_gpg_agent }}
+	name = {{ .gitname }}
+	email = {{ .gitmail }}
+{{- if .gpgagent }}
 	signingkey = 8DCF873C32DE2E45!
 {{- end }}
 
-{{- if .is_plasma }}
+{{- if and (eq .chezmoi.os "linux") (eq .hosttype "desktop" ) }}
 [credential]
 	helper = with-kwallet
 {{- end }}

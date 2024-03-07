@@ -17,14 +17,14 @@ Library/Application Support/
 .config/electron25-flags.conf
 .config/electron26-flags.conf
 .config/electron28-flags.conf
-.config/mimeapps.*
+.config/mimeapps.list
 .config/user-dirs.locale
 .local/bin/git-credential-with-kwallet
 {{- else }}
 {{- if ne .chezmoi.osRelease.id "tencentos" }}
 .config/fzf
 {{- end }}
-{{- if not .is_plasma }}
+{{- if ne .hosttype "desktop" }}
 .config/plasma-workspace
 .local/bin/git-credential-with-kwallet
 {{- end }}

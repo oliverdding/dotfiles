@@ -1,14 +1,12 @@
 {{- if eq .chezmoi.os "darwin" }}
-{{- if .use_gpg_agent }}
+{{- if .gpgagent }}
 pinentry-program /Applications/MacPorts/pinentry-mac.app/Contents/MacOS/pinentry-mac
 {{- else }}
 pinentry-program /opt/local/bin/pinentry-tty
 {{- end }}
 {{- else if eq .chezmoi.os "linux" }}
-{{- if .is_plasma }}
+{{- if eq .hosttype "desktop" }}
 pinentry-program /usr/bin/pinentry-qt
-{{- else if .is_gnome }}
-pinentry-program /usr/bin/pinentry-gnome3
 {{- else if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 pinentry-program "/mnt/c/ProgramData/Scoop/apps/gpg4win/current/Gpg4win/bin/pinentry.exe"
 {{- else }}
@@ -17,6 +15,6 @@ pinentry-program /usr/bin/pinentry-curses
 {{- end }}
 default-cache-ttl 1200
 max-cache-ttl 14400
-{{- if .use_gpg_agent }}
+{{- if .gpgagent }}
 enable-ssh-support
 {{- end }}

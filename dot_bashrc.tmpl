@@ -1,6 +1,6 @@
 [ -z "$PS1" ] && return
 
-{{- if .use_gpg_agent }}
+{{- if .gpgagent }}
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 {{- end }}
