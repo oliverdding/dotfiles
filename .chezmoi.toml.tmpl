@@ -19,10 +19,6 @@ encryption = "gpg"
 
 [diff]
   command = "delta"
-  pager = "delta"
+  pager = "less"
   args = [ "--paging", "never" ]
   exclude = [ "dirs", "scripts" ]
-
-[merge]
-  command = "nvim"
-  args = [ "-d", '{{ "{{" }} .Destination {{ "}}" }}', '{{ "{{" }} .Source {{ "}}" }}', '{{ "{{" }} .Target {{ "}}" }}' ]
