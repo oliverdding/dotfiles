@@ -5,11 +5,11 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 {{- end }}
 
-{{- if .chezmoi.osRelease.id "arch" }}
+{{- if eq .chezmoi.osRelease.id "arch" }}
 [[ -f /usr/share/fzf/key-bindings.bash ]] && source /usr/share/fzf/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
-{{- else if .chezmoi.osRelease.id "tencentos" }}
+{{- else if eq .chezmoi.osRelease.id "tencentos" }}
 [[ -f $HOME/.config/fzf/key-bindings.bash ]] && source $HOME/.config/fzf/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
-{{- else if .chezmoi.osRelease.id "Ubuntu" }}
+{{- else if eq .chezmoi.osRelease.id "Ubuntu" }}
 [[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && source /usr/share/doc/fzf/examples/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
 {{- end }}
 
