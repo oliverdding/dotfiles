@@ -12,4 +12,4 @@ jobs:
     - name: Install dotfiles
       run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty -v --no-pager --keep-going --debug oliverdding --apply --promptDefaults
     - name: Check system
-      run: chezmoi doctor
+      run: ./bin/chezmoi doctor --keep-going --no-pager --no-tty -v --debug
