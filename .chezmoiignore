@@ -1,14 +1,12 @@
 README.md
 LICENSE
-
+.config/bash_completion.tencentos
 {{- if ne .chezmoi.os "darwin" }}
 Library/Application Support/
 {{- end }}
-
 {{- if ne .chezmoi.os "linux" }}
 .config/Code - OSS
 .config/environment.d
-.config/fzf
 .config/plasma-workspace
 .config/paru
 .config/chrome-flags.conf
@@ -20,15 +18,15 @@ Library/Application Support/
 .config/mimeapps.list
 .config/user-dirs.locale
 .local/bin/git-credential-with-kwallet
-{{- else }}
-{{- if ne .chezmoi.osRelease.id "tencentos" }}
-.config/fzf
 {{- end }}
-{{- if ne .hosttype "desktop" }}
+{{- if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
 .config/plasma-workspace
 .local/bin/git-credential-with-kwallet
+{{- end }}
+{{- if ne .chezmoi.osRelease.id "tencentos" }}
+.config/fzf
 {{- end }}
 {{- if ne .chezmoi.osRelease.id "arch" }}
 .config/paru
 {{- end }}
-{{- end }}
+
