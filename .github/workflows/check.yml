@@ -1,0 +1,15 @@
+name: Manual workflow
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dotfiles
+      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty --no-pager --keep-going --debug oliverdding --apply --promptDefaults
+    - name: Check system
+      run: chezmoi doctor
