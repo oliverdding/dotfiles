@@ -8,6 +8,9 @@ Library/Application Support/
 {{- if ne .chezmoi.os "linux" }}
 .config/Code - OSS
 .config/environment.d
+.config/gtk-2.0
+.config/gtk-3.0
+.config/gtk-4.0
 .config/plasma-workspace
 .config/paru
 .config/chrome-flags.conf
@@ -21,6 +24,9 @@ Library/Application Support/
 .local/bin/git-credential-with-kwallet
 {{- end }}
 {{- if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
+.config/gtk-2.0
+.config/gtk-3.0
+.config/gtk-4.0
 .config/plasma-workspace
 .local/bin/git-credential-with-kwallet
 {{- end }}

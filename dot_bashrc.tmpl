@@ -1,9 +1,8 @@
 [ -z "$PS1" ] && return
 
-{{- if .gpgagent }}
-export GPG_TTY=$(tty)
+{{ if .gpgagent }}export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
-{{- end }}
+{{ end }}
 
 {{- if eq .chezmoi.osRelease.id "arch" }}
 [[ -f /usr/share/fzf/key-bindings.bash ]] && source /usr/share/fzf/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
@@ -11,7 +10,7 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 [[ -f $HOME/.config/fzf/key-bindings.bash ]] && source $HOME/.config/fzf/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
 {{- else if eq .chezmoi.osRelease.id "Ubuntu" }}
 [[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && source /usr/share/doc/fzf/examples/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
-{{- end }}
+{{ end }}
 
 function ya() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
