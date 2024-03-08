@@ -1,3 +1,5 @@
 [generate]
 	length = 16
 	symbols = true
+[mounts]
+	path = ~/.local/share/pass
