@@ -1,0 +1,36 @@
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "tencentos") -}}
+
+{{ $packages := list
+    "openssh"
+    "gnupg2"
+    "fd-find"
+    "ripgrep"
+    "bash-completion"
+    "less"
+    "gcc"
+    "cargo"
+    "rust" -}}
+
+{{ $cargopackages := list
+    "git-delta"
+    "starship"
+    "zoxide"
+    "eza"
+    "bat"
+    "helix-term" -}}
+
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+{{ range $packages -}}
+sudo dnf install -y {{ . }}
+{{ end -}}
+
+cargo install --quiet cargo-binstall
+
+{{ range $cargopackages -}}
+cargo binstall -y --index sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/ {{ . }}
+{{ end -}}
+
+{{ end -}}

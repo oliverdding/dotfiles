@@ -1,0 +1,29 @@
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch") -}}
+
+{{ $packages := list
+    "openssh"
+    "gnupg"
+    "git-delta"
+    "starship"
+    "zoxide"
+    "fzf"
+    "fd"
+    "eza"
+    "ripgrep"
+    "bat"
+    "helix"
+    "bash-completion"
+    "run-parts"
+    "less" -}}
+
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+{{ range $packages -}}
+sudo pacman -S --noconfirm --needed {{ . }}
+{{ end -}}
+{{ if .pass -}}
+sudo pacman -S --noconfirm --needed gopass
+{{ end -}}
+{{ end -}}
