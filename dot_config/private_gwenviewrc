@@ -1,0 +1,12 @@
+[General]
+HistoryEnabled=false
+LastUsedVersion=210800
+
+[ImageView]
+AnimationMethod=DocumentView::GLAnimation
+
+[MainWindow]
+ToolBarsMovable=Disabled
+
+[SideBar]
+InformationSplitterSizes=211,244

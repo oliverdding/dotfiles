@@ -9,7 +9,7 @@ CursorShape=0
 
 [General]
 LocalTabTitleFormat=%d : %n
-Name=oliverdding
+Name=Main
 Parent=FALLBACK/
 
 [Interaction Options]
