@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+function help {
+    echo -e "ClickHouse client for quickly access database online.\nUsage: $0 [r,t,b,tke1.8] [...]"
+}
+
+[[ $# -eq 0 ]] && {
+    error "Need target database."
+    help
+    exit 1
+}
+
+case $1 in
+r | release)
+    CLICK_HOUSE_HOST='10.16.30.26'
+    CLICK_HOUSE_USER='monitor'
+    ;;
+t | test)
+    CLICK_HOUSE_HOST='10.16.30.2'
+    CLICK_HOUSE_USER='monitor'
+    ;;
+tmf1.8)
+    ssh -J devcloud,mixed-main-22 -t tmf1.8 'source /data/umbrella/env/config.sh; kubectl -n $QAPM_CLICKHOUSE_NAMESPACE exec -it $QAPM_CLICKHOUSE_POD -c clickhouse -- clickhouse-client -u $QAPM_CLICKHOUSE_USER --password $QAPM_CLICKHOUSE_PWD -m -d cloud_private;'
+    exit 0
+    ;;
+tmf1.8-arm)
+    ssh -J devcloud,mixed-main-22 -t tmf1.8-arm 'source /data/umbrella/env/config.sh; kubectl -n $QAPM_CLICKHOUSE_NAMESPACE exec -it $QAPM_CLICKHOUSE_POD -c clickhouse -- clickhouse-client -u $QAPM_CLICKHOUSE_USER --password $QAPM_CLICKHOUSE_PWD -m -d cloud_private;'
+    exit 0
+    ;;
+*)
+    error "Unknown target dataabse"
+    help
+    exit 2
+    ;;
+esac
+
+shift 1
+ssh -J devcloud -t mixed-main-22 "clickhouse-client -h $CLICK_HOUSE_HOST -u $CLICK_HOUSE_USER --ask-password -m $@"
