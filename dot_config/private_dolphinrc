@@ -2,6 +2,7 @@
 ShowCopyMoveMenu=true
 
 [General]
+RememberOpenedTabs=false
 ShowFullPath=true
 ShowFullPathInTitlebar=true
 UseTabForSwitchingSplitView=true
