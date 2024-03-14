@@ -1,6 +1,7 @@
 README.md
 LICENSE
 .github
+.config/alacritty # deprecated
 .config/bash_completion.tencentos
 {{- if ne .chezmoi.os "darwin" }}
 Library/Application Support/
