@@ -3,27 +3,27 @@ LICENSE
 .github
 .config/alacritty # deprecated
 .config/bash_completion.tencentos
-{{- if ne .chezmoi.os "darwin" }}
+{{ if ne .chezmoi.os "darwin" }}
 Library/Application Support/
-{{- end }}
-{{- if ne .chezmoi.os "linux" }}
+{{ end }}
+{{ if ne .chezmoi.os "linux" }}
 .config/Code - OSS
 .config/environment.d
 .config/paru
+.config/mimeapps.list
+.config/user-dirs.locale
+{{ end }}
+{{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
+.config/gtk-2.0
+.config/gtk-3.0
+.config/gtk-4.0
+.config/plasma-workspace
 .config/chrome-flags.conf
 .config/code-flags.conf
 .config/electron-flags.conf
 .config/electron25-flags.conf
 .config/electron26-flags.conf
-.config/electron28-flags.conf
-.config/mimeapps.list
-.config/user-dirs.locale
-{{- end }}
-{{- if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
-.config/gtk-2.0
-.config/gtk-3.0
-.config/gtk-4.0
-.config/plasma-workspace
+.config/electron27-flags.conf
 .config/private_dolphinrc
 .config/private_gwenviewrc
 .config/private_konsolerc
@@ -31,11 +31,10 @@ Library/Application Support/
 .config/private_okularrc
 .local/bin/git-credential-with-kwallet
 .local/share/konsole
-{{- end }}
-{{- if ne .chezmoi.osRelease.id "tencentos" }}
+{{ end }}
+{{ if ne .chezmoi.osRelease.id "tencentos" }}
 .config/fzf
-{{- end }}
-{{- if ne .chezmoi.osRelease.id "arch" }}
+{{ end }}
+{{ if ne .chezmoi.osRelease.id "arch" }}
 .config/paru
-{{- end }}
-
+{{ end }}
