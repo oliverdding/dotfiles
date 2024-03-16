@@ -14,6 +14,7 @@ Library/Application Support/
 .config/user-dirs.locale
 {{ end }}
 {{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
+.config/fcitx5
 .config/gtk-2.0
 .config/gtk-3.0
 .config/gtk-4.0
@@ -30,6 +31,9 @@ Library/Application Support/
 .config/private_krunnerrc
 .config/private_okularrc
 .local/bin/git-credential-with-kwallet
+.local/share/applications
+.local/share/fcitx5
+.local/share/icons
 .local/share/konsole
 {{ end }}
 {{ if ne .chezmoi.osRelease.id "tencentos" }}
