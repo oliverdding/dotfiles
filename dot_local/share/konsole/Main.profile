@@ -18,4 +18,4 @@ TrimLeadingSpacesInSelectedText=true
 TrimTrailingSpacesInSelectedText=true
 
 [Keyboard]
-KeyBindings=linux
+KeyBindings=default
