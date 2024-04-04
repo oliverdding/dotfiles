@@ -101,5 +101,6 @@
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 12,
     "window.autoDetectColorScheme": true,
-    "http.proxy": "http://127.0.0.1:7890"
+    "http.proxy": "http://127.0.0.1:7890",
+    "workbench.colorTheme": "Default Light Modern"
 }
