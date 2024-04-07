@@ -26,4 +26,20 @@ sudo pacman -S --noconfirm --needed {{ . }}
 {{ if .pass -}}
 sudo pacman -S --noconfirm --needed gopass
 {{ end -}}
+
+{{ if eq .hosttype "desktop" -}}
+
+{{ $fonts := list
+    "noto-fonts"
+    "noto-fonts-cjk"
+    "noto-fonts-emoji"
+    "ttf-nerd-fonts-symbols"
+    "ttc-iosevka" -}}
+
+{{ range $fonts -}}
+sudo pacman -S --noconfirm --needed {{ . }}
+{{ end -}}
+
+{{ end -}}
+
 {{ end -}}

@@ -15,3 +15,7 @@ Or if the system package manager doesn't contain `chezmoi` so you would like to 
 ```bash
 sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply oliverdding
 ```
+
+## Font configuration
+
+See also: [用 fontconfig 治理 Linux 中的字体](https://catcat.cc/post/2021-03-07/)
