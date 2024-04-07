@@ -27,7 +27,6 @@ Library/Application Support/
 .config/electron26-flags.conf
 .config/electron27-flags.conf
 .config/private_dolphinrc
-.config/private_gwenviewrc
 .config/private_konsolerc
 .config/private_krunnerrc
 .config/private_okularrc
