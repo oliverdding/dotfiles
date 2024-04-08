@@ -1,5 +1,6 @@
 [General]
 FreeFloating=true
+history=
 historyBehavior=Disabled
 
 [Plugins]
