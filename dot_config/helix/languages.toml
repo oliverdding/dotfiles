@@ -32,5 +32,5 @@ name = "cpp"
 indent = { tab-width = 4, unit = "    " }
 
 [language-server.clangd]
-args = [ "--background-index", "--compile-commands-dir=build", "-j=12", "--query-driver=/opt/local/bin/clang++", "--clang-tidy", "--all-scopes-completion", "--completion-style=detailed", "--function-arg-placeholders", "--header-insertion=iwyu", "--pch-storage=memory", "-std=c++11", "-Wc++11-extensions" ]
-config = { "fallbackFlags" = [ "-std=c++11", "-Wc++11-extensions" ] }
+args = [ "--background-index", "--compile-commands-dir=build", "-j=8", "--clang-tidy", "--all-scopes-completion", "--completion-style=detailed", "--function-arg-placeholders", "--header-insertion=iwyu", "--pch-storage=memory", "--malloc-trim", "--offset-encoding=utf-8" ]
+config = { "fallbackFlags" = [ "-std=c++17", "-Wc++17-extensions" ] }
