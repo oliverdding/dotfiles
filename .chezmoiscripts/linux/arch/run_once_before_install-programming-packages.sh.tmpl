@@ -2,8 +2,6 @@
 
 {{ $packages := list
     "gcc"
-    "clang"
-    "llvm"
     "mold"
     "rustup"
     "rust-analyzer"
@@ -16,5 +14,7 @@ set -eufo pipefail
 {{ range $packages -}}
 sudo pacman -S --noconfirm --needed {{ . }}
 {{ end -}}
+
+rustup default nigntly
 
 {{ end -}}
