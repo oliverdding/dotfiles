@@ -1,16 +1,22 @@
-use-grammars = { except = ["gemini"] }
-
 [[language]]
 name = "rust"
+
+[language-server.rust-analyzer.config]
+imports.granularity.group = "module"
+imports.prefix = "crate"
+diagnostics.experimental.enable = true
 
 [[language]]
 name = "go"
 
 [language-server.gopls.config]
+semanticTokens = true
 gofumpt = true
-analyses = { "fieldalignment" = true, "nilness" = true, "unusedvariable" = true }
+analyses = { "shadow" = true, "fieldalignment" = true, "unusedvariable" = true, "useany" = true }
+usePlaceholders = true
 staticcheck = true
 vulncheck = "Imports"
+hints = { "assignVariableType" = true, "compositeLiteralFields" = true, "compositeLiteralTypes" = true, "constantValues" = true, "functionTypeParameters" = true, "parameterNames" = true, "rangeVariableTypes" = true }
 
 [[language]]
 name = "typescript"
