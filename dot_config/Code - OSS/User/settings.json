@@ -15,7 +15,7 @@
   "codeium.enableConfig": {
     "*": true
   },
-  "crates.indexServerURL": "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index",
+  "crates.indexServerURL": "sparse+https://mirrors.aliyun.com/crates.io-index/",
   "docker.containers.description": [
     "Ports",
     "Status"
@@ -108,5 +108,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.tree.indent": 12
+  "workbench.tree.indent": 12,
+  "http.proxy": "http://127.0.0.1:7890"
 }
