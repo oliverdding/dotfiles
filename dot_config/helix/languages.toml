@@ -2,15 +2,19 @@
 name = "rust"
 
 [language-server.rust-analyzer.config]
+check.command = "clippy"
 imports.granularity.group = "module"
 imports.prefix = "crate"
 diagnostics.experimental.enable = true
+diagnostics.styleLints.enable = true
+
+inlayHints.bindingModeHints.enable = true
+inlayHints.closureCaptureHints.enable = true
 
 [[language]]
 name = "go"
 
 [language-server.gopls.config]
-semanticTokens = true
 gofumpt = true
 analyses = { "shadow" = true, "fieldalignment" = true, "unusedvariable" = true, "useany" = true }
 usePlaceholders = true
