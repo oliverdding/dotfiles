@@ -2,17 +2,17 @@
 size = 16.0
 
 [font.normal]
-family = "FantasqueSansM Nerd Font Mono"
+family = "Monospace"
 style = "Regular"
 
 [font.bold]
-family = "FantasqueSansM Nerd Font Mono"
+family = "Monospace"
 style = "Bold"
 
 [font.bold_italic]
-family = "FantasqueSansM Nerd Font Mono"
+family = "Monospace"
 style = "Blod Italic"
 
 [font.italic]
-family = "FantasqueSansM Nerd Font Mono"
+family = "Monospace"
 style = "Italic"
