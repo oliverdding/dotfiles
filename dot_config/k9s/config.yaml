@@ -12,7 +12,7 @@ k9s:
     crumbsless: false
     reactive: false
     noIcons: false
-    skin: one-dark
+    skin: tokyonight
   skipLatestRevCheck: true
   disablePodCounting: false
   shellPod:
