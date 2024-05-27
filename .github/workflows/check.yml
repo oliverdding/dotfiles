@@ -9,6 +9,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+    - name: Install bat
+      run: sudo apt install bat
     - name: Install dotfiles
       run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty -v --no-pager --keep-going --debug oliverdding --apply --promptDefaults
     - name: Check system
