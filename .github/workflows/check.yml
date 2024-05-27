@@ -12,6 +12,6 @@ jobs:
     - name: Install bat
       run: sudo apt install bat
     - name: Install dotfiles
-      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty -v --no-pager --keep-going --debug oliverdding --apply --promptDefaults
+      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty --no-pager --keep-going oliverdding --apply --promptDefaults
     - name: Check system
-      run: ./bin/chezmoi doctor --keep-going --no-pager --no-tty -v --debug
+      run: ./bin/chezmoi doctor --keep-going --no-pager --no-tty
