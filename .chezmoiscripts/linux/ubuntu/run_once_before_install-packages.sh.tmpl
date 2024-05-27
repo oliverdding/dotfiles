@@ -1,0 +1,14 @@
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch") -}}
+
+{{ $packages := list
+    "bat" -}}
+
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+{{ range $packages -}}
+sudo apt install {{ . }}
+{{ end -}}
+
+{{ end -}}
