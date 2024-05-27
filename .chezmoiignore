@@ -1,5 +1,6 @@
 README.md
 LICENSE
+.git
 .github
 .config/alacritty # deprecated
 .config/bash_completion.tencentos
