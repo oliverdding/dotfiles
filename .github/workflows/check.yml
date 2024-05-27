@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install dotfiles
-      run: |
-        sudo apt install bat
-        echo $PATH
-        bat --version
-        sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty --no-pager --keep-going oliverdding --apply --promptDefaults
+      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty --no-pager --keep-going oliverdding --apply --promptDefaults
     - name: Check system
       run: ./bin/chezmoi doctor --keep-going --no-pager --no-tty
