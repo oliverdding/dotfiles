@@ -1,9 +1,0 @@
-theme = 'TokyoNight'
-
-{{ if eq .chezmoi.os "linux" }}
-{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-copy_cmd = '/mnt/c/Windows/System32/clip.exe'
-{{ else }}
-copy_cmd = 'wl-copy --trim-newline'
-{{   end }}
-{{ end }}
