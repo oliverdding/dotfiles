@@ -3,8 +3,8 @@ cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 
 # init config
-init-author-name=oliverdding
-init-author-email=oliverdding@outlook.com
+init-author-name={{ .gitname }}
+init-author-email={{ .gitmail }}
 init-author-url=https://charmer.fun
 
 # mirror config
