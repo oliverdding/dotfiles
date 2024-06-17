@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.hostname "tower" }}
+{{-   include "daemon.tower.json" -}}
+{{- else }}
+{{-   include "daemon.default.json" -}}
+{{- end }}

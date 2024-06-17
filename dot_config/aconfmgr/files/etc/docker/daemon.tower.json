@@ -1,0 +1,14 @@
+{
+  "bip": "172.26.0.1/16",
+  "insecure-registries": [
+    "mirrors.tencent.com",
+    "hub.oa.com",
+    "docker.oa.com:8080",
+    "csighub.tencentyun.com"
+  ],
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
+    "https://dockerhub.woa.com",
+    "https://csighub.woa.com"
+  ]
+}

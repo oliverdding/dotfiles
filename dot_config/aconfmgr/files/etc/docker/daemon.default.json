@@ -1,0 +1,7 @@
+{
+    "storage-driver": "btrfs",
+    "bip": "172.26.0.1/16",
+    "registry-mirrors": [
+        "https://hub-mirror.c.163.com"
+    ]
+}

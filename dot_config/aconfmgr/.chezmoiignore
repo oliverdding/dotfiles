@@ -1,0 +1,12 @@
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+201-configure-ufw.sh
+202-configure-zram.sh
+300-configure-network.sh
+301-configure-bluetooth.sh
+{{   end }}
+{{ end }}
+{{ if ne .hosttype "desktop" }}
+302-install-kde.sh
+303-install-sddm.sh
+{{ end }}
