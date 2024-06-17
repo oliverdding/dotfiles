@@ -1,3 +1,3 @@
-{{- if eq .chezmoi.osRelease "tencentos" }}
-{{-   include "bash_completion.tencentos" -}}
+{{- if eq .chezmoi.osRelease.id "tencentos" }}
+{{-   include "dot_config/bash_completion.tencentos" -}}
 {{- end }}
