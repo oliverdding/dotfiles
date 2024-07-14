@@ -31,6 +31,7 @@ Library/Application Support/
 .config/private_konsolerc
 .config/private_krunnerrc
 .config/private_okularrc
+.config/qq-flags.conf
 .local/bin/git-credential-with-kwallet
 .local/share/applications
 .local/share/fcitx5
