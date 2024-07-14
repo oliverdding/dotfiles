@@ -1,12 +1,16 @@
-{{ if eq .chezmoi.os "linux" }}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+102-install-btrfs.sh
 201-configure-ufw.sh
 202-configure-zram.sh
 300-configure-network.sh
 301-configure-bluetooth.sh
 {{   end }}
-{{ end }}
 {{ if ne .hosttype "desktop" }}
 302-install-kde.sh
 303-install-sddm.sh
+304-install-useful-applications.sh
+305-install-fonts.sh
 {{ end }}
+{{- if ne .chezmoi.hostname "tower" }}
+155-install-development-k8s.sh
+{{- end }}

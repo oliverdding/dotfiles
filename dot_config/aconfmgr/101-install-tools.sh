@@ -3,6 +3,7 @@ AddPackage bottom # A graphical process/system monitor
 AddPackage chezmoi # Manage your dotfiles across multiple machines
 AddPackage eza # A modern replacement for ls (community fork of exa)
 AddPackage fd # Simple, fast and user-friendly alternative to find
+AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage fzf # Command-line fuzzy finder
 AddPackage gopass # The slightly more awesome standard unix password manager for teams.
 AddPackage graphviz # Graph visualization software
@@ -15,6 +16,7 @@ AddPackage proxychains-ng # A hook preloader that allows to redirect TCP traffic
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage starship # The cross-shell prompt for astronauts
 AddPackage topgrade # Invoke the upgrade procedure of multiple package managers
+AddPackage wget # Network utility to retrieve files from the Web
 AddPackage yazi # Blazing fast terminal file manager written in Rust, based on async I/O
 AddPackage zoxide # A smarter cd command for your terminal
 

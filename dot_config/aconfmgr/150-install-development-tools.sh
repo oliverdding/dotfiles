@@ -9,5 +9,6 @@ AddPackage hurl # Run and test HTTP requests with plain text
 AddPackage just # A handy way to save and run project-specific commands
 AddPackage mkcert # Simple tool for making locally-trusted development certificates
 AddPackage taplo-cli # TOML toolkit written in Rust
+AddPackage traceroute # Tracks the route taken by packets over an IP network
 AddPackage vscode-json-languageserver # JSON language server
 AddPackage yaml-language-server # YAML Language Server
