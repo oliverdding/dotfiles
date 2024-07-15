@@ -49,7 +49,6 @@ IgnorePath '/etc/X11'
 IgnorePath '/etc/sddm.conf.d/kde_settings.conf' # kde auto login settings for sddm
 
 # system directories for temporary files
-IgnorePath '/lost+found'
 IgnorePath '/lost+found/*'
 IgnorePath '/var/*'
 

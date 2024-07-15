@@ -27,10 +27,12 @@ Library/Application Support/
 .config/electron25-flags.conf
 .config/electron26-flags.conf
 .config/electron27-flags.conf
-.config/private_dolphinrc
-.config/private_konsolerc
-.config/private_krunnerrc
-.config/private_okularrc
+.config/electron28-flags.conf
+.config/mimeapps.list
+.config/dolphinrc
+.config/konsolerc
+.config/krunnerrc
+.config/okularrc
 .config/qq-flags.conf
 .local/bin/git-credential-with-kwallet
 .local/share/applications
