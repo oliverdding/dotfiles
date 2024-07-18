@@ -18,6 +18,7 @@ AddPackage rime-ice-pinyin-git # Rime 配置：雾凇拼音 | 长期维护的简
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage sweeper # System Cleaner
 AddPackage xorg-xwininfo # Command-line utility to print information about windows on an X server
+AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 
 AddPackage --foreign clash-verge-rev-bin # Continuation of Clash Verge | A Clash Meta GUI based on Tauri
 AddPackage --foreign google-chrome # The popular web browser by Google (Stable Channel)
@@ -25,3 +26,6 @@ AddPackage --foreign linuxqq # New Linux QQ based on Electron
 AddPackage --foreign lrcget-bin # Utility for mass-downloading LRC synced lyrics for your offline music library.
 AddPackage --foreign qmplay2 # QMPlay2 is a video and audio player which can play most formats and codecs
 AddPackage --foreign zotero-beta-bin # Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
+
+CopyFile /etc/systemd/system/clash-verge-service.service
+CreateLink /etc/systemd/system/multi-user.target.wants/clash-verge-service.service /etc/systemd/system/clash-verge-service.service

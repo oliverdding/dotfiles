@@ -47,6 +47,7 @@ IgnorePath '/etc/fonts'
 IgnorePath '/etc/vconsole.conf'
 IgnorePath '/etc/X11'
 IgnorePath '/etc/sddm.conf.d/kde_settings.conf' # kde auto login settings for sddm
+IgnorePath '/etc/systemd/user/*'
 
 # system directories for temporary files
 IgnorePath '/lost+found/*'

@@ -5,4 +5,4 @@ AddPackage docker-scan # Docker Scan is a Command Line Interface to run vulnerab
 
 CopyFile /etc/docker/daemon.json
 
-systemctl enable docker.socket # docker.socket starts docker on first usage
+CreateLink /etc/systemd/system/sockets.target.wants/docker.socket /usr/lib/systemd/system/docker.socket # docker.socket starts docker on first usage

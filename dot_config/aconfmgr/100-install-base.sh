@@ -16,3 +16,8 @@ AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage which # A utility to show the full path of commands
 AddPackage xdg-user-dirs # Manage user directories like ~/Desktop and ~/Music
 AddPackage zip # Compressor/archiver for creating and modifying zipfiles
+
+CopyFile /etc/systemd/timesyncd.conf.d/china.conf
+
+CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
+CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service
