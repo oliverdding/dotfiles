@@ -2,8 +2,11 @@
 102-install-btrfs.sh
 201-configure-ufw.sh
 202-configure-zram.sh
+204-configure-timesyncd.sh
 300-configure-network.sh
 301-configure-bluetooth.sh
+{{- else }}
+103-install-wsl.sh
 {{   end }}
 {{ if ne .hosttype "desktop" }}
 302-install-kde.sh

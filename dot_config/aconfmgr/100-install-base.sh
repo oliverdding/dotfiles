@@ -10,14 +10,11 @@ AddPackage openssh # SSH protocol implementation for remote login, command execu
 AddPackage paru # Feature packed AUR helper
 AddPackage pigz # Parallel implementation of the gzip file compressor
 AddPackage run-parts # run scripts or programs in a directory
+AddPackage sudo # Give certain users the ability to run some commands as root
+AddPackage tree # A directory listing program displaying a depth indented list of files
 AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files
 AddPackage unrar # The RAR uncompression program
 AddPackage unzip # For extracting and viewing files in .zip archives
 AddPackage which # A utility to show the full path of commands
 AddPackage xdg-user-dirs # Manage user directories like ~/Desktop and ~/Music
 AddPackage zip # Compressor/archiver for creating and modifying zipfiles
-
-CopyFile /etc/systemd/timesyncd.conf.d/china.conf
-
-CreateLink /etc/systemd/system/dbus-org.freedesktop.timesync1.service /usr/lib/systemd/system/systemd-timesyncd.service
-CreateLink /etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service /usr/lib/systemd/system/systemd-timesyncd.service

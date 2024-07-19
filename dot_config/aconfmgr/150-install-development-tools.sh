@@ -8,7 +8,11 @@ AddPackage git-lfs # Git extension for versioning large files
 AddPackage hurl # Run and test HTTP requests with plain text
 AddPackage just # A handy way to save and run project-specific commands
 AddPackage mkcert # Simple tool for making locally-trusted development certificates
+AddPackage sqlfluff # A dialect-flexible and configurable SQL linter
 AddPackage taplo-cli # TOML toolkit written in Rust
+AddPackage tcpdump # Powerful command-line packet analyzer
 AddPackage traceroute # Tracks the route taken by packets over an IP network
 AddPackage vscode-json-languageserver # JSON language server
 AddPackage yaml-language-server # YAML Language Server
+
+AddPackage --foreign duckdb-bin # An in-process SQL OLAP database management system

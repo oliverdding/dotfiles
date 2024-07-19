@@ -26,3 +26,5 @@ CopyFile /etc/sudoers.d/99_wheel
 # --- journald, see also: https://man.archlinux.org/man/journald.conf.5.en
 CopyFile /etc/systemd/journald.conf.d/override.conf
 
+CreateLink /etc/systemd/system/getty.target.wants/getty@tty1.service /usr/lib/systemd/system/getty@.service
+CreateLink /etc/systemd/system/multi-user.target.wants/remote-fs.target /usr/lib/systemd/system/remote-fs.target
