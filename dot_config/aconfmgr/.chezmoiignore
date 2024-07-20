@@ -3,6 +3,7 @@
 201-configure-ufw.sh
 202-configure-zram.sh
 204-configure-timesyncd.sh
+205-configure-ssd.sh
 300-configure-network.sh
 301-configure-bluetooth.sh
 {{- else }}
