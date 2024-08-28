@@ -1,0 +1,94 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "dock": "bottom",
+    "version": "2"
+  },
+  "auto_update": false,
+  "autosave": "on_focus_change",
+  "buffer_font_family": "Iosevka Fixed",
+  "buffer_font_size": 16,
+  "current_line_highlight": "gutter",
+  "cursor_blink": false,
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+      "delay_ms": 500
+    }
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "inline_completions": {
+    "disabled_globs": [".env"]
+  },
+  "journal": {
+    "hour_format": "hour24"
+  },
+  "load_direnv": "shell_hook",
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        }
+      }
+    },
+    "gopls": {
+      "initialization_options": {
+        "directoryFilters": ["-**/node_modules", "-**/.git"],
+        "gofumpt": true,
+        "codelenses": {
+          "gc_details": true
+        },
+        "analyses": {
+          "fieldalignment": true,
+          "shadow": true,
+          "unusedvariable": true,
+          "useany": true
+        },
+        "staticcheck": true,
+        "semanticTokens": true
+      }
+    }
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "scrollbar": {
+    "show": "system"
+  },
+  "show_whitespaces": "all",
+  "tabs": {
+    "close_position": "right",
+    "git_status": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "font_family": "Iosevka Term",
+    "font_size": 14
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Rosé Pine Dawn",
+    "dark": "Rosé Pine Moon"
+  },
+  "ui_font_size": 16
+}
