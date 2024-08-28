@@ -38,6 +38,7 @@ AddPackage pipewire-jack # Low-latency audio/video router and processor - JACK r
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
 AddPackage plasma-meta # Meta package to install KDE Plasma
 AddPackage plasma-workspace # KDE Plasma Workspace
+AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
 AddPackage qt5-wayland # Provides APIs for Wayland
 AddPackage qt6-quick3d # Qt module and API for defining 3D content in Qt Quick
 AddPackage smartmontools # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives

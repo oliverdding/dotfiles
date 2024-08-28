@@ -38,6 +38,7 @@ video/x-ogm=QMPlay2.desktop;
 video/x-ogm+ogg=QMPlay2.desktop;
 video/x-theora=QMPlay2.desktop;
 video/x-theora+ogg=QMPlay2.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 
 [Default Applications]
 application/x-bittorrent=org.kde.ktorrent.desktop;
@@ -85,3 +86,4 @@ x-scheme-handler/clash=clash-verge.desktop
 x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
