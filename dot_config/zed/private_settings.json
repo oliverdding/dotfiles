@@ -18,6 +18,7 @@
   "auto_update": false,
   "autosave": "on_focus_change",
   "buffer_font_family": "Iosevka Fixed",
+  "buffer_font_fallbacks": ["Noto Sans CJK SC", "Noto Color Emoji"],
   "buffer_font_size": 16,
   "current_line_highlight": "gutter",
   "cursor_blink": false,
@@ -45,6 +46,28 @@
       "initialization_options": {
         "check": {
           "command": "clippy"
+        },
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          },
+          "styleLints": {
+            "enable": true
+          }
+        },
+        "imports": {
+          "granularity": {
+            "group": "module"
+          },
+          "prefix": "crate"
+        },
+        "inlayHints": {
+          "bindingModeHints": {
+            "enable": true
+          },
+          "closureCaptureHints": {
+            "enable": true
+          }
         }
       }
     },
