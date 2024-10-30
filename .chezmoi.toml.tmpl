@@ -6,17 +6,17 @@
 {{- $gpgagent := promptBoolOnce   . "gpgagent" "Use gnupg agent instead of ssh agent? [Y/n]" false                     -}}
 {{- $pass     := promptBoolOnce   . "pass"     "Clone pass store? [Y/n]"                     false                     -}}
 
+encryption = "gpg"
+[gpg]
+  recipient = "oliverdding@outlook.com"
+  args = [ "--quiet" ]
+
 [data]
   gitname  = {{ $gitname  | quote }}
   gitmail  = {{ $gitmail  | quote }}
   hosttype = {{ $hosttype | quote }}
   gpgagent = {{ $gpgagent }}
   pass     = {{ $pass }}
-
-encryption = "gpg"
-[gpg]
-  recipient = "oliverdding@outlook.com"
-  args = [ "--quiet" ]
 
 [diff]
   command = "delta"
