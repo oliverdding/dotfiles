@@ -1,5 +1,6 @@
 AddPackage atac # A simple API client (postman like) in your terminal
 AddPackage bash-language-server # Bash language server implementation based on Tree Sitter and its grammar for Bash
+AddPackage d2 # A modern diagram scripting language that turns text to diagrams
 AddPackage binsider # A TUI for analyzing binaries like a boss
 AddPackage direnv # A shell extension that manages your environment
 AddPackage git # the fast distributed version control system
