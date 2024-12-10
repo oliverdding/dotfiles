@@ -20,11 +20,11 @@ t | test)
     CLICK_HOUSE_USER='monitor'
     ;;
 tmf1.8)
-    ssh -J devcloud,mixed-main-22 -t tmf1.8 'source /data/umbrella/env/config.sh; kubectl -n $QAPM_CLICKHOUSE_NAMESPACE exec -it $QAPM_CLICKHOUSE_POD -c clickhouse -- clickhouse-client -u $QAPM_CLICKHOUSE_USER --password $QAPM_CLICKHOUSE_PWD -m -d cloud_private;'
+    ssh -J devcloud,dbjump -t tmf1.8 'source /data/umbrella/env/config.sh; kubectl -n $QAPM_CLICKHOUSE_NAMESPACE exec -it $QAPM_CLICKHOUSE_POD -c clickhouse -- clickhouse-client -u $QAPM_CLICKHOUSE_USER --password $QAPM_CLICKHOUSE_PWD -m -d cloud_private;'
     exit 0
     ;;
 tmf1.8-arm)
-    ssh -J devcloud,mixed-main-22 -t tmf1.8-arm 'source /data/umbrella/env/config.sh; kubectl -n $QAPM_CLICKHOUSE_NAMESPACE exec -it $QAPM_CLICKHOUSE_POD -c clickhouse -- clickhouse-client -u $QAPM_CLICKHOUSE_USER --password $QAPM_CLICKHOUSE_PWD -m -d cloud_private;'
+    ssh -J devcloud,dbjump -t tmf1.8-arm 'source /data/umbrella/env/config.sh; kubectl -n $QAPM_CLICKHOUSE_NAMESPACE exec -it $QAPM_CLICKHOUSE_POD -c clickhouse -- clickhouse-client -u $QAPM_CLICKHOUSE_USER --password $QAPM_CLICKHOUSE_PWD -m -d cloud_private;'
     exit 0
     ;;
 *)
@@ -35,4 +35,4 @@ tmf1.8-arm)
 esac
 
 shift 1
-ssh -J devcloud -t mixed-main-22 "clickhouse-client -h $CLICK_HOUSE_HOST -u $CLICK_HOUSE_USER --ask-password -m $@"
+ssh -J devcloud -t dbjump "clickhouse-client -h $CLICK_HOUSE_HOST -u $CLICK_HOUSE_USER --ask-password -m $@"
