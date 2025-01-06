@@ -7,6 +7,11 @@ true-color = true # for ssh
 bufferline = "multiple"
 color-modes = true
 default-line-ending = "lf"
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
 
 [editor.soft-wrap]
 enable = true
