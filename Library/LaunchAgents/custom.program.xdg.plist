@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>custom.program.xdg</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/sh</string>
+      <string>-c</string>
+      <string>
+        /bin/launchctl setenv AWS_CONFIG_FILE "$HOME/Library/Application Support/aws/config"
+        /bin/launchctl setenv AWS_SHARED_CREDENTIALS_FILE "$HOME/Library/Application Support/aws/credentials"
+        /bin/launchctl setenv AZURE_CONFIG_DIR "$HOME/Library/Application Support/azure"
+        /bin/launchctl setenv CALCHISTFILE "$HOME/Library/Caches/calc_history"
+        /bin/launchctl setenv CARGO_HOME "$HOME/Library/Application Support/cargo"
+        /bin/launchctl setenv DOCKER_CONFIG "$HOME/Library/Application Support/docker"
+        /bin/launchctl setenv ELM_HOME "$HOME/Library/Application Support/elm"
+        /bin/launchctl setenv FFMPEG_DATADIR "$HOME/Library/Application Support/ffmpeg"
+        /bin/launchctl setenv GDBHISTFILE "$HOME/Library/Application Support/gdb/history"
+        /bin/launchctl setenv GOMODCACHE "$HOME/Library/Caches/go/mod"
+        /bin/launchctl setenv GOPATH "$HOME/Library/Application Support/go"
+        /bin/launchctl setenv GOPASS_CONFIG "$HOME/Library/Application Support/gopass/config"
+        /bin/launchctl setenv GRADLE_USER_HOME "$HOME/Library/Application Support/gradle"
+        /bin/launchctl setenv HISTFILE "$HOME/Library/Application Support/bash/history"
+        /bin/launchctl setenv INPUTRC "$HOME/Library/Application Support/readline/inputrc"
+        /bin/launchctl setenv IPFS_PATH "$HOME/Library/Application Support/ipfs"
+        /bin/launchctl setenv JUPYTER_CONFIG_DIR "$HOME/Library/Application Support/jupyter"
+        /bin/launchctl setenv JUPYTER_PLATFORM_DIRS "1"
+        /bin/launchctl setenv JUPYTERLAB_DIR "$HOME/Library/Application Support/jupyter/lab"
+        /bin/launchctl setenv K9SCONFIG "$HOME/Library/Application Support/k9s"
+        /bin/launchctl setenv LEDGER_FILE "$HOME/Library/Application Support/hledger.journal"
+        /bin/launchctl setenv LYNX_CFG_PATH "$HOME/Library/Application Support/lynx.cfg"
+        /bin/launchctl setenv MACHINE_STORAGE_PATH "$HOME/Library/Application Support/docker-machine"
+        /bin/launchctl setenv MINIKUBE_HOME "$HOME/Library/Application Support/minikube"
+        /bin/launchctl setenv MIX_XDG "true"
+        /bin/launchctl setenv MOST_INITFILE "$HOME/Library/Application Support/mostrc"
+        /bin/launchctl setenv MYPY_CACHE_DIR "$HOME/Library/Caches/mypy"
+        /bin/launchctl setenv MYSQL_HISTFILE "$HOME/Library/Application Support/mysql_history"
+        /bin/launchctl setenv NODE_REPL_HISTORY "$HOME/Library/Application Support/node_repl_history"
+        /bin/launchctl setenv NPM_CONFIG_USERCONFIG "$HOME/Library/Application Support/npm/npmrc"
+        /bin/launchctl setenv PASSWORD_STORE_DIR "$HOME/Library/Application Support/pass"
+        /bin/launchctl setenv PGPASSFILE "$HOME/Library/Application Support/pg/pgpass"
+        /bin/launchctl setenv PROXYCHAINS_CONF_FILE "$HOME/Library/Application Support/proxychains/proxychains.conf"
+        /bin/launchctl setenv PSQL_HISTORY "$HOME/Library/Application Support/psql_history"
+        /bin/launchctl setenv PSQLRC "$HOME/Library/Application Support/pg/psqlrc"
+        /bin/launchctl setenv PYENV_ROOT "$HOME/Library/Application Support/pyenv"
+        /bin/launchctl setenv PYLINTHOME "$HOME/Library/Caches/pylint"
+        /bin/launchctl setenv PYTHON_EGG_CACHE "$HOME/Library/Caches/python-eggs"
+        /bin/launchctl setenv PYTHON_HISTORY "$HOME/Library/Application Support/python/history"
+        /bin/launchctl setenv PYTHONPYCACHEPREFIX "$HOME/Library/Caches/python"
+        /bin/launchctl setenv PYTHONUSERBASE "$HOME/Library/Application Support/python"
+        /bin/launchctl setenv REDISCLI_HISTFILE "$HOME/Library/Application Support/redis/rediscli_history"
+        /bin/launchctl setenv REDISCLI_RCFILE "$HOME/Library/Application Support/redis/redisclirc"
+        /bin/launchctl setenv RIPGREP_CONFIG_PATH "$HOME/Library/Application Support/ripgrep/config"
+        /bin/launchctl setenv RUFF_CACHE_DIR "$HOME/Library/Caches/ruff"
+        /bin/launchctl setenv RUSTUP_HOME "$HOME/Library/Application Support/rustup"
+        /bin/launchctl setenv SCREENRC "$HOME/Library/Application Support/screen/screenrc"
+        /bin/launchctl setenv SDKMAN_DIR "$HOME/Library/Application Support/sdkman"
+        /bin/launchctl setenv SQLITE_HISTORY "$HOME/Library/Application Support/sqlite_history"
+        /bin/launchctl setenv TERMINFO_DIRS "$HOME/Library/Application Support/terminfo:/usr/share/terminfo"
+        /bin/launchctl setenv TERMINFO "$HOME/Library/Application Support/terminfo"
+        /bin/launchctl setenv TEXMFCONFIG "$HOME/Library/Application Support/texlive/texmf-config"
+        /bin/launchctl setenv TEXMFHOME "$HOME/Library/Application Support/texmf"
+        /bin/launchctl setenv TEXMFVAR "$HOME/Library/Caches/texlive/texmf-var"
+        /bin/launchctl setenv VAGRANT_ALIAS_FILE "$HOME/Library/Application Support/vagrant/aliases"
+        /bin/launchctl setenv VAGRANT_HOME "$HOME/Library/Application Support/vagrant"
+        /bin/launchctl setenv W3M_DIR "$HOME/Library/Application Support/w3m"
+        /bin/launchctl setenv WGETRC "$HOME/Library/Application Support/wgetrc"
+        /bin/launchctl setenv WORKON_HOME "$HOME/Library/Application Support/virtualenvs"
+      </string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+  </dict>
+</plist>

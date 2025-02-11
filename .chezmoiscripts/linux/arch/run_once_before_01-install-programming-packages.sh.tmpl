@@ -15,7 +15,7 @@ set -eufo pipefail
 sudo pacman -S --noconfirm --needed {{ . }}
 {{ end -}}
 
-rustup default nightly
+rustup default stable
 
 # snippet manager in terminal
 # https://github.com/out-of-cheese-error/the-way

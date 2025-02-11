@@ -10,5 +10,8 @@
     "https://mirror.ccs.tencentyun.com",
     "https://dockerhub.woa.com",
     "https://csighub.woa.com"
-  ]
+  ],
+  "features": {
+    "buildkit": true
+  }
 }

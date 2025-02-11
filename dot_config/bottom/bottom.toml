@@ -1,2 +1,6 @@
+
 [flags]
-color = "default"
+temperature_type = "c"
+
+[styles]
+theme = "gruvbox"

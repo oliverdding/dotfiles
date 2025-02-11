@@ -1,5 +1,11 @@
 {{- if .pass }}
+{{- if eq .chezmoi.os "linux" }}
 [".local/share/pass"]
   type = "git-repo"
   url = "git@github.com:oliverdding/pass.git"
+{{- else if eq .chezmoi.os "darwin" }}
+["Library/Application Support/pass"]
+  type = "git-repo"
+  url = "git@github.com:oliverdding/pass.git"
+{{- end }}
 {{- end }}

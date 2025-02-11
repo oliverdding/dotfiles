@@ -1,0 +1,87 @@
+[packages.darwin]
+mas = [
+    497799835, # Xcode
+    1549159979, # uPic
+    6452276577, # DockX
+    462058435, # Microsoft Excel
+    6467176005, # 1Break
+    1630034110, # Bob
+    1295203466, # Windows App
+    1024640650, # CotEditor
+    462054704, # Microsoft Word
+    462062816, # Microsoft PowerPoint
+]
+brews = [
+    "bash-completion@2",
+    "bat",
+    "bottom",
+    "chezmoi",
+    "cmake",
+    "colima",
+    "curl",
+    "d2",
+    "direnv",
+    "docker",
+    "duckdb",
+    "dwarf",
+    "eza",
+    "fd",
+    "ffmpegthumbnailer",
+    "git",
+    "git-delta",
+    "git-lfs",
+    "go",
+    "gopass",
+    "gopls",
+    "graphviz",
+    "helix",
+    "helm",
+    "hexyl",
+    "hurl",
+    "hyperfine",
+    "jq",
+    "just",
+    "k9s",
+    "kind",
+    "kubernetes-cli",
+    "kubie",
+    "less",
+    "lld",
+    "luarocks",
+    "mas",
+    "miniserve",
+    "mold",
+    "navi",
+    "ninja",
+    "openjdk@11",
+    "openssh",
+    "openssl",
+    "ouch",
+    "qemu",
+    "ripgrep",
+    "rmtrash",
+    "ruff",
+    "rustup",
+    "sccache",
+    "starship",
+    "stylua",
+    "tokei",
+    "topgrade",
+    "vegeta",
+    "yazi",
+    "zoxide",
+]
+casks = [
+    "clash-verge-rev",
+    "dbeaverlite",
+    "google-chrome",
+    "iina",
+    "obsidian",
+    "raycase",
+    "steam",
+    "visual-studio-code",
+    "wezterm",
+    "xld",
+    "zed",
+    "zotero",
+]

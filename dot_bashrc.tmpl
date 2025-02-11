@@ -4,20 +4,30 @@
 gpg-connect-agent updatestartuptty /bye >/dev/null
 {{ end }}
 
-{{- if eq .chezmoi.osRelease.id "arch" }}
-[[ -f /usr/share/fzf/key-bindings.bash ]] && source /usr/share/fzf/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
-{{- else if eq .chezmoi.osRelease.id "tencentos" }}
-[[ -f $HOME/.config/fzf/key-bindings.bash ]] && source $HOME/.config/fzf/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
-{{- else if eq .chezmoi.osRelease.id "Ubuntu" }}
-[[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && source /usr/share/doc/fzf/examples/key-bindings.bash || echo "[$0] cannot find key-bindings.bash of fzf"
-{{ end }}
-
-# https://github.com/folke/tokyonight.nvim/blob/main/extras/fzf/tokyonight_night.zsh
+# https://github.com/folke/tokyonight.nvim/blob/main/extras/fzf/tokyonight_night.sh
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
---color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
---color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
---color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
---color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none \
+  --color=bg+:#283457 \
+  --color=bg:#16161e \
+  --color=border:#27a1b9 \
+  --color=fg:#c0caf5 \
+  --color=gutter:#16161e \
+  --color=header:#ff9e64 \
+  --color=hl+:#2ac3de \
+  --color=hl:#2ac3de \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#2ac3de \
+  --color=query:#c0caf5:regular \
+  --color=scrollbar:#27a1b9 \
+  --color=separator:#ff9e64 \
+  --color=spinner:#ff007c \
+"
 
 # https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function y() {
@@ -29,6 +39,14 @@ function y() {
     rm -f -- "$tmp"
 }
 
+# https://github.com/junegunn/fzf#setting-up-shell-integration
+eval "$(fzf --bash)"
+
+# https://github.com/denisidoro/navi/blob/master/docs/installation.md#installing-the-shell-widget
 eval "$(navi widget bash)"
+
+# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 eval "$(zoxide init bash)"
+
+# https://starship.rs/#bash
 eval "$(starship init bash)"

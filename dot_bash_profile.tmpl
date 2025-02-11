@@ -1,0 +1,51 @@
+{{ if eq .chezmoi.os "linux" }}
+# Load systemd user environment variables
+export $(run-parts /usr/lib/systemd/user-environment-generators | sed '/:$/d; /^$/d' | xargs)
+{{ end }}
+
+{{ if eq .chezmoi.os "darwin" }}
+function cdf {
+    cd "$(pfd)"
+}
+
+export HOMEBREW_NO_ANALYTICS=1
+
+if [ -f /opt/homebrew/bin/brew ]
+then
+  # load homebrew
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  $(/opt/homebrew/bin/brew shellenv)
+
+  # https://docs.brew.sh/Shell-Completion#configuring-completions-in-bash
+  if [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "/opt/homebrew/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "/opt/homebrew/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+
+  # load third-party app and library
+  export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+  export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+
+  export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+
+  export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+  export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+  export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+else
+  echo "failed to load homebrew env, please make sure that the homebrew is installed!"
+fi
+{{ end }}
+
+# kubernetes configuration
+export KUBECONFIG=$(echo $(ls ~/.kube/config.d/* 2>/dev/null) | sed 's/ /:/g')
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

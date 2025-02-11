@@ -4,13 +4,17 @@ LICENSE
 .github
 .config/alacritty # deprecated
 .config/bash_completion.tencentos
+{{ if eq .chezmoi.os "darwin" }}
+.config
+.local
+{{ end }}
 {{ if ne .chezmoi.os "darwin" }}
-Library/Application Support/
+Library
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/Code - OSS
 .config/environment.d
-.config/paru
+.config/locale.conf
 .config/mimeapps.list
 .config/user-dirs.locale
 {{ end }}
@@ -23,27 +27,24 @@ Library/Application Support/
 .config/plasma-workspace
 .config/chrome-flags.conf
 .config/code-flags.conf
+.config/qq-flags.conf
 .config/electron-flags.conf
 .config/electron25-flags.conf
 .config/electron26-flags.conf
 .config/electron27-flags.conf
 .config/electron28-flags.conf
-.config/mimeapps.list
 .config/dolphinrc
 .config/konsolerc
 .config/krunnerrc
 .config/okularrc
-.config/qq-flags.conf
 .local/bin/git-credential-with-kwallet
 .local/share/applications
 .local/share/fcitx5
 .local/share/icons
 .local/share/konsole
 {{ end }}
-{{ if ne .chezmoi.osRelease.id "tencentos" }}
-.config/fzf
-{{ end }}
 {{ if ne .chezmoi.osRelease.id "arch" }}
+.config/aconfmgr
 .config/paru
 .config/pacman
 {{ end }}

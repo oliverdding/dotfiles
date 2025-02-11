@@ -1,0 +1,9 @@
+[generate]
+	length = 16
+	symbols = true
+
+[show]
+	safecontent = true
+
+[mounts]
+	path = ~/Library/Application Support/pass

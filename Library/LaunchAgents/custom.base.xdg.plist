@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>custom.base.xdg</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/sh</string>
+      <string>-c</string>
+      <string>
+        # https://github.com/adrg/xdg/blob/master/README.md
+        /bin/launchctl setenv XDG_CACHE_HOME "$HOME/Library/Caches"
+        /bin/launchctl setenv XDG_CONFIG_HOME "$HOME/Library/Application Support"
+        /bin/launchctl setenv XDG_DATA_HOME "$HOME/Library/Application Support"
+        /bin/launchctl setenv XDG_STATE_HOME "$HOME/Library/Application Support"
+      </string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+  </dict>
+</plist>
