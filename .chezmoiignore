@@ -5,7 +5,10 @@ LICENSE
 .config/alacritty # deprecated
 .config/bash_completion.tencentos
 {{ if eq .chezmoi.os "darwin" }}
+.cache
 .config
+!.config/gitui
+!.config/helix
 .local
 {{ end }}
 {{ if ne .chezmoi.os "darwin" }}

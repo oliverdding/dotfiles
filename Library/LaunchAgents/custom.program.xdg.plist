@@ -58,6 +58,8 @@
         /bin/launchctl setenv SCREENRC "$HOME/Library/Application Support/screen/screenrc"
         /bin/launchctl setenv SDKMAN_DIR "$HOME/Library/Application Support/sdkman"
         /bin/launchctl setenv SQLITE_HISTORY "$HOME/Library/Application Support/sqlite_history"
+        /bin/launchctl setenv STARSHIP_CACHE "$HOME/Library/Caches/starship"
+        /bin/launchctl setenv STARSHIP_CONFIG "$HOME/Library/Application Support/starship.toml"
         /bin/launchctl setenv TERMINFO_DIRS "$HOME/Library/Application Support/terminfo:/usr/share/terminfo"
         /bin/launchctl setenv TERMINFO "$HOME/Library/Application Support/terminfo"
         /bin/launchctl setenv TEXMFCONFIG "$HOME/Library/Application Support/texlive/texmf-config"
@@ -68,6 +70,7 @@
         /bin/launchctl setenv W3M_DIR "$HOME/Library/Application Support/w3m"
         /bin/launchctl setenv WGETRC "$HOME/Library/Application Support/wgetrc"
         /bin/launchctl setenv WORKON_HOME "$HOME/Library/Application Support/virtualenvs"
+        /bin/launchctl setenv YAZI_CONFIG_HOME "$HOME/Library/Application Support/yazi"
       </string>
     </array>
     <key>RunAtLoad</key>
