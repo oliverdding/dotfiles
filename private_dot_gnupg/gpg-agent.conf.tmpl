@@ -1,6 +1,6 @@
 {{- if eq .chezmoi.os "darwin" }}
-{{- if .gpgagent }}pinentry-program /Applications/MacPorts/pinentry-mac.app/Contents/MacOS/pinentry-mac
-{{- else }}pinentry-program /opt/local/bin/pinentry-tty{{- end }}
+{{- if .gpgagent }}pinentry-program /opt/homebrew/bin/pinentry-mac
+{{- else }}pinentry-program /opt/homebrew/bin/pinentry-tty{{- end }}
 {{- else if eq .chezmoi.os "linux" }}
 {{- if eq .hosttype "desktop" }}pinentry-program /usr/bin/pinentry-qt
 {{- else if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}pinentry-program "/mnt/c/ProgramData/Scoop/apps/gpg4win/current/Gpg4win/bin/pinentry.exe"
