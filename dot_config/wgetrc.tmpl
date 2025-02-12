@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.os "linux" }}
+hsts-file=~/.cache/wget-hsts
+{{- else if eq .chezmoi.os "darwin" }}
+hsts-file=~/Library/Caches/wget-hsts
+{{- end }}

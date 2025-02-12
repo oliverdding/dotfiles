@@ -8,5 +8,5 @@ ql
 showhidden
 {{ end }}
 {{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
-.local/bin/git-credential-with-kwallet
+git-credential-with-kwallet
 {{ end }}

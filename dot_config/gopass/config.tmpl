@@ -6,4 +6,8 @@
 	safecontent = true
 
 [mounts]
+{{- if eq .chezmoi.os "linux" }}
+	path = ~/.local/share/pass
+{{- else if eq .chezmoi.os "darwin" }}
 	path = ~/Library/Application Support/pass
+{{- end }}
