@@ -10,6 +10,7 @@ LICENSE
 !.config/gitui
 !.config/helix
 .local
+!.local/bin
 {{ end }}
 {{ if ne .chezmoi.os "darwin" }}
 Library
@@ -40,7 +41,6 @@ Library
 .config/konsolerc
 .config/krunnerrc
 .config/okularrc
-.local/bin/git-credential-with-kwallet
 .local/share/applications
 .local/share/fcitx5
 .local/share/icons

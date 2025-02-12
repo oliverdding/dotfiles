@@ -1,0 +1,8 @@
+[paths]
+darwin = [
+    "$HOME/.local/bin",
+    "/opt/homebrew/opt/curl/bin",
+    "/opt/homebrew/opt/openjdk@11/bin",
+    "/opt/homebrew/opt/llvm/bin",
+    "/opt/homebrew/opt/rustup/bin",
+]

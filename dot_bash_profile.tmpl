@@ -8,8 +8,6 @@ function cdf {
     cd "$(pfd)"
 }
 
-export HOMEBREW_NO_ANALYTICS=1
-
 if [ -f /opt/homebrew/bin/brew ]
 then
   # load homebrew
@@ -26,20 +24,6 @@ then
       [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
     done
   fi
-
-  # load third-party app and library
-  export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-  export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
-  export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
-
-  export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-  export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
-
-  export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-  export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-
-  export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 else
   echo "failed to load homebrew env, please make sure that the homebrew is installed!"
 fi

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+dialog --title "Confirmation" --yesno "Are you sure to hides system files and folders in Finder?" 10 40 \
+  && defaults write com.apple.finder AppleShowAllFiles YES \
+  || defaults write com.apple.finder AppleShowAllFiles NO
+
+killall Finder /System/Library/CoreServices/Finder.app
