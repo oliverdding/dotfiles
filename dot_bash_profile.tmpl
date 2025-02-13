@@ -30,6 +30,6 @@ fi
 {{ end }}
 
 # kubernetes configuration
-export KUBECONFIG=$(echo $(ls ~/.kube/config.d/* 2>/dev/null) | sed 's/ /:/g')
+export KUBECONFIG=$(echo $(ls $XDG_CONFIG_HOME/kube/config.d/* 2>/dev/null) | sed 's/ /:/g')
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
