@@ -10,6 +10,9 @@ mas = [
     1024640650, # CotEditor
     462054704, # Microsoft Word
     462062816, # Microsoft PowerPoint
+    1189898970, # 企业微信
+    1484048379, # 腾讯会议
+    1449962996, # 腾讯柠檬清理(Lite)
 ]
 brews = [
     "bash-completion@2",

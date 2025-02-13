@@ -15,39 +15,3 @@ LICENSE
 {{ if ne .chezmoi.os "darwin" }}
 Library
 {{ end }}
-{{ if ne .chezmoi.os "linux" }}
-.config/Code - OSS
-.config/environment.d
-.config/locale.conf
-.config/mimeapps.list
-.config/user-dirs.locale
-{{ end }}
-{{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
-.config/fcitx5
-.config/fontconfig
-.config/gtk-2.0
-.config/gtk-3.0
-.config/gtk-4.0
-.config/plasma-workspace
-.config/chrome-flags.conf
-.config/code-flags.conf
-.config/qq-flags.conf
-.config/electron-flags.conf
-.config/electron25-flags.conf
-.config/electron26-flags.conf
-.config/electron27-flags.conf
-.config/electron28-flags.conf
-.config/dolphinrc
-.config/konsolerc
-.config/krunnerrc
-.config/okularrc
-.local/share/applications
-.local/share/fcitx5
-.local/share/icons
-.local/share/konsole
-{{ end }}
-{{ if ne .chezmoi.osRelease.id "arch" }}
-.config/aconfmgr
-.config/paru
-.config/pacman
-{{ end }}
