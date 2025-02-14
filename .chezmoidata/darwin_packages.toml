@@ -64,6 +64,7 @@ brews = [
     "mold",
     "navi",
     "ninja",
+    "onefetch",
     "openjdk@11",
     "openssh",
     "openssl",

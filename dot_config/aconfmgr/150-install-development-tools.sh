@@ -11,6 +11,7 @@ AddPackage hurl # Run and test HTTP requests with plain text
 AddPackage just # A handy way to save and run project-specific commands
 AddPackage mkcert # Simple tool for making locally-trusted development certificates
 AddPackage navi # An interactive cheatsheet tool for the command-line
+AddPackage onefetch # Git repository summary on your terminal
 AddPackage sqlfluff # A dialect-flexible and configurable SQL linter
 AddPackage taplo-cli # TOML toolkit written in Rust
 AddPackage tcpdump # Powerful command-line packet analyzer
