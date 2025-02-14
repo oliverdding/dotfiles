@@ -12,6 +12,7 @@ AddPackage jq # Command-line JSON processor
 AddPackage macchina # A system information fetcher, with an (unhealthy) emphasis on performance.
 AddPackage miniserve # Tool to serve files via HTTP
 AddPackage neovim # Fork of Vim aiming to improve user experience, plugins, and GUIs
+AddPackage p7zip # File archiver for extremely high compression
 AddPackage proxychains-ng # A hook preloader that allows to redirect TCP traffic of existing dynamically linked programs through one or more SOCKS or HTTP proxies
 AddPackage ripgrep # A search tool that combines the usability of ag with the raw speed of grep
 AddPackage starship # The cross-shell prompt for astronauts

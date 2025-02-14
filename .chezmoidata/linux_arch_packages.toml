@@ -1,0 +1,26 @@
+[packages.linux.arch]
+base = [
+    "bash-completion",
+    "bat",
+    "eza",
+    "fd",
+    "fzf",
+    "git-delta",
+    "gnupg",
+    "helix",
+    "jq",
+    "less",
+    "openssh",
+    "p7zip",
+    "ripgrep",
+    "run-parts",
+    "starship",
+    "zoxide",
+]
+fonts = [
+    "noto-fonts",
+    "noto-fonts-cjk",
+    "noto-fonts-emoji",
+    "ttf-nerd-fonts-symbols",
+    "ttc-iosevka",
+]

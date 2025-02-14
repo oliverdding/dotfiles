@@ -8,3 +8,5 @@ AddPackage cargo-wizard # Cargo subcommand for configuring Cargo profile
 AddPackage rustup # The Rust toolchain installer
 AddPackage rust-analyzer # Rust compiler front-end for IDEs
 AddPackage sccache # Shared compilation cache
+
+CARGO_HOME="$XDG_DATA_HOME/cargo" RUSTUP_HOME="$XDG_DATA_HOME/rustup" rustup default stable

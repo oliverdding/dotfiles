@@ -8,9 +8,11 @@ AddPackage exfat-utils # Utilities for exFAT file system
 AddPackage fatresize # A utility to resize FAT filesystems using libparted
 AddPackage ffmpegthumbnailer # Lightweight video thumbnailer that can be used by file managers
 AddPackage ffmpegthumbs # FFmpeg-based thumbnail creator for video files
+AddPackage ffmpeg # Complete solution to record, convert and stream audio and video
 AddPackage flatpak-kcm # Flatpak Permissions Management KCM
 AddPackage gst-plugin-pipewire # Multimedia graph framework - pipewire plugin
 AddPackage gwenview # A fast and easy to use image viewer
+AddPackage imagemagick # An image viewing/manipulation program
 AddPackage kalk # A powerful cross-platform calculator application built with the Kirigami framework
 AddPackage kate # Advanced text editor
 AddPackage kdeconnect # Adds communication between KDE and your smartphone
@@ -36,6 +38,7 @@ AddPackage pipewire # Low-latency audio/video router and processor
 AddPackage pipewire-alsa # Low-latency audio/video router and processor - ALSA configuration
 AddPackage pipewire-jack # Low-latency audio/video router and processor - JACK replacement
 AddPackage pipewire-pulse # Low-latency audio/video router and processor - PulseAudio replacement
+AddPackage poppler # PDF rendering library based on xpdf 3.0
 AddPackage plasma-meta # Meta package to install KDE Plasma
 AddPackage plasma-workspace # KDE Plasma Workspace
 AddPackage power-profiles-daemon # Makes power profiles handling available over D-Bus
