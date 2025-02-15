@@ -1,0 +1,87 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# Dock
+
+## icon size
+defaults write com.apple.dock "tilesize" -int "36" && killall Dock
+
+## enable auto hide
+defaults write com.apple.dock "autohide" -bool "true" && killall Dock
+
+## disable animation
+defaults write com.apple.dock "autohide-time-modifier" -float "0" && killall Dock
+
+## disable autohide delay
+defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock
+
+## disable recents
+defaults write com.apple.dock "show-recents" -bool "false" && killall Dock
+
+## set minimize animation effect to scale
+defaults write com.apple.dock "mineffect" -string "scale" && killall Dock
+
+# Finder
+
+## show extensions
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
+
+## show path bar
+defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
+
+## set default view style to column view
+defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv" && killall Finder
+
+## keep folders on top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
+
+## search the current folder
+defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf" && killall Finder
+
+## empty bin items after 30 days
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
+
+## changing file extension warning
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
+
+## save to disk location
+defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
+
+# menubar
+
+## flash clock time separators
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "false" && killall SystemUIServer
+
+## set time format to hh:mm:ss
+defaults write com.apple.menuextra.clock "IsAnalog" -bool "false" && killall SystemUIServer
+defaults write com.apple.menuextra.clock "Show24Hour" -bool "true" && killall SystemUIServer
+defaults write com.apple.menuextra.clock "ShowDate" -int 2 && killall SystemUIServer
+defaults write com.apple.menuextra.clock "ShowDayOfWeek" -bool "false" && killall SystemUIServer
+defaults write com.apple.menuextra.clock "ShowSeconds" -bool "true" && killall SystemUIServer
+
+# mouse
+
+## disable mouse acceration
+defaults write NSGlobalDomain com.apple.mouse.linear -bool "true"
+
+## speed
+defaults write NSGlobalDomain com.apple.mouse.scaling -float "0.6875"
+
+# mission control
+
+## disable rearrange automatically
+defaults write com.apple.dock "mru-spaces" -bool "false" && killall Dock
+
+# Windows Management
+
+## enable click-and-drag a window from everywhere with ctrl + cmd, see also: https://www.reddit.com/r/MacOS/comments/k6hiwk/keyboard_modifier_to_simplify_click_drag_of/
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
+# Safari
+
+## show full website address.
+defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true" && killall Safari
+
+{{ end -}}
