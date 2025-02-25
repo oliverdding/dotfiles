@@ -13,6 +13,7 @@ mas = [
     1189898970, # 企业微信
     1484048379, # 腾讯会议
     1449962996, # 腾讯柠檬清理(Lite)
+    6698876601, # Folder Preview
 ]
 brews = [
     "bash-completion@2",
@@ -42,6 +43,7 @@ brews = [
     "git-delta",
     "git-lfs",
     "go",
+    "goose",
     "gopass",
     "gopls",
     "graphviz",
