@@ -3,6 +3,8 @@
 
 set -eufo pipefail
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 source $HOME/.bash_profile
 
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk

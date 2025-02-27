@@ -6,6 +6,8 @@ set -eufo pipefail
 # Install homebrew, see also: https://brew.sh/
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 {{- if .pass }}
 brew install gnupg pinentry
 {{ if .gpgagent }}
