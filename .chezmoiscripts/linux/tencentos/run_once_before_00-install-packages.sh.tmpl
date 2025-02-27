@@ -33,4 +33,6 @@ cargo install --quiet cargo-binstall
 cargo binstall -y --index sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/ {{ . }}
 {{ end -}}
 
+bat cache --build
+
 {{ end -}}
