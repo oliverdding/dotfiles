@@ -85,7 +85,7 @@ brews = [
 ]
 casks = [
     "appcleaner",
-    "clash-verge-rev",
+    # "clash-verge-rev",
     "dbeaverlite",
     "font-iosevka-nerd-font",
     "font-iosevka-term-nerd-font",
