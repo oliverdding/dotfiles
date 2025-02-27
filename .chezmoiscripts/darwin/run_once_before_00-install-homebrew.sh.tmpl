@@ -3,6 +3,12 @@
 
 set -eufo pipefail
 
-# https://brew.sh/
+# Install xcode-command-developer-tools
+xcode-select --install
+
+# Aggree the licenses
+sudo xcodebuild -license accept
+
+# Install homebrew, see also: https://brew.sh/
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 {{ end -}}

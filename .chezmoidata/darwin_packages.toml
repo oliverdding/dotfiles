@@ -1,6 +1,5 @@
 [packages.darwin]
 mas = [
-    497799835, # Xcode
     1549159979, # uPic
     6452276577, # DockX
     462058435, # Microsoft Excel
