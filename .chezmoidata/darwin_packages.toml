@@ -5,7 +5,6 @@ mas = [
     462058435, # Microsoft Excel
     6467176005, # 1Break
     1630034110, # Bob
-    1295203466, # Windows App
     1024640650, # CotEditor
     462054704, # Microsoft Word
     462062816, # Microsoft PowerPoint
@@ -85,6 +84,7 @@ brews = [
     "zoxide",
 ]
 casks = [
+    "appcleaner",
     "clash-verge-rev",
     "dbeaverlite",
     "font-iosevka-nerd-font",
