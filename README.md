@@ -13,7 +13,7 @@ chezmoi init --apply oliverdding
 Or if the system package manager doesn't contain `chezmoi` so you would like to install it's binary directly from web:
 
 ```bash
-sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply oliverdding
+BINDIR="$HOME/.local/bin" sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply oliverdding
 ```
 
 ## Font configuration
