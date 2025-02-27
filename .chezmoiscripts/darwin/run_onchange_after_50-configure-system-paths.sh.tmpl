@@ -3,8 +3,8 @@
 
 set -eufo pipefail
 
-truncate -s 0 /etc/paths.d/50-homebrew
+sudo truncate -s 0 /etc/paths.d/50-homebrew
 {{ range .paths.darwin -}}
-echo '{{ . }}' >>/etc/paths.d/50-homebrew
+echo '{{ . }}' | sudo tee -a /etc/paths.d/50-homebrew > /dev/null
 {{ end -}}
 {{ end -}}

@@ -1,3 +1,5 @@
+chezmoi.toml
+chezmoistate.boltdb
 README.md
 LICENSE
 .git
