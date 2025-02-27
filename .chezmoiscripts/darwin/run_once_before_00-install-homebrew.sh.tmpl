@@ -4,7 +4,10 @@
 set -eufo pipefail
 
 # Install homebrew, see also: https://brew.sh/
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [ ! -f /opt/homebrew/bin/brew ]
+then
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
