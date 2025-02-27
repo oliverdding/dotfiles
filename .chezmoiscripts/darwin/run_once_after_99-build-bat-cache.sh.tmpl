@@ -1,0 +1,9 @@
+{{ if or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin") -}}
+
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+bat cache --build
+
+{{ end -}}
