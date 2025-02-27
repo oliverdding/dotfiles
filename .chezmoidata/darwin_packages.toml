@@ -24,7 +24,6 @@ brews = [
     "curl",
     "d2",
     "direnv",
-    "dockdoor",
     "docker",
     "docker-compose",
     "docker-buildx",
