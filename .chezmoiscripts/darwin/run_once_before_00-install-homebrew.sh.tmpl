@@ -5,4 +5,11 @@ set -eufo pipefail
 
 # Install homebrew, see also: https://brew.sh/
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+{{- if .pass }}
+brew install gnupg pinentry
+{{ if .gpgagent }}
+brew install pinentry-mac
+{{ end }}
+{{- end }}
 {{ end -}}
