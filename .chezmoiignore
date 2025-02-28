@@ -9,10 +9,8 @@ LICENSE
 {{ if eq .chezmoi.os "darwin" }}
 .cache
 .config
-!.config/gitui
-!.config/helix
-.local
-!.local/bin
+.local/share
+.local/state
 {{ end }}
 {{ if ne .chezmoi.os "darwin" }}
 Library

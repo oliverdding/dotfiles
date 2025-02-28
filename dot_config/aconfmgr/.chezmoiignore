@@ -15,6 +15,6 @@
 304-install-useful-applications.sh
 305-install-fonts.sh
 {{ end }}
-{{- if ne .chezmoi.hostname "tower" }}
+{{- if .work }}
 155-install-development-k8s.sh
 {{- end }}

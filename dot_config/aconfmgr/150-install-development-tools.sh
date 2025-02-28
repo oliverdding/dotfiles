@@ -4,11 +4,11 @@ AddPackage d2 # A modern diagram scripting language that turns text to diagrams
 AddPackage binsider # A TUI for analyzing binaries like a boss
 AddPackage direnv # A shell extension that manages your environment
 AddPackage git # the fast distributed version control system
-AddPackage gitui # Blazing fast terminal-ui for git written in Rust
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage git-lfs # Git extension for versioning large files
 AddPackage hurl # Run and test HTTP requests with plain text
 AddPackage just # A handy way to save and run project-specific commands
+AddPackage lazygit # Simple terminal UI for git commands
 AddPackage mkcert # Simple tool for making locally-trusted development certificates
 AddPackage navi # An interactive cheatsheet tool for the command-line
 AddPackage onefetch # Git repository summary on your terminal

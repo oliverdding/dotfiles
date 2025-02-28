@@ -25,7 +25,7 @@ konsolerc
 krunnerrc
 okularrc
 {{ end }}
-{{ if ne .chezmoi.osRelease.id "arch" }}
+{{ if or (ne .chezmoi.os "linux") (ne .chezmoi.osRelease.id "arch") }}
 aconfmgr
 paru
 pacman

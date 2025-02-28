@@ -1,5 +1,5 @@
-{{- if eq .chezmoi.hostname "tower" }}
-{{-   include "dot_config/aconfmgr/files/etc/docker/daemon.tower.json" -}}
+{{- if .work }}
+{{-   include "dot_config/aconfmgr/files/etc/docker/daemon.work.json" -}}
 {{- else }}
 {{-   include "dot_config/aconfmgr/files/etc/docker/daemon.default.json" -}}
 {{- end }}

@@ -5,6 +5,7 @@
 {{- $gitmail  := promptStringOnce . "gitmail"  "Git Mail Address"                            "oliverdding@outlook.com" -}}
 {{- $gpgagent := promptBoolOnce   . "gpgagent" "Use gnupg agent instead of ssh agent? [Y/n]" false                     -}}
 {{- $pass     := promptBoolOnce   . "pass"     "Clone pass store? [Y/n]"                     false                     -}}
+{{- $work     := promptBoolOnce   . "work"     "Is it used in working env? [Y/n]"            false                     -}}
 
 encryption = "gpg"
 [gpg]
@@ -17,6 +18,7 @@ encryption = "gpg"
   hosttype = {{ $hosttype | quote }}
   gpgagent = {{ $gpgagent }}
   pass     = {{ $pass }}
+  work     = {{ $work }}
 
 [diff]
   command = "delta"
