@@ -12,8 +12,12 @@
         # https://github.com/adrg/xdg/blob/master/README.md
         /bin/launchctl setenv XDG_CACHE_HOME "$HOME/Library/Caches"
         /bin/launchctl setenv XDG_CONFIG_HOME "$HOME/Library/Application Support"
+        /bin/launchctl setenv XDG_CONFIG_DIRS "$HOME/Library/Preferences:/Library/Application Support:/Library/Preferences:$HOME/.config"
         /bin/launchctl setenv XDG_DATA_HOME "$HOME/Library/Application Support"
+        /bin/launchctl setenv XDG_DATA_DIRS "/Library/Application Support:$HOME/.local/share" 
         /bin/launchctl setenv XDG_STATE_HOME "$HOME/Library/Application Support"
+        /bin/launchctl setenv XDG_RUNTIME_DIR "$HOME/Library/Application Support"
+        /bin/launchctl setenv XDG_BIN_HOME "$HOME/.local/bin"
       </string>
     </array>
     <key>RunAtLoad</key>

@@ -3,6 +3,17 @@
 
 set -eufo pipefail
 
+sudo -v
+
+osascript -e 'tell application "System Preferences" to quit'
+
+# Set computer name
+
+sudo scutil --set ComputerName "omega"
+sudo scutil --set HostName "omega"
+sudo scutil --set LocalHostName "omega"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "omega"
+
 # Dock
 
 ## icon size
@@ -22,6 +33,16 @@ defaults write com.apple.dock "show-recents" -bool "false"
 
 ## set minimize animation effect to scale
 defaults write com.apple.dock "mineffect" -string "scale"
+
+## group windows by app in app expose
+defaults write "com.apple.dock" "expose-group-apps" -int 1
+
+## enable swipe down with three finger to show app expose
+defaults write "com.apple.dock" showAppExposeGestureEnabled -int 1
+
+## disable window corner
+defaults write "com.apple.dock" "wvous-br-corner" -int 1
+defaults write "com.apple.dock" "wvous-br-modifier" -int 0
 
 # Finder
 
@@ -49,9 +70,9 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 ## save to disk location
 defaults write NSGlobalDomain "NSDocumentSaveNewDocumentsToCloud" -bool "false"
 
-# menubar
+# Menubar
 
-## flash clock time separators
+## disable flash clock time separators
 defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "false"
 
 ## set time format to hh:mm:ss
@@ -61,7 +82,12 @@ defaults write com.apple.menuextra.clock "ShowDate" -int 2
 defaults write com.apple.menuextra.clock "ShowDayOfWeek" -bool "false"
 defaults write com.apple.menuextra.clock "ShowSeconds" -bool "true"
 
-# mouse
+# Keyboard
+
+## disable fn key
+defaults write "Apple Global Domain" com.apple.keyboard.fnState -int 1
+
+# Mouse
 
 ## disable mouse acceration
 defaults write NSGlobalDomain com.apple.mouse.linear -bool "true"
@@ -69,7 +95,12 @@ defaults write NSGlobalDomain com.apple.mouse.linear -bool "true"
 ## speed
 defaults write NSGlobalDomain com.apple.mouse.scaling -float "0.6875"
 
-# mission control
+# Trackpad
+
+## disable nature scrolling
+defaults write "Apple Global Domain" "com.apple.swipescrolldirection" 0
+
+# Mission control
 
 ## disable rearrange automatically
 defaults write com.apple.dock "mru-spaces" -bool "false"
