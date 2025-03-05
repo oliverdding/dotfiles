@@ -94,6 +94,7 @@ casks = [
     "google-chrome",
     "iina",
     "jordanbaird-ice",
+    "maccy",
     "obsidian",
     "raycast",
     "steam",
