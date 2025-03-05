@@ -44,6 +44,15 @@ defaults write "com.apple.dock" showAppExposeGestureEnabled -int 1
 defaults write "com.apple.dock" "wvous-br-corner" -int 1
 defaults write "com.apple.dock" "wvous-br-modifier" -int 0
 
+## fix size
+defaults write com.apple.dock size-immutable -bool true
+
+## fix location
+defaults write com.apple.dock position-immutable -bool true
+
+## fix icons
+#defaults write com.apple.dock contents-immutable -bool true
+
 # Finder
 
 ## show extensions
