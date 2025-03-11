@@ -75,6 +75,7 @@ brews = [
     "rustup",
     "sccache",
     "sevenzip",
+    "sqlfluff",
     "starship",
     "stylua",
     "tokei",

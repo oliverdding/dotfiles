@@ -12,7 +12,6 @@
         "--pch-storage=memory"
     ],
     "clangd.detectExtensionConflicts": false,
-    "crates.indexServerURL": "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index",
     "docker.containers.description": [
         "Ports",
         "Status"
@@ -115,31 +114,6 @@
     },
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.diagnostics.experimental.enable": true,
-    "rust-analyzer.files.excludeDirs": [
-        "_build",
-        ".dart_tool",
-        ".flatpak-builder",
-        "build-aux",
-        ".git",
-        ".gitlab",
-        ".gitlab-ci",
-        ".gradle",
-        ".idea",
-        ".next",
-        ".project",
-        ".github",
-        ".scannerwork",
-        ".settings",
-        ".venv",
-        "archetype-resources",
-        "bin",
-        "hooks",
-        "node_modules",
-        "po",
-        "screenshots",
-        "target",
-        "flatpak_app"
-    ],
     "rust-analyzer.imports.granularity.group": "module",
     "rust-analyzer.imports.prefix": "crate",
     "search.exclude": {
@@ -157,21 +131,9 @@
         "**/target": true,
         "**/tmp/**": true
     },
-    "sqlfluff.config": "${workspaceFolder}/.sqlfluff",
-    "sqlfluff.dialect": "clickhouse",
     "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.defaultProfile.osx": "bash",
     "terminal.integrated.fontFamily": "'IosevkaTerm Nerd Font Mono', 'Noto Serif CJK SC'",
     "terminal.integrated.fontSize": 14,
-    "terminal.integrated.profiles.osx": {
-        "bash": {
-            "args": [
-                "-i",
-                "-l"
-            ],
-            "path": "/opt/local/bin/bash"
-        }
-    },
     "terminal.integrated.rightClickBehavior": "paste",
     "terminal.integrated.scrollback": 10000,
     "window.autoDetectColorScheme": true,
