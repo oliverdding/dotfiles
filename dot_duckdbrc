@@ -1,0 +1,3 @@
+SET home_directory = getenv('XDG_DATA_HOME') || '/duckdb';
+SET extension_directory = getenv('XDG_DATA_HOME') || '/duckdb/extensions';
+SET secret_directory = getenv('XDG_DATA_HOME') || '/duckdb/stored_secrets';

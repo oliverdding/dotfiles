@@ -18,6 +18,7 @@
         /bin/launchctl setenv DISCORD_USER_DATA_DIR "$HOME/Library/Application Support"
         /bin/launchctl setenv DOCKER_CONFIG "$HOME/Library/Application Support/docker"
         /bin/launchctl setenv DOTNET_CLI_HOME "$HOME/Library/Application Support/dotnet"
+        /bin/launchctl setenv DUCKDB_HISTORY "$HOME/Library/Application Support/duckdb/history"
         /bin/launchctl setenv ELM_HOME "$HOME/Library/Application Support/elm"
         /bin/launchctl setenv FFMPEG_DATADIR "$HOME/Library/Application Support/ffmpeg"
         /bin/launchctl setenv GDBHISTFILE "$HOME/Library/Application Support/gdb/history"
