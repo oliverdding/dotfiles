@@ -83,6 +83,7 @@ brews = [
     "topgrade",
     "vegeta",
     "yazi",
+    "youplot",
     "zoxide",
 ]
 casks = [
