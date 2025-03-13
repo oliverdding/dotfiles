@@ -3,6 +3,7 @@ AddPackage bash-language-server # Bash language server implementation based on T
 AddPackage d2 # A modern diagram scripting language that turns text to diagrams
 AddPackage binsider # A TUI for analyzing binaries like a boss
 AddPackage direnv # A shell extension that manages your environment
+AddPackage ducker # A terminal app for managing docker containers
 AddPackage git # the fast distributed version control system
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage git-lfs # Git extension for versioning large files

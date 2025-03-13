@@ -27,6 +27,7 @@ brews = [
     "docker-compose",
     "docker-buildx",
     "duckdb",
+    "ducker",
     "dwarf",
     "eza",
     "fd",
