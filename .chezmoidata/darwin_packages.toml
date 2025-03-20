@@ -70,6 +70,7 @@ brews = [
     "pkg-config",
     "poppler",
     "qemu",
+    "qsv",
     "ripgrep",
     "rmtrash",
     "ruff",
