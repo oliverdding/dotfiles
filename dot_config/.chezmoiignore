@@ -1,18 +1,19 @@
 {{ if ne .chezmoi.os "linux" }}
 Code - OSS
-environment.d
+environment.d/
 locale.conf
 mimeapps.list
 user-dirs.locale
 {{ end }}
 {{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
-fcitx5
-fontconfig
-gtk-2.0
-gtk-3.0
-gtk-4.0
-plasma-workspace
+fcitx5/
+fontconfig/
+gtk-2.0/
+gtk-3.0/
+gtk-4.0/
+plasma-workspace/
 chrome-flags.conf
+chromium-flags.conf
 code-flags.conf
 qq-flags.conf
 electron-flags.conf
@@ -26,7 +27,7 @@ krunnerrc
 okularrc
 {{ end }}
 {{ if or (ne .chezmoi.os "linux") (ne .chezmoi.osRelease.id "arch") }}
-aconfmgr
-paru
-pacman
+aconfmgr/
+paru/
+pacman/
 {{ end }}
