@@ -30,7 +30,13 @@
 	excludesfile   = ~/.config/git/ignore
 	untrackedCache = true
 	pager          = delta
+{{- if eq .chezmoi.os "linux" }}
 	editor         = helix
+{{- else if eq .chezmoi.os "darwin" }}
+	editor         = hx
+{{- else }}
+	editor         = nvim
+{{- end }}
 
 [diff]
 	colorMoved = default
