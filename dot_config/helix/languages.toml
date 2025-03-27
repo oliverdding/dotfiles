@@ -16,7 +16,7 @@ name = "go"
 
 [language-server.gopls.config]
 gofumpt = true
-analyses = { "shadow" = true, "fieldalignment" = true, "unusedvariable" = true, "useany" = true }
+analyses = { "shadow" = true, "unusedvariable" = true, "useany" = true }
 usePlaceholders = true
 staticcheck = true
 vulncheck = "Imports"

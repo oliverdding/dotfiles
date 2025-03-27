@@ -72,7 +72,6 @@
     },
     "usePlaceholders": true,
     "analyses": {
-      "fieldalignment": true,
       "shadow": true,
       "unusedvariable": true,
       "useany": true
