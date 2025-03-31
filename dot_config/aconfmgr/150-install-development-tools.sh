@@ -5,6 +5,7 @@ AddPackage binsider # A TUI for analyzing binaries like a boss
 AddPackage direnv # A shell extension that manages your environment
 AddPackage ducker # A terminal app for managing docker containers
 AddPackage git # the fast distributed version control system
+AddPackage git-cliff # A highly customizable changelog generator
 AddPackage git-delta # Syntax-highlighting pager for git and diff output
 AddPackage git-lfs # Git extension for versioning large files
 AddPackage hurl # Run and test HTTP requests with plain text

@@ -35,6 +35,7 @@ brews = [
     "ffmpeg",
     "ffmpegthumbnailer",
     "git",
+    "git-cliff",
     "git-delta",
     "git-lfs",
     "gnupg",
