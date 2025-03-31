@@ -88,6 +88,9 @@ brews = [
     "youplot",
     "zoxide",
 ]
+taps = [
+    "lzt1008/powerflow"
+]
 casks = [
     "appcleaner",
     "bruno",
@@ -102,6 +105,7 @@ casks = [
     "jordanbaird-ice",
     "maccy",
     "obsidian",
+    "powerflow",
     "raycast",
     "steam",
     "visual-studio-code",
