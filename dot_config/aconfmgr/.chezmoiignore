@@ -1,4 +1,4 @@
-{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+{{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 102-install-btrfs.sh
 201-configure-ufw.sh
 202-configure-zram.sh
@@ -8,13 +8,13 @@
 301-configure-bluetooth.sh
 {{- else }}
 103-install-wsl.sh
-{{   end }}
-{{ if ne .hosttype "desktop" }}
+{{- end }}
+{{- if ne .hosttype "desktop" }}
 302-install-kde.sh
 303-install-sddm.sh
 304-install-useful-applications.sh
 305-install-fonts.sh
-{{ end }}
-{{- if .work }}
+{{- end }}
+{{- if not .work }}
 155-install-development-k8s.sh
 {{- end }}

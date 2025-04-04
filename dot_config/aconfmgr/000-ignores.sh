@@ -80,6 +80,6 @@ IgnorePackage intel-media-driver
 IgnorePackage linux-firmware
 IgnorePackage linux-lts
 IgnorePackage linux-zen
-IgnorePackage 
-IgnorePackage 
-IgnorePackage 
+IgnorePackage libva-intel-driver
+IgnorePackage vulkan-intel
+IgnorePackage vulkan-mesa-layers

@@ -19,7 +19,6 @@ AddPackage rime-ice-pinyin-git # Rime 配置：雾凇拼音 | 长期维护的简
 AddPackage telegram-desktop # Official Telegram Desktop client
 AddPackage sweeper # System Cleaner
 AddPackage xorg-xwininfo # Command-line utility to print information about windows on an X server
-AddPackage zed # A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 AddPackage zotero # Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research
 
 AddPackage --foreign clash-verge-rev-bin # Continuation of Clash Verge | A Clash Meta GUI based on Tauri
