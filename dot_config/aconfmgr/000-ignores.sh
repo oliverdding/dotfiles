@@ -72,3 +72,14 @@ IgnorePath '*.bak'
 IgnorePath '*.sbak'
 IgnorePath '*.pacnew'
 IgnorePath '*.pacsave'
+
+# ArchLinux Core Packages
+IgnorePackage intel-ucode
+IgnorePackage amd-ucode
+IgnorePackage intel-media-driver
+IgnorePackage linux-firmware
+IgnorePackage linux-lts
+IgnorePackage linux-zen
+IgnorePackage 
+IgnorePackage 
+IgnorePackage 

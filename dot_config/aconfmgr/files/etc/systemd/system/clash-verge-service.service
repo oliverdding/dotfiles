@@ -4,7 +4,7 @@ After=network-online.target nftables.service iptables.service
 
 [Service]
 Type=simple
-ExecStart=/usr/lib/clash-verge/resources/clash-verge-service
+ExecStart=/usr/bin/clash-verge-service
 Restart=always
 RestartSec=5
 

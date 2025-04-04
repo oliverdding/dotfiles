@@ -29,6 +29,7 @@ AddPackage libpulse # A featureful, general-purpose sound server (client library
 AddPackage libraw # A library for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, and others)
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
 AddPackage ncmpcpp # Almost exact clone of ncmpc with some new features
+AddPackage network-manager-applet # Applet for managing network connections
 AddPackage ntfs-3g # NTFS filesystem driver and utilities
 AddPackage okular # Document Viewer
 AddPackage packagekit-qt6 # Qt6 bindings for PackageKit
