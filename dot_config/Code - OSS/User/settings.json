@@ -18,7 +18,6 @@
   "codeium.enableConfig": {
     "*": true
   },
-  "crates.indexServerURL": "sparse+https://mirrors.aliyun.com/crates.io-index/",
   "docker.containers.description": [
     "Ports",
     "Status"
