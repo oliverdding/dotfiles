@@ -1,2 +1,2 @@
 [misc]
-disable = ["containers"]
+disable = ["containers", "uv"]
