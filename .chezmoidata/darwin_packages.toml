@@ -71,6 +71,7 @@ brews = [
     "pinentry",
     "pkg-config",
     "poppler",
+    "presenterm",
     "qemu",
     "qsv",
     "ripgrep",

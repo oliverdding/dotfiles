@@ -7,10 +7,10 @@
 {{- end }}
 
 [commit]
-	gpgsign = {{ .gpgagent }}
+	gpgsign = {{ and .gpgagent (not .work) }}
 
 [tag]
-	gpgsign = {{ .gpgagent }}
+	gpgsign = {{ and .gpgagent (not .work) }}
 
 [user]
 	name = {{ .gitname }}
