@@ -18,11 +18,11 @@
   "codeium.enableConfig": {
     "*": true
   },
-  "docker.containers.description": [
+  "containers.containers.description": [
     "Ports",
     "Status"
   ],
-  "docker.containers.label": "ContainerName",
+  "containers.containers.label": "ContainerName",
   "editor.folding": true,
   "editor.fontFamily": "Monospace",
   "editor.fontLigatures": true,
@@ -36,6 +36,9 @@
   "evenBetterToml.formatter.arrayTrailingComma": true,
   "evenBetterToml.formatter.reorderArrays": false,
   "evenBetterToml.formatter.trailingNewline": true,
+  "extensions.experimental.affinity": {
+    "jasew.vscode-helix-emulation": 1
+  },
   "extensions.ignoreRecommendations": true,
   "files.autoSave": "onWindowChange",
   "files.eol": "\n",
@@ -64,19 +67,22 @@
   "go.survey.prompt": false,
   "go.toolsManagement.autoUpdate": true,
   "gopls": {
-    "directoryFilters": ["-**/node_modules", "-**/.git"],
-    "gofumpt": true,
-    "codelenses": {
-      "gc_details": true
-    },
-    "usePlaceholders": true,
     "analyses": {
       "shadow": true,
       "unusedvariable": true,
       "useany": true
     },
+    "codelenses": {
+      "gc_details": true
+    },
+    "directoryFilters": [
+      "-**/node_modules",
+      "-**/.git"
+    ],
+    "gofumpt": true,
+    "semanticTokens": true,
     "staticcheck": true,
-    "semanticTokens": true
+    "usePlaceholders": true
   },
   "leetcode.defaultLanguage": "golang",
   "leetcode.endpoint": "leetcode-cn",

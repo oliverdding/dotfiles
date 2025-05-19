@@ -12,11 +12,11 @@
         "--pch-storage=memory"
     ],
     "clangd.detectExtensionConflicts": false,
-    "docker.containers.description": [
+    "containers.containers.description": [
         "Ports",
         "Status"
     ],
-    "docker.containers.label": "ContainerName",
+    "containers.containers.label": "ContainerName",
     "editor.bracketPairColorization.enabled": true,
     "editor.folding": true,
     "editor.fontFamily": "'Iosevka Nerd Font Mono', 'Noto Serif CJK SC'",
@@ -24,6 +24,9 @@
     "editor.fontSize": 16,
     "editor.renderLineHighlight": "none",
     "editor.renderWhitespace": "all",
+    "extensions.experimental.affinity": {
+        "jasew.vscode-helix-emulation": 1
+    },
     "files.autoSave": "onWindowChange",
     "files.eol": "\n",
     "files.exclude": {
