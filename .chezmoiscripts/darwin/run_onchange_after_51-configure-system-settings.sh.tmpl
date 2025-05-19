@@ -99,6 +99,10 @@ defaults write "Apple Global Domain" com.apple.keyboard.fnState -int 1
 ## disable press-and-hold
 defaults write NSGlobalDomain "ApplePressAndHoldEnabled" -bool "false"
 
+## increase key repeat rate
+defaults write NSGlobalDomain "KeyRepeat" -int 1
+defaults write NSGlobalDomain "InitialKeyRepeat" -int 10
+
 # Mouse
 
 ## disable mouse acceration
