@@ -26,6 +26,7 @@ AddPackage --foreign google-chrome # The popular web browser by Google (Stable C
 AddPackage --foreign linuxqq # New Linux QQ based on Electron
 AddPackage --foreign lrcget-bin # Utility for mass-downloading LRC synced lyrics for your offline music library.
 AddPackage --foreign qmplay2 # QMPlay2 is a video and audio player which can play most formats and codecs
+AddPackage --foreign ytdlp-gui-bin # a GUI for yt-dlp written in Rust
 
 CopyFile /etc/systemd/system/clash-verge-service.service
 CreateLink /etc/systemd/system/multi-user.target.wants/clash-verge-service.service /etc/systemd/system/clash-verge-service.service

@@ -21,5 +21,6 @@ AddPackage traceroute # Tracks the route taken by packets over an IP network
 AddPackage vegeta # HTTP load testing tool
 AddPackage vscode-json-languageserver # JSON language server
 AddPackage yaml-language-server # YAML Language Server
+AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
 
 AddPackage --foreign duckdb-bin # An in-process SQL OLAP database management system
