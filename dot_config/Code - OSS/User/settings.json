@@ -15,9 +15,6 @@
     "--pch-storage=memory"
   ],
   "clangd.detectExtensionConflicts": false,
-  "codeium.enableConfig": {
-    "*": true
-  },
   "containers.containers.description": [
     "Ports",
     "Status"
