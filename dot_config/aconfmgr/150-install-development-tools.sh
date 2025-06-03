@@ -14,6 +14,7 @@ AddPackage lazygit # Simple terminal UI for git commands
 AddPackage mkcert # Simple tool for making locally-trusted development certificates
 AddPackage navi # An interactive cheatsheet tool for the command-line
 AddPackage onefetch # Git repository summary on your terminal
+AddPackage oryx # A TUI for sniffing network traffic using eBPF
 AddPackage sqlfluff # A dialect-flexible and configurable SQL linter
 AddPackage taplo-cli # TOML toolkit written in Rust
 AddPackage tcpdump # Powerful command-line packet analyzer
