@@ -61,6 +61,8 @@ brews = [
     "kubernetes-cli",
     "kubie",
     "less",
+    "lima",
+    "lima-additional-guestagents",
     "lld",
     "luarocks",
     "mas",
