@@ -10,13 +10,13 @@ disk: 100
 
 # Size of the memory in GiB to be allocated to the virtual machine.
 # Default: 2
-memory: 4
+memory: 2
 
 # Architecture of the virtual machine (x86_64, aarch64, host).
 #
 # NOTE: value cannot be changed after virtual machine is created.
 # Default: host
-arch: x86_64
+arch: aarch64
 
 # Container runtime to be used (docker, containerd).
 #
@@ -27,7 +27,7 @@ runtime: docker
 # Set custom hostname for the virtual machine.
 # Default: colima
 #          colima-profile_name for other profiles
-hostname: colima-amd
+hostname: colima-arm
 
 # Kubernetes configuration for the virtual machine.
 kubernetes:
@@ -91,7 +91,7 @@ network:
 
 # Forward the host's SSH agent to the virtual machine.
 # Default: false
-forwardAgent: false
+forwardAgent: true
 
 # Docker daemon configuration that maps directly to daemon.json.
 # https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file.
@@ -112,6 +112,8 @@ forwardAgent: false
 # Default: {}
 docker:
   bip: 172.22.0.1/16
+  features:
+    buildkit: true
   insecure-registries:
     - mirrors.tencent.com
     - hub.oa.com
@@ -121,8 +123,6 @@ docker:
     - https://mirror.ccs.tencentyun.com
     - https://dockerhub.woa.com
     - https://csighub.woa.com
-  features:
-    buildkit: true
 
 # Virtual Machine type (qemu, vz)
 # NOTE: this is macOS 13 only. For Linux and macOS <13.0, qemu is always used.
@@ -135,11 +135,11 @@ vmType: vz
 
 # Utilise rosetta for amd64 emulation (requires m1 mac and vmType `vz`)
 # Default: false
-rosetta: true
+rosetta: false
 
 # Enable nested virtualization for the virtual machine (requires m3 mac and vmType `vz`)
 # Default: false
-nestedVirtualization: false
+nestedVirtualization: true
 
 # Volume mount driver for the virtual machine (virtiofs, 9p, sshfs).
 #
@@ -186,13 +186,13 @@ provision: []
 # Modify ~/.ssh/config automatically to include a SSH config for the virtual machine.
 # SSH config will still be generated in $COLIMA_HOME/ssh_config regardless.
 # Default: true
-sshConfig: true
+sshConfig: false
 
 # The port number for the SSH server for the virtual machine.
 # When set to 0, a random available port is used.
 #
 # Default: 0
-sshPort: 36000
+sshPort: 0
 
 # Configure volume mounts for the virtual machine.
 # Colima mounts user's home directory by default to provide a familiar
