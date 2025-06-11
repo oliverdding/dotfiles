@@ -131,6 +131,11 @@ defaults write -g NSWindowShouldDragOnGesture -bool true
 ## disable save in keychain by default
 defaults write org.gpgtools.common UseKeychain NO
 
+# DS_Store
+
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
 # Power Management
 ## see also: https://liam.page/2020/07/26/change-hibernatemode-to-save-battery-on-macOS/
 
