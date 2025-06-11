@@ -8,6 +8,7 @@ mas = [
     1024640650, # CotEditor
     462054704, # Microsoft Word
     462062816, # Microsoft PowerPoint
+    1295203466 , # Windows App
     1189898970, # 企业微信
     1484048379, # 腾讯会议
     1449962996, # 腾讯柠檬清理(Lite)
@@ -17,6 +18,7 @@ mas = [
     6740315592, # Spokenly
     1231336508, # 腾讯视频
     6450693428, # 鸣潮
+    1099472017, # Helm
 ]
 brews = [
     "bash-completion@2",
@@ -100,6 +102,7 @@ taps = [
     "lzt1008/powerflow"
 ]
 casks = [
+    "apifox",
     "appcleaner",
     "bruno",
     "clash-verge-rev",
