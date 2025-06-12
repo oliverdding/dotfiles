@@ -119,7 +119,6 @@ casks = [
     "outrigdev/outrig/outrig", # https://outrig.run/
     "powerflow",
     "raindropio",
-    "raycast",
     "steam",
     "visual-studio-code",
     "wezterm",
