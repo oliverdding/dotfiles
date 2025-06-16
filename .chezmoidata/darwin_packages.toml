@@ -62,6 +62,7 @@ brews = [
     "kind",
     "kubernetes-cli",
     "kubie",
+    "launchctl-completion",
     "less",
     "lima",
     "lima-additional-guestagents",
