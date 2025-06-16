@@ -22,4 +22,7 @@ See also: [用 fontconfig 治理 Linux 中的字体](https://catcat.cc/post/2021
 
 ## XDG specification for all system
 
-See also: [github.com/adrg/xdg](https://github.com/adrg/xdg/blob/master/README.md)
+See also:
+
+- [github.com/adrg/xdg](https://github.com/adrg/xdg/blob/master/README.md)
+- [set SSH_AUTH_SOCK in launchctl](https://evilmartians.com/chronicles/stick-with-security-yubikey-ssh-gnupg-macos)
