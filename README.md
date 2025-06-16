@@ -19,3 +19,7 @@ BINDIR="$HOME/.local/bin" sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply o
 ## Font configuration
 
 See also: [用 fontconfig 治理 Linux 中的字体](https://catcat.cc/post/2021-03-07/)
+
+## XDG specification for all system
+
+See also: [github.com/adrg/xdg](https://github.com/adrg/xdg/blob/master/README.md)
