@@ -15,7 +15,7 @@
 [user]
 	name = {{ .gitname }}
 	email = {{ .gitmail }}
-{{- if .gpgagent }}
+{{- if and .gpgagent (not .work) }}
 	signingkey = 8DCF873C32DE2E45!
 {{- end }}
 
