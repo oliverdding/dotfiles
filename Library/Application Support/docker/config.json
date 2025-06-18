@@ -1,6 +1,11 @@
 {
-	"auths": {},
-	"currentContext": "colima-arm",
+	"auths": {
+		"ccr.ccs.tencentyun.com": {},
+		"csighub.tencentyun.com": {},
+		"mirrors.tencent.com": {}
+	},
+	"credsStore": "osxkeychain",
+	"currentContext": "colima",
 	"cliPluginsExtraDirs": [
 		"/opt/homebrew/lib/docker/cli-plugins"
 	]

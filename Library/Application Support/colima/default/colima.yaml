@@ -16,7 +16,7 @@ memory: 2
 #
 # NOTE: value cannot be changed after virtual machine is created.
 # Default: host
-arch: aarch64
+arch: host
 
 # Container runtime to be used (docker, containerd).
 #
@@ -27,7 +27,7 @@ runtime: docker
 # Set custom hostname for the virtual machine.
 # Default: colima
 #          colima-profile_name for other profiles
-hostname: colima-arm
+hostname: colima
 
 # Kubernetes configuration for the virtual machine.
 kubernetes:
@@ -135,7 +135,7 @@ vmType: vz
 
 # Utilise rosetta for amd64 emulation (requires m1 mac and vmType `vz`)
 # Default: false
-rosetta: false
+rosetta: true
 
 # Enable nested virtualization for the virtual machine (requires m3 mac and vmType `vz`)
 # Default: false
