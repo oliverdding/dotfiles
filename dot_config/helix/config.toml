@@ -9,10 +9,6 @@ color-modes = true
 default-line-ending = "lf"
 end-of-line-diagnostics = "hint"
 
-[editor.inline-diagnostics]
-cursor-line = "warning"
-other-lines = "error"
-
 [editor.soft-wrap]
 enable = true
 
@@ -24,7 +20,6 @@ mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [editor.lsp]
-display-messages = true
 display-inlay-hints = true
 
 [editor.cursor-shape]
@@ -40,6 +35,10 @@ newline = "none"
 [editor.indent-guides]
 render = true
 skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]

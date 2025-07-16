@@ -16,8 +16,8 @@ AddPackage navi # An interactive cheatsheet tool for the command-line
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage oryx # A TUI for sniffing network traffic using eBPF
 AddPackage sqlfluff # A dialect-flexible and configurable SQL linter
-AddPackage taplo-cli # TOML toolkit written in Rust
 AddPackage tcpdump # Powerful command-line packet analyzer
+AddPackage tombi # TOML Formatter / Linter / Language Server
 AddPackage traceroute # Tracks the route taken by packets over an IP network
 AddPackage vegeta # HTTP load testing tool
 AddPackage vscode-json-languageserver # JSON language server

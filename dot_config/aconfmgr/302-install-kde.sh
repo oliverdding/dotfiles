@@ -54,4 +54,5 @@ AddPackage wireplumber # Session / policy manager implementation for PipeWire
 AddPackage wireshark-qt # Network traffic and protocol analyzer/sniffer - Qt GUI
 AddPackage wl-clipboard # Command-line copy/paste utilities for Wayland
 AddPackage xdg-desktop-portal-gtk # A backend implementation for xdg-desktop-portal using GTK
+AddPackage xdg-desktop-portal-kde # A backend implementation for xdg-desktop-portal using Qt/KF5
 AddPackage xdg-utils # Command line tools that assist applications with a variety of desktop integration tasks
