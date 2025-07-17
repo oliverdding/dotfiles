@@ -101,6 +101,7 @@
   "update.mode": "manual",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
+  "window.dialogStyle": "custom",
   "workbench.editor.labelFormat": "short",
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
