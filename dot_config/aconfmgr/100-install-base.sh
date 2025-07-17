@@ -15,6 +15,7 @@ AddPackage tree # A directory listing program displaying a depth indented list o
 AddPackage unarchiver # unar and lsar: Objective-C tools for uncompressing archive files
 AddPackage unrar # The RAR uncompression program
 AddPackage unzip # For extracting and viewing files in .zip archives
+AddPackage usbutils # A collection of USB tools to query connected USB devices
 AddPackage which # A utility to show the full path of commands
 AddPackage xdg-user-dirs # Manage user directories like ~/Desktop and ~/Music
 AddPackage zip # Compressor/archiver for creating and modifying zipfiles
