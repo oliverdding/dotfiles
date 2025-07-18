@@ -1,0 +1,4 @@
+check_for_update: false
+
+theme:
+  use_theme: false
