@@ -103,9 +103,7 @@
   "window.commandCenter": false,
   "window.dialogStyle": "custom",
   "workbench.editor.labelFormat": "short",
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 12
