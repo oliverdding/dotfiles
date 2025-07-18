@@ -233,7 +233,7 @@ pane_frames true
 // Default: default
 // https://github.com/zellij-org/zellij/tree/main/zellij-utils/assets/themes
 //
-theme "tokyonight"
+theme "catppuccin-macchiato"
 
 // The name of the default layout to load on startup
 // Default: "default"

@@ -7,7 +7,7 @@ cfg.window_padding = {
 	bottom = 10,
 }
 
-cfg.color_scheme = "Rosé Pine Moon (Gogh)"
+cfg.color_scheme = "Catppuccin Macchiato"
 cfg.tab_bar_at_bottom = true
 cfg.hide_tab_bar_if_only_one_tab = true
 cfg.window_background_opacity = 0.9

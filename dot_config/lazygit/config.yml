@@ -5,32 +5,29 @@ git:
 
 gui:
   nerdFontsVersion: "3"
-  # https://github.com/folke/tokyonight.nvim/blob/main/extras/lazygit/tokyonight_night.yml
+  # see also: https://github.com/catppuccin/lazygit/blob/main/themes/macchiato/blue.yml
   theme:
     activeBorderColor:
-      - "#ff9e64"
-      - "bold"
+      - '#8aadf4'
+      - bold
     inactiveBorderColor:
-      - "#27a1b9"
-    searchingActiveBorderColor:
-      - "#ff9e64"
-      - "bold"
+      - '#a5adcb'
     optionsTextColor:
-      - "#7aa2f7"
+      - '#8aadf4'
     selectedLineBgColor:
-      - "#283457"
-    cherryPickedCommitFgColor:
-      - "#7aa2f7"
+      - '#363a4f'
     cherryPickedCommitBgColor:
-      - "#bb9af7"
-    markedBaseCommitFgColor:
-      - "#7aa2f7"
-    markedBaseCommitBgColor:
-      - "#e0af68"
+      - '#494d64'
+    cherryPickedCommitFgColor:
+      - '#8aadf4'
     unstagedChangesColor:
-      - "#db4b4b"
+      - '#ed8796'
     defaultFgColor:
-      - "#c0caf5"
+      - '#cad3f5'
+    searchingActiveBorderColor:
+      - '#eed49f'
+  authorColors:
+    '*': '#b7bdf8'
   language: en
   timeFormat: 2006-01-02
   shortTimeFormat: 13:05:24
