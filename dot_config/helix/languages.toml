@@ -28,11 +28,6 @@ formatter = { command = "prettier" }
 auto-format = true
 
 [[language]]
-name = "toml"
-formatter = { command = "prettier" }
-auto-format = true
-
-[[language]]
 name = "yaml"
 formatter = { command = "prettier" }
 auto-format = true
