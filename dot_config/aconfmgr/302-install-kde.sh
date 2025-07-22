@@ -1,3 +1,4 @@
+AddPackage appmenu-gtk-module # Application Menu GTK+ Module
 AddPackage ark # Archiving Tool
 AddPackage dolphin # KDE File Manager
 AddPackage dolphin-plugins # Extra Dolphin plugins
@@ -25,6 +26,8 @@ AddPackage kjournald # Framework for interacting with systemd-journald
 AddPackage kmail # KDE mail client
 AddPackage konsole # KDE terminal emulator
 AddPackage ksystemlog # System log viewer tool
+AddPackage libdbusmenu-glib # Library for passing menus over DBus
+AddPackage libdbusmenu-gtk3 # Library for passing menus over DBus (GTK+ 3 library)
 AddPackage libpulse # A featureful, general-purpose sound server (client library)
 AddPackage libraw # A library for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, and others)
 AddPackage libva-utils # Intel VA-API Media Applications and Scripts for libva
