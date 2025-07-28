@@ -19,6 +19,7 @@ AddPackage sqlfluff # A dialect-flexible and configurable SQL linter
 AddPackage tcpdump # Powerful command-line packet analyzer
 AddPackage tombi # TOML Formatter / Linter / Language Server
 AddPackage traceroute # Tracks the route taken by packets over an IP network
+AddPackage trippy # A network diagnostic tool
 AddPackage vegeta # HTTP load testing tool
 AddPackage vscode-json-languageserver # JSON language server
 AddPackage yaml-language-server # YAML Language Server
