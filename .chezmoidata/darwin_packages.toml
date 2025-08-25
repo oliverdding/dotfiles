@@ -24,6 +24,7 @@ brews = [
     "bash-completion@2",
     "bat",
     "bottom",
+    "bruno-cli",
     "chezmoi",
     "cmake",
     "colima",
