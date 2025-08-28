@@ -48,7 +48,7 @@ brews = [
     "git-lfs",
     "gnupg",
     "go",
-    "gonze",
+    "gonzo",
     "goose",
     "gopass",
     "gopls",
