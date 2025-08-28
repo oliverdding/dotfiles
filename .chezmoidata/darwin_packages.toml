@@ -103,7 +103,8 @@ brews = [
     "zoxide",
 ]
 taps = [
-    "lzt1008/powerflow"
+    "lzt1008/powerflow",
+    "control-theory/gonzo",
 ]
 casks = [
     "apifox",
@@ -116,6 +117,7 @@ casks = [
     "font-noto-serif-cjk-sc",
     "font-symbols-only-nerd-font",
     "google-chrome",
+    "gonze",
     "iina",
     "jordanbaird-ice",
     "maccy",
