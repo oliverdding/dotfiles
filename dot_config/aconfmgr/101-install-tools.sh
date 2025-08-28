@@ -2,6 +2,7 @@ AddPackage aconfmgr-git # A configuration manager for Arch Linux
 AddPackage bat # Cat clone with syntax highlighting and git integration
 AddPackage bottom # A graphical process/system monitor
 AddPackage chezmoi # Manage your dotfiles across multiple machines
+AddPackage dysk # Get information on your mounted filesystems
 AddPackage eza # A modern replacement for ls (community fork of exa)
 AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage fwupd # Simple daemon to allow session software to update firmware
