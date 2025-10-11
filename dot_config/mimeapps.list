@@ -90,3 +90,4 @@ x-scheme-handler/tonsite=org.telegram.desktop.desktop
 clash=clash-verge-handler.desktop
 clash-verge=clash-verge-handler.desktop
 x-scheme-handler/rnio=raindrop.desktop
+x-scheme-handler/clash-verge=clash-verge-handler.desktop
