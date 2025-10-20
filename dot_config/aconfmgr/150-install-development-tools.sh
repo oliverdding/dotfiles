@@ -20,6 +20,7 @@ AddPackage tcpdump # Powerful command-line packet analyzer
 AddPackage tombi # TOML Formatter / Linter / Language Server
 AddPackage traceroute # Tracks the route taken by packets over an IP network
 AddPackage trippy # A network diagnostic tool
+AddPackage unixodbc # ODBC is an open specification for providing application developers with a predictable API with which to access Data Sources
 AddPackage vegeta # HTTP load testing tool
 AddPackage vscode-json-languageserver # JSON language server
 AddPackage yaml-language-server # YAML Language Server
