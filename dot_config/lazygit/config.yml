@@ -1,7 +1,7 @@
 git:
-  paging:
-    colorArg: always
-    useConfig: true
+  pagers:
+    - colorArg: always
+      useExternalDiffGitConfig: true
 
 gui:
   nerdFontsVersion: "3"
