@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=TokyoNightBlueKonsole
+ColorScheme=catppuccin-macchiato
 EmojiFont=Noto Color Emoji,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Font=Monospace,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 UseFontLineChararacters=true

@@ -8,6 +8,8 @@ bufferline = "multiple"
 color-modes = true
 default-line-ending = "lf"
 end-of-line-diagnostics = "hint"
+# Sync clipboard with system clipboard
+default-yank-register = "+"
 
 [editor.soft-wrap]
 enable = true

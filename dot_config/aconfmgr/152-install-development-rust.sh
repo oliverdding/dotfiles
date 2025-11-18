@@ -1,5 +1,6 @@
 AddPackage cargo-audit # Audit Cargo.lock for crates with security vulnerabilities
 AddPackage cargo-binstall # Binary installation for Rust projects
+AddPackage cargo-cache # Display info and prune cargo cache
 AddPackage cargo-generate # Use pre-existing git repositories as templates
 AddPackage cargo-outdated # A cargo subcommand for displaying when Rust dependencies are out of date
 AddPackage cargo-show-asm # Cargo subcommand to display ASM, LLVM-IR and MIR for Rust source code
