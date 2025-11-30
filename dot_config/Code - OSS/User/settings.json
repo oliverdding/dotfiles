@@ -1,4 +1,12 @@
 {
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  },
   "clangd.arguments": [
     "--background-index",
     "--compile-commands-dir=build",
@@ -90,6 +98,7 @@
   "leetcode.useEndpointTranslation": false,
   "leetcode.workspaceFolder": "/home/charmer/Developer/leetcode-go",
   "lldb.showDisassembly": "never",
+  "python.languageServer": "None",
   "rust-analyzer.check.command": "clippy",
   "rust-analyzer.diagnostics.experimental.enable": true,
   "rust-analyzer.diagnostics.styleLints.enable": true,
@@ -101,6 +110,8 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.rightClickBehavior": "paste",
+  "ty.experimental.autoImport": true,
+  "ty.experimental.rename": true,
   "update.mode": "manual",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
