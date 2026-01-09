@@ -1,3 +1,4 @@
+AddPackage bugstalker # Rust debugger for Linux x86-64
 AddPackage cargo-audit # Audit Cargo.lock for crates with security vulnerabilities
 AddPackage cargo-binstall # Binary installation for Rust projects
 AddPackage cargo-cache # Display info and prune cargo cache

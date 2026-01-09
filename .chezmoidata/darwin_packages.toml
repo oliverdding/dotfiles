@@ -69,6 +69,7 @@ brews = [
     "less",
     "lima",
     "lima-additional-guestagents",
+    "llama.cpp",
     "lld",
     "luarocks",
     "mas",
@@ -104,8 +105,9 @@ brews = [
     "zoxide",
 ]
 taps = [
-    "lzt1008/powerflow",
     "control-theory/gonzo",
+    "lzt1008/powerflow",
+    "mostlygeek/llama-swap"
 ]
 casks = [
     "apifox",
@@ -120,6 +122,7 @@ casks = [
     "google-chrome",
     "iina",
     "jordanbaird-ice",
+    "llama-swap",
     "maccy",
     "obsidian",
     "outrigdev/outrig/outrig", # https://outrig.run/
