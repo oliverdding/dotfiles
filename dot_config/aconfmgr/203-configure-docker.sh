@@ -1,3 +1,5 @@
+AddPackage dive # A tool for exploring layers in a docker image
+AddPackage ducker # A terminal app for managing docker containers
 AddPackage docker # Pack, ship and run any application as a lightweight container
 AddPackage docker-buildx # Docker CLI plugin for extended build capabilities with BuildKit
 AddPackage docker-compose # Fast, isolated development environments using Docker
