@@ -2,6 +2,7 @@
 darwin = [
     "$HOME/.local/bin",
     "$HOME/Library/Application Support/go/bin",
+    "$HOME/Library/Application Support/cargo/bin",
     "/opt/homebrew/opt/curl/bin",
     "/opt/homebrew/opt/openjdk@11/bin",
     "/opt/homebrew/opt/llvm/bin",
