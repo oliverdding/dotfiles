@@ -66,7 +66,6 @@ brews = [
     "less",
     "lima",
     "lima-additional-guestagents",
-    "llama.cpp",
     "lld",
     "luarocks",
     "mas",
@@ -102,9 +101,7 @@ brews = [
     "zoxide",
 ]
 taps = [
-    "control-theory/gonzo",
-    "lzt1008/powerflow",
-    "mostlygeek/llama-swap"
+    "lifedever/tap",
 ]
 casks = [
     "apifox",
@@ -119,12 +116,12 @@ casks = [
     "google-chrome",
     "iina",
     "jordanbaird-ice",
-    "maccy",
+    "pastememo", # https://github.com/lifedever/PasteMemo-app
     "obsidian",
     "outrigdev/outrig/outrig", # https://outrig.run/
-    "powerflow",
     "raindropio",
     "steam",
+    "thaw",
     "visual-studio-code",
     "wezterm",
     "xld",
