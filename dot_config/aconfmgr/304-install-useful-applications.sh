@@ -1,5 +1,6 @@
 AddPackage akregator # A Feed Reader by KDE
 AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
+AddPackage code-marketplace # Enable vscode marketplace in Code OSS
 AddPackage fcitx5 # Next generation of fcitx
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
