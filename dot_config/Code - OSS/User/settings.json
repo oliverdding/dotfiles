@@ -21,8 +21,6 @@
   ],
   "clangd.detectExtensionConflicts": false,
   "codingcopilot.commitMessageLanguage": "en",
-  "codingcopilot.commitMessageStyle": "ConventionalCommits",
-  "codingcopilot.modelDocumentLanguage": "English",
   "containers.containers.description": [
     "Ports",
     "Status"
@@ -110,8 +108,6 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.rightClickBehavior": "paste",
-  "ty.experimental.autoImport": true,
-  "ty.experimental.rename": true,
   "update.mode": "manual",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
@@ -120,5 +116,5 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.tree.indent": 12
+  "workbench.tree.indent": 12,
 }
