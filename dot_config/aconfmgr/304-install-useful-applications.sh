@@ -12,11 +12,10 @@ AddPackage kdenlive # A non-linear video editor for Linux using the MLT video fr
 AddPackage kget # Download Manager
 AddPackage kid3 # An MP3, Ogg/Vorbis and FLAC tag editor, KDE version
 AddPackage ktorrent # A powerful BitTorrent client for KDE
-AddPackage libreoffice-still # LibreOffice maintenance branch
-AddPackage libreoffice-still-zh-cn # Chinese (simplified) language pack for LibreOffice still
 AddPackage monolith # CLI to save web pages as single HTML files
 AddPackage neochat # A client for matrix, the decentralized communication protocol
 AddPackage obsidian # A powerful knowledge base that works on top of a local folder of plain text Markdown files
+AddPackage onlyoffice-bin # An office suite that combines text, spreadsheet and presentation editors
 AddPackage pot-translation # 一个跨平台的划词翻译软件 | A cross-platform software for text translation.
 AddPackage rime-ice-pinyin-git # Rime 配置：雾凇拼音 | 长期维护的简体词库 - 拼音方案
 AddPackage telegram-desktop # Official Telegram Desktop client
