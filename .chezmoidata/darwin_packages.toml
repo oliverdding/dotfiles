@@ -15,6 +15,12 @@ mas = [
     6698876601, # Folder Preview
     6670330650, # Rainbow PDF
     1231336508, # 腾讯视频
+    6737194096, # AD Blocker
+    6763280346, # AriaX
+    1590273176, # Bee DICOM Viewer
+    571213070, # DaVinci Resolve
+    6670330650, # Rainbow PDF
+    6754293545, # Sheepo Desktop
 ]
 brews = [
     "bash-completion@2",
@@ -104,7 +110,6 @@ taps = [
     "lifedever/tap",
 ]
 casks = [
-    "apifox",
     "appcleaner",
     "bruno",
     "clash-verge-rev",
