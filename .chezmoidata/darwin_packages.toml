@@ -11,11 +11,10 @@ mas = [
     1295203466 , # Windows App
     1189898970, # 企业微信
     1484048379, # 腾讯会议
-    1449962996, # 腾讯柠檬清理(Lite)
     6698876601, # Folder Preview
     6670330650, # Rainbow PDF
     1231336508, # 腾讯视频
-    6737194096, # AD Blocker
+    # 6737194096, # AD Blocker
     6763280346, # AriaX
     1590273176, # Bee DICOM Viewer
     571213070, # DaVinci Resolve
@@ -120,7 +119,6 @@ casks = [
     "font-symbols-only-nerd-font",
     "google-chrome",
     "iina",
-    "jordanbaird-ice",
     "pastememo", # https://github.com/lifedever/PasteMemo-app
     "obsidian",
     "outrigdev/outrig/outrig", # https://outrig.run/
