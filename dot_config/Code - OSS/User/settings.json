@@ -7,20 +7,9 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
-  "clangd.arguments": [
-    "--background-index",
-    "--compile-commands-dir=build",
-    "-j=12",
-    "--query-driver=/usr/bin/clang++",
-    "--clang-tidy",
-    "--all-scopes-completion",
-    "--completion-style=detailed",
-    "--function-arg-placeholders",
-    "--header-insertion=iwyu",
-    "--pch-storage=memory"
-  ],
-  "clangd.detectExtensionConflicts": false,
-  "codingcopilot.commitMessageLanguage": "en",
+  "chat.agent.enabled": false,
+  "chat.titleBar.signIn.enabled": false,
+  // "window.titleBarStyle": "native",
   "containers.containers.description": [
     "Ports",
     "Status"
@@ -40,6 +29,7 @@
     "**/.bloop": true,
     "**/.metals": true
   },
+  "git.enableCommitSigning": true,
   "git.showPushSuccessNotification": true,
   "git.terminalGitEditor": true,
   "github.gitProtocol": "ssh",
@@ -95,7 +85,6 @@
   "leetcode.hint.setDefaultLanguage": false,
   "leetcode.useEndpointTranslation": false,
   "leetcode.workspaceFolder": "/home/charmer/Developer/leetcode-go",
-  "lldb.showDisassembly": "never",
   "python.languageServer": "None",
   "rust-analyzer.check.command": "clippy",
   "rust-analyzer.diagnostics.experimental.enable": true,
@@ -112,9 +101,12 @@
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
   "window.dialogStyle": "custom",
+  "workbench.browser.showInTitleBar": false,
+  "workbench.commandPalette.showAskInChat": false,
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editor.labelFormat": "short",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.tree.indent": 12,
+  "workbench.tips.enabled": false
 }
