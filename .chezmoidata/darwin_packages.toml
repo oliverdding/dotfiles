@@ -119,7 +119,6 @@ casks = [
     "font-symbols-only-nerd-font",
     "google-chrome",
     "iina",
-    "pastememo", # https://github.com/lifedever/PasteMemo-app
     "obsidian",
     "outrigdev/outrig/outrig", # https://outrig.run/
     "raindropio",
