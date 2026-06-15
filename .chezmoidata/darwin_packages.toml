@@ -123,7 +123,6 @@ casks = [
     "obsidian",
     "outrigdev/outrig/outrig", # https://outrig.run/
     "raindropio",
-    "steam",
     "thaw",
     "visual-studio-code",
     "wezterm",
