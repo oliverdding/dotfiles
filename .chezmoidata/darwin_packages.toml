@@ -121,7 +121,6 @@ casks = [
     "iina",
     "netnewswire",
     "obsidian",
-    "outrigdev/outrig/outrig", # https://outrig.run/
     "raindropio",
     "thaw",
     "visual-studio-code",
