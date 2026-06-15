@@ -119,6 +119,7 @@ casks = [
     "font-symbols-only-nerd-font",
     "google-chrome",
     "iina",
+    "netnewswire",
     "obsidian",
     "outrigdev/outrig/outrig", # https://outrig.run/
     "raindropio",
