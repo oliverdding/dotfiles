@@ -1,0 +1,11 @@
+prefix=${XDG_DATA_HOME}/npm
+cache=${XDG_CACHE_HOME}/npm
+init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
+
+# init config
+init-author-name={{ .gitname }}
+init-author-email={{ .gitmail }}
+init-author-url=https://charmer.fun
+
+# mirror config
+registry = http://mirrors.tencent.com/npm/
