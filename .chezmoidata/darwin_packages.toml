@@ -22,6 +22,7 @@ mas = [
     6754293545, # Sheepo Desktop
 ]
 brews = [
+    "apfel",
     "bash-completion@2",
     "bat",
     "bottom",
