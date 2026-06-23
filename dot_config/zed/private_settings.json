@@ -4,44 +4,67 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
-    },
-    "dock": "bottom",
-    "version": "2"
-  },
   "auto_update": false,
   "autosave": "on_focus_change",
-  "buffer_font_family": "Iosevka Fixed",
-  "buffer_font_fallbacks": ["Noto Sans CJK SC", "Noto Color Emoji"],
+  "buffer_font_fallbacks": [
+    "Noto Serif CJK SC"
+  ],
+  "buffer_font_family": "IosevkaTerm Nerd Font Mono",
   "buffer_font_size": 16,
+  "collaboration_panel": {
+    "button": false
+  },
   "current_line_highlight": "gutter",
   "cursor_blink": false,
+  "cursor_shape": "block",
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "api_url": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash"
+    },
+    "provider": "open_ai_compatible_api"
+  },
   "git": {
     "inline_blame": {
-      "enabled": false,
-      "delay_ms": 500
+      "delay_ms": 500,
+      "enabled": true
     }
   },
+  "helix_mode": true,
   "indent_guides": {
     "coloring": "indent_aware"
   },
   "inlay_hints": {
     "enabled": true
   },
-  "inline_completions": {
-    "disabled_globs": [".env"]
-  },
   "journal": {
     "hour_format": "hour24"
   },
+  "line_ending": "enforce_lf",
   "load_direnv": "shell_hook",
   "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "analyses": {
+          "shadow": true,
+          "unusedvariable": true,
+          "useany": true
+        },
+        "codelenses": {
+          "gc_details": true
+        },
+        "directoryFilters": [
+          "-**/node_modules",
+          "-**/.git"
+        ],
+        "gofumpt": true,
+        "semanticTokens": true,
+        "staticcheck": true
+      }
+    },
     "rust-analyzer": {
       "initialization_options": {
         "check": {
@@ -70,29 +93,17 @@
           }
         }
       }
-    },
-    "gopls": {
-      "initialization_options": {
-        "directoryFilters": ["-**/node_modules", "-**/.git"],
-        "gofumpt": true,
-        "codelenses": {
-          "gc_details": true
-        },
-        "analyses": {
-          "shadow": true,
-          "unusedvariable": true,
-          "useany": true
-        },
-        "staticcheck": true,
-        "semanticTokens": true
-      }
     }
+  },
+  "minimap": {
+    "show": "always"
   },
   "project_panel": {
     "dock": "right"
   },
+  "relative_line_numbers": "disabled",
   "scrollbar": {
-    "show": "system"
+    "show": "never"
   },
   "show_whitespaces": "all",
   "tabs": {
@@ -100,17 +111,24 @@
     "git_status": true
   },
   "telemetry": {
+    "anthropic_retention": false,
     "diagnostics": false,
     "metrics": false
   },
   "terminal": {
-    "font_family": "Iosevka Term",
+    "font_fallbacks": [
+      "Noto Serif CJK SC"
+    ],
+    "font_family": "IosevkaTerm Nerd Font Mono",
     "font_size": 14
   },
   "theme": {
-    "mode": "system",
-    "light": "Rosé Pine Dawn",
-    "dark": "Rosé Pine Moon"
+    "dark": "One Dark",
+    "light": "One Light",
+    "mode": "system"
   },
-  "ui_font_size": 16
+  "ui_font_size": 16,
+  "which_key": {
+    "enabled": true
+  }
 }
