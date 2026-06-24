@@ -59,6 +59,7 @@
         /bin/launchctl setenv PYTHON_HISTORY "$HOME/Library/Application Support/python/history";
         /bin/launchctl setenv PYTHONPYCACHEPREFIX "$HOME/Library/Caches/python";
         /bin/launchctl setenv PYTHONUSERBASE "$HOME/Library/Application Support/python";
+        /bin/launchctl setenv REASONIX_HOME "$HOME/Library/Application Support/reasonix";
         /bin/launchctl setenv REDISCLI_HISTFILE "$HOME/Library/Application Support/redis/rediscli_history";
         /bin/launchctl setenv REDISCLI_RCFILE "$HOME/Library/Application Support/redis/redisclirc";
         /bin/launchctl setenv RIPGREP_CONFIG_PATH "$HOME/Library/Application Support/ripgrep/config";
