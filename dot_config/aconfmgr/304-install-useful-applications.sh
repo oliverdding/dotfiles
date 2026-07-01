@@ -1,11 +1,10 @@
 AddPackage akregator # A Feed Reader by KDE
-AddPackage code # The Open Source build of Visual Studio Code (vscode) editor
-AddPackage code-marketplace # Enable vscode marketplace in Code OSS
 AddPackage fcitx5 # Next generation of fcitx
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage fcitx5-qt # Fcitx5 Qt Library (Qt5 & Qt6 integrations)
 AddPackage fcitx5-rime # RIME support for Fcitx5
+AddPackage flclash # A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.
 AddPackage go-musicfox-git # Command-line Netease Cloud Music written in Go (git version).
 AddPackage kasts # Kirigami-based podcast player
 AddPackage kcachegrind # Visualization of Performance Profiling Data
@@ -24,7 +23,6 @@ AddPackage sweeper # System Cleaner
 AddPackage xorg-xwininfo # Command-line utility to print information about windows on an X server
 AddPackage zotero # Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research
 
-AddPackage --foreign code-marketplace # Enable vscode marketplace in Code OSS
 AddPackage --foreign google-chrome # The popular web browser by Google (Stable Channel)
 AddPackage --foreign linuxqq # New Linux QQ based on Electron
 AddPackage --foreign lrcget-bin # Utility for mass-downloading LRC synced lyrics for your offline music library.
@@ -32,6 +30,3 @@ AddPackage --foreign omniget-bin # Media downloader. Paste a link. Get your file
 AddPackage --foreign qmplay2 # QMPlay2 is a video and audio player which can play most formats and codecs
 AddPackage --foreign raindrop # All-in-one bookmark manager
 AddPackage --foreign ytdlp-gui-bin # a GUI for yt-dlp written in Rust
-
-CopyFile /etc/systemd/system/clash-verge-service.service
-CreateLink /etc/systemd/system/multi-user.target.wants/clash-verge-service.service /etc/systemd/system/clash-verge-service.service
