@@ -39,3 +39,6 @@ eval "$(starship init bash)"
 # Aliases
 
 alias ls='eza'
+{{ if eq .chezmoi.os "darwin" }}
+alias helix='hx'
+{{ end }}
