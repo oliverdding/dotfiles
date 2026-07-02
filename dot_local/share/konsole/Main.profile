@@ -14,7 +14,7 @@ Parent=FALLBACK/
 
 [Interaction Options]
 CopyTextAsHTML=false
-TrimLeadingSpacesInSelectedText=true
+TrimLeadingSpacesInSelectedText=false
 TrimTrailingSpacesInSelectedText=true
 
 [Keyboard]

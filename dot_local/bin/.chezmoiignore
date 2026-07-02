@@ -10,3 +10,6 @@ showhidden
 {{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
 git-credential-with-kwallet
 {{ end }}
+{{ if ne .chezmoi.osRelease.id "arch" }}
+hx
+{{ end }}
