@@ -1,7 +1,6 @@
 [Unit]
 Description=UxPlay AirPlay Receiver
-After=avahi-daemon.service network.target dbus.service
-Requires=avahi-daemon.service
+After=network.target dbus.service
 
 [Service]
 Type=simple
