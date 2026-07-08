@@ -5,7 +5,7 @@ After=avahi-daemon
 
 [Service]
 Type=simple
-ExecStart=uxplay -p 7000
+ExecStart=uxplay -async -p 7000
 Restart=on-failure
 # StandardOutput=file:%h/uxplay.log
 
