@@ -23,6 +23,15 @@
 ### tuple ### allow tcp 1714:1764 ::/0 any ::/0 in
 -A ufw6-user-input -p tcp -m multiport --dports 1714:1764 -j ACCEPT
 
+### tuple ### allow udp 5353 ::/0 any fe80::/64 in
+-A ufw6-user-input -p udp --dport 5353 -s fe80::/64 -j ACCEPT
+
+### tuple ### allow tcp 7000:7002 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp -m multiport --dports 7000:7002 -j ACCEPT
+
+### tuple ### allow udp 7000:7002 ::/0 any ::/0 in
+-A ufw6-user-input -p udp -m multiport --dports 7000:7002 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###

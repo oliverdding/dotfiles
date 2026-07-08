@@ -4,6 +4,3 @@ FullScreen=false
 [General]
 LockSidebar=true
 ShowSidebar=true
-
-[MainWindow]
-ToolBarsMovable=Disabled

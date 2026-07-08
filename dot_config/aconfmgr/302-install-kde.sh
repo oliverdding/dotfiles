@@ -52,6 +52,7 @@ AddPackage smartmontools # Control and monitor S.M.A.R.T. enabled ATA and SCSI H
 AddPackage sof-firmware # Sound Open Firmware
 AddPackage spectacle # KDE screenshot capture utility
 AddPackage sshfs # FUSE client based on the SSH File Transfer Protocol
+AddPackage uxplay # AirPlay Unix mirroring server
 AddPackage wireless_tools # Tools allowing to manipulate the Wireless Extensions
 AddPackage wireplumber # Session / policy manager implementation for PipeWire
 AddPackage wireshark-qt # Network traffic and protocol analyzer/sniffer - Qt GUI

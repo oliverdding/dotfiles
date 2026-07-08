@@ -55,7 +55,7 @@
       "enabled": true
     }
   },
-  "helix_mode": true,
+  "helix_mode": false,
   "indent_guides": {
     "coloring": "indent_aware"
   },
