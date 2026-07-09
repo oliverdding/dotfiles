@@ -1,4 +1,18 @@
 {
+    "[dockercompose]": {
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.insertSpaces": true,
+        "editor.quickSuggestions": {
+            "comments": false,
+            "other": true,
+            "strings": true
+        },
+        "editor.tabSize": 2
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "clangd.arguments": [
         "--background-index",
         "--compile-commands-dir=build",
@@ -61,6 +75,7 @@
     },
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "git.replaceTagsWhenPull": true,
     "git.showPushSuccessNotification": true,
     "git.terminalGitEditor": true,
     "github.gitProtocol": "ssh",
@@ -90,25 +105,6 @@
         "ui.diagnostic.staticcheck": true,
         "ui.semanticTokens": true
     },
-    "leetcode.defaultLanguage": "golang",
-    "leetcode.endpoint": "leetcode-cn",
-    "leetcode.filePath": {
-        "default": {
-            "filename": "${id}.${kebab-case-name}.${ext}",
-            "folder": ""
-        },
-        "golang": {
-            "filename": "${snake_case_name}.${ext}",
-            "folder": "${difficulty}/id${id}"
-        }
-    },
-    "leetcode.hint.commandShortcut": false,
-    "leetcode.hint.commentDescription": false,
-    "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.setDefaultLanguage": false,
-    "leetcode.useEndpointTranslation": false,
-    "leetcode.workspaceFolder": "/Users/charmer/Developer/leetcode-go",
-    "lldb.showDisassembly": "never",
     "redhat.telemetry.enabled": false,
     "remote.SSH.remotePlatform": {
         "devcloud": "linux",
@@ -172,5 +168,6 @@
         "!Select sequence",
         "!Split",
         "!Split sequence"
-    ]
+    ],
+    "todo-tree.ripgrep.ripgrep": "/opt/homebrew/bin/rg"
 }
