@@ -11,7 +11,7 @@
 {{- end }}
 {{- if ne .hosttype "desktop" }}
 302-install-kde.sh
-303-install-sddm.sh
+303-install-display-manager.sh
 304-install-useful-applications.sh
 305-install-fonts.sh
 {{- end }}
