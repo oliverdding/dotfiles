@@ -1,5 +1,6 @@
 {{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
 applications
+dbus-1
 fcitx5
 icons
 konsole

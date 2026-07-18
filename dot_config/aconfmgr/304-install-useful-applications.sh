@@ -1,4 +1,5 @@
 AddPackage akregator # A Feed Reader by KDE
+AddPackage crow-translate # Application that allows you to translate and speak text
 AddPackage fcitx5 # Next generation of fcitx
 AddPackage fcitx5-configtool # Configuration Tool for Fcitx5
 AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
