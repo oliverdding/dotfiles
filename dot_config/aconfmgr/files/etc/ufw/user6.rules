@@ -17,20 +17,38 @@
 :ufw6-user-limit-accept - [0:0]
 ### RULES ###
 
-### tuple ### allow udp 1714:1764 ::/0 any ::/0 in
--A ufw6-user-input -p udp -m multiport --dports 1714:1764 -j ACCEPT
+### KDE Connect: allow link-local and unique-local IPv6 networks only
 
-### tuple ### allow tcp 1714:1764 ::/0 any ::/0 in
--A ufw6-user-input -p tcp -m multiport --dports 1714:1764 -j ACCEPT
+### tuple ### allow udp 1714:1764 ::/0 any fe80::/10 in
+-A ufw6-user-input -p udp -m multiport --dports 1714:1764 -s fe80::/10 -j ACCEPT
 
-### tuple ### allow udp 5353 ::/0 any fe80::/64 in
--A ufw6-user-input -p udp --dport 5353 -s fe80::/64 -j ACCEPT
+### tuple ### allow udp 1714:1764 ::/0 any fc00::/7 in
+-A ufw6-user-input -p udp -m multiport --dports 1714:1764 -s fc00::/7 -j ACCEPT
 
-### tuple ### allow tcp 7000:7002 ::/0 any ::/0 in
--A ufw6-user-input -p tcp -m multiport --dports 7000:7002 -j ACCEPT
+### tuple ### allow tcp 1714:1764 ::/0 any fe80::/10 in
+-A ufw6-user-input -p tcp -m multiport --dports 1714:1764 -s fe80::/10 -j ACCEPT
 
-### tuple ### allow udp 7000:7002 ::/0 any ::/0 in
--A ufw6-user-input -p udp -m multiport --dports 7000:7002 -j ACCEPT
+### tuple ### allow tcp 1714:1764 ::/0 any fc00::/7 in
+-A ufw6-user-input -p tcp -m multiport --dports 1714:1764 -s fc00::/7 -j ACCEPT
+
+### mDNS: allow link-local IPv6 only
+
+### tuple ### allow udp 5353 ::/0 any fe80::/10 in
+-A ufw6-user-input -p udp --dport 5353 -s fe80::/10 -j ACCEPT
+
+### UxPlay: allow link-local and unique-local IPv6 networks only
+
+### tuple ### allow tcp 7000:7002 ::/0 any fe80::/10 in
+-A ufw6-user-input -p tcp -m multiport --dports 7000:7002 -s fe80::/10 -j ACCEPT
+
+### tuple ### allow tcp 7000:7002 ::/0 any fc00::/7 in
+-A ufw6-user-input -p tcp -m multiport --dports 7000:7002 -s fc00::/7 -j ACCEPT
+
+### tuple ### allow udp 7000:7002 ::/0 any fe80::/10 in
+-A ufw6-user-input -p udp -m multiport --dports 7000:7002 -s fe80::/10 -j ACCEPT
+
+### tuple ### allow udp 7000:7002 ::/0 any fc00::/7 in
+-A ufw6-user-input -p udp -m multiport --dports 7000:7002 -s fc00::/7 -j ACCEPT
 
 ### END RULES ###
 

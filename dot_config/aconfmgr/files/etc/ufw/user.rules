@@ -17,20 +17,56 @@
 :ufw-user-limit-accept - [0:0]
 ### RULES ###
 
-### tuple ### allow udp 1714:1764 0.0.0.0/0 any 0.0.0.0/0 in
--A ufw-user-input -p udp -m multiport --dports 1714:1764 -j ACCEPT
+### KDE Connect: allow private IPv4 networks only
 
-### tuple ### allow tcp 1714:1764 0.0.0.0/0 any 0.0.0.0/0 in
--A ufw-user-input -p tcp -m multiport --dports 1714:1764 -j ACCEPT
+### tuple ### allow udp 1714:1764 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p udp -m multiport --dports 1714:1764 -s 10.0.0.0/8 -j ACCEPT
 
-### tuple ### allow udp 5353 0.0.0.0/0 any 192.168.124.0/24 in
--A ufw-user-input -p udp --dport 5353 -s 192.168.124.0/24 -j ACCEPT
+### tuple ### allow udp 1714:1764 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p udp -m multiport --dports 1714:1764 -s 172.16.0.0/12 -j ACCEPT
 
-### tuple ### allow tcp 7000:7002 0.0.0.0/0 any 0.0.0.0/0 in
--A ufw-user-input -p tcp -m multiport --dports 7000:7002 -j ACCEPT
+### tuple ### allow udp 1714:1764 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p udp -m multiport --dports 1714:1764 -s 192.168.0.0/16 -j ACCEPT
 
-### tuple ### allow udp 7000:7002 0.0.0.0/0 any 0.0.0.0/0 in
--A ufw-user-input -p udp -m multiport --dports 7000:7002 -j ACCEPT
+### tuple ### allow tcp 1714:1764 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p tcp -m multiport --dports 1714:1764 -s 10.0.0.0/8 -j ACCEPT
+
+### tuple ### allow tcp 1714:1764 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p tcp -m multiport --dports 1714:1764 -s 172.16.0.0/12 -j ACCEPT
+
+### tuple ### allow tcp 1714:1764 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p tcp -m multiport --dports 1714:1764 -s 192.168.0.0/16 -j ACCEPT
+
+### mDNS: allow private IPv4 networks only
+
+### tuple ### allow udp 5353 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p udp --dport 5353 -s 10.0.0.0/8 -j ACCEPT
+
+### tuple ### allow udp 5353 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p udp --dport 5353 -s 172.16.0.0/12 -j ACCEPT
+
+### tuple ### allow udp 5353 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p udp --dport 5353 -s 192.168.0.0/16 -j ACCEPT
+
+### UxPlay: allow private IPv4 networks only
+
+### tuple ### allow tcp 7000:7002 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p tcp -m multiport --dports 7000:7002 -s 10.0.0.0/8 -j ACCEPT
+
+### tuple ### allow tcp 7000:7002 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p tcp -m multiport --dports 7000:7002 -s 172.16.0.0/12 -j ACCEPT
+
+### tuple ### allow tcp 7000:7002 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p tcp -m multiport --dports 7000:7002 -s 192.168.0.0/16 -j ACCEPT
+
+### tuple ### allow udp 7000:7002 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p udp -m multiport --dports 7000:7002 -s 10.0.0.0/8 -j ACCEPT
+
+### tuple ### allow udp 7000:7002 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p udp -m multiport --dports 7000:7002 -s 172.16.0.0/12 -j ACCEPT
+
+### tuple ### allow udp 7000:7002 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p udp -m multiport --dports 7000:7002 -s 192.168.0.0/16 -j ACCEPT
 
 ### END RULES ###
 
