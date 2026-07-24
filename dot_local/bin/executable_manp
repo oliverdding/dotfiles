@@ -5,7 +5,7 @@ function help {
 }
 
 [[ $# -eq 0 ]] && {
-    error "No arguments given."
+    printf 'Error: No arguments given.\n' >&2
     help
     exit 1
 }

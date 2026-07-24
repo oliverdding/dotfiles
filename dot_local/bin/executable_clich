@@ -5,7 +5,7 @@ function help {
 }
 
 [[ $# -eq 0 ]] && {
-    error "Need target database."
+    printf 'Error: Need target database.\n' >&2
     help
     exit 1
 }
@@ -28,7 +28,7 @@ tmf1.8-arm)
     exit 0
     ;;
 *)
-    error "Unknown target dataabse"
+    printf 'Error: Unknown target database.\n' >&2
     help
     exit 2
     ;;
