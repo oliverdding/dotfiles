@@ -7,9 +7,9 @@ pushdf
 ql
 showhidden
 {{ end }}
-{{ if or (ne .chezmoi.os "linux") (ne .hosttype "desktop") }}
-git-credential-with-kwallet
-{{ end }}
 {{ if or (ne .chezmoi.os "linux") (ne .chezmoi.osRelease.id "arch") }}
 hx
+{{ end }}
+{{ if not .work }}
+clich
 {{ end }}

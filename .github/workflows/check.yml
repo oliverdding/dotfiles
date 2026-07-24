@@ -1,15 +1,87 @@
-name: Manual workflow
+name: Check dotfiles
 
 on:
   push:
     branches:
-      - 'main'
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  CHEZMOI_VERSION: "2.71.1"
 
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-    - name: Install dotfiles
-      run: sh -c "$(curl -fsLS get.chezmoi.io)" -- init --no-tty --no-pager --keep-going oliverdding --apply --promptDefaults
-    - name: Check system
-      run: ./bin/chezmoi doctor --keep-going --no-pager --no-tty
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install chezmoi
+        run: |
+          mkdir -p "${RUNNER_TEMP}/bin"
+          curl -fsSLo "${RUNNER_TEMP}/chezmoi.tar.gz" \
+            "https://github.com/twpayne/chezmoi/releases/download/v${CHEZMOI_VERSION}/chezmoi_${CHEZMOI_VERSION}_linux_amd64.tar.gz"
+          tar -xzf "${RUNNER_TEMP}/chezmoi.tar.gz" -C "${RUNNER_TEMP}" chezmoi
+          install -m 0755 "${RUNNER_TEMP}/chezmoi" "${RUNNER_TEMP}/bin/chezmoi"
+          echo "${RUNNER_TEMP}/bin" >> "${GITHUB_PATH}"
+
+      - name: Initialize test configuration
+        run: |
+          mkdir -p "${RUNNER_TEMP}/home" "${RUNNER_TEMP}/config"
+          chezmoi init \
+            --source "${GITHUB_WORKSPACE}" \
+            --destination "${RUNNER_TEMP}/home" \
+            --config-path "${RUNNER_TEMP}/config/chezmoi.toml" \
+            --promptDefaults \
+            --no-tty \
+            --no-pager
+
+      - name: Validate target state
+        run: |
+          chezmoi \
+            --source "${GITHUB_WORKSPACE}" \
+            --destination "${RUNNER_TEMP}/home" \
+            --config "${RUNNER_TEMP}/config/chezmoi.toml" \
+            apply \
+            --dry-run \
+            --exclude scripts \
+            --refresh-externals never \
+            --no-tty \
+            --no-pager
+
+      - name: Check shell syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          while IFS= read -r -d '' file; do
+            if head -n 1 "${file}" | grep -qE '^#!.*(ba)?sh([[:space:]]|$)'; then
+              bash -n "${file}"
+            fi
+          done < <(find dot_local/bin dot_config/aconfmgr -type f -print0)
+
+          while IFS= read -r -d '' file; do
+            chezmoi \
+              --source "${GITHUB_WORKSPACE}" \
+              --config "${RUNNER_TEMP}/config/chezmoi.toml" \
+              execute-template < "${file}" | bash -n
+          done < <(
+            find .chezmoiscripts -type f -name '*.sh.tmpl' -print0
+            printf '%s\0' dot_bash_profile.tmpl dot_bashrc.tmpl
+          )
+
+      - name: Check Git whitespace
+        shell: bash
+        run: |
+          set -euo pipefail
+          base_sha="${{ github.event.pull_request.base.sha || github.event.before }}"
+          if git cat-file -e "${base_sha}^{commit}" 2>/dev/null; then
+            git diff --check "${base_sha}" "${GITHUB_SHA}"
+          else
+            git diff --check "${GITHUB_SHA}^" "${GITHUB_SHA}"
+          fi

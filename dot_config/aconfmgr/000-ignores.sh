@@ -46,7 +46,6 @@ IgnorePath '/etc/resolv.conf'
 IgnorePath '/etc/fonts'
 IgnorePath '/etc/vconsole.conf'
 IgnorePath '/etc/X11'
-IgnorePath '/etc/plasmalogin.conf.d/autologin.conf' # kde auto login settings for loginmanager
 IgnorePath '/etc/systemd/user/*'
 
 # system directories for temporary files

@@ -3,5 +3,7 @@ AddPackage plasma-login-manager # Plasma Login Manager
 
 # see also: https://wiki.archlinux.org/title/KDE_Wallet#Using_Plasma_Login_Manager_autologin_and_LUKS_encryption
 CopyFile /etc/pam.d/plasmalogin-autologin
+CopyFile /etc/plasmalogin.conf.d/autologin.conf
+CopyFile /etc/systemd/system/plasmalogin.service.d/keyringmode.conf
 
 CreateLink /etc/systemd/system/display-manager.service /usr/lib/systemd/system/plasmalogin.service
