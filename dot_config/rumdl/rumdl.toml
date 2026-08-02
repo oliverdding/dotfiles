@@ -1,0 +1,77 @@
+[global]
+line-length = 100
+exclude = [
+    # Common directories to exclude
+    ".git",
+    ".github",
+    "node_modules",
+    "vendor",
+    "dist",
+    "build",
+
+    # Specific files or patterns
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "generated/*.md",
+    "**/temp_*.md",
+]
+respect-gitignore = true
+flavor = "mkdocs"
+disable = ["MD013", "MD033"]
+
+# Per-file flavor overrides
+[per-file-flavor]
+"**/*.mdx" = "mdx"
+
+# Disable specific rules for specific files
+[per-file-ignores]
+"README.md" = ["MD033"]  # Allow HTML in README
+"SUMMARY.md" = ["MD025"]  # Allow multiple H1 in table of contents
+"docs/api/**/*.md" = ["MD013", "MD041"]  # Disable line length check for documentation with long code examples
+"generated/**/*.md" = ["MD041"] # Disable first line heading check for generated files
+
+# Configure individual rules
+[MD003]
+style = "atx"  # Heading style (atx, atx_closed, setext)
+
+[MD004]
+style = "asterisk"  # Unordered list style (asterisk, plus, dash, consistent)
+
+[MD007]
+indent = 2
+
+[MD013]
+line-length = 100
+code-blocks = false
+tables = false
+headings = false  # Exclude headings from line length check
+reflow = true  # Enable automatic line wrapping (required for --fix)
+
+[MD025]
+level = 1
+front-matter-title = "title"
+
+[MD044]
+names = ["rumdl", "Markdown", "GitHub"]
+
+[MD048]
+code-fence-style = "backtick"
+
+# Code block tools (optional)
+[code-block-tools]
+enabled = true
+normalize-language = "linguist"
+on-error = "warn"
+timeout = 30000
+
+[code-block-tools.language-aliases]
+py = "python"
+bash = "shell"
+
+[code-block-tools.languages]
+python = { lint = ["ruff:check"], format = ["ruff:format"] }
+shell = { lint = ["shellcheck"], format = ["shfmt"] }
+javascript = { format = ["prettier"] }
+json = { format = ["jq"] }
+rust = { format = ["rustfmt"] }
+go = { format = ["gofumpt"] }

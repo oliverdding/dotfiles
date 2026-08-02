@@ -14,6 +14,7 @@ AddPackage mkcert # Simple tool for making locally-trusted development certifica
 AddPackage navi # An interactive cheatsheet tool for the command-line
 AddPackage onefetch # Git repository summary on your terminal
 AddPackage oryx # A TUI for sniffing network traffic using eBPF
+AddPackage rumdl # Markdown Linter and Formatter written in Rust
 AddPackage sqlfluff # A dialect-flexible and configurable SQL linter
 AddPackage tcpdump # Powerful command-line packet analyzer
 AddPackage tombi # TOML Formatter / Linter / Language Server
