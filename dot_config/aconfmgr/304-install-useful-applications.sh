@@ -6,6 +6,7 @@ AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage fcitx5-qt # Fcitx5 Qt Library (Qt5 & Qt6 integrations)
 AddPackage fcitx5-rime # RIME support for Fcitx5
 AddPackage flclash # A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.
+AddPackage ghostwriter # Aesthetic, distraction-free Markdown editor
 AddPackage go-musicfox-git # Command-line Netease Cloud Music written in Go (git version).
 AddPackage kasts # Kirigami-based podcast player
 AddPackage kcachegrind # Visualization of Performance Profiling Data
