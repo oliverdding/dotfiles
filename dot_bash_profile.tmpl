@@ -33,6 +33,29 @@ then
 else
   echo "failed to load homebrew env, please make sure that the homebrew is installed!"
 fi
+
+_custom_paths=(
+  "$HOME/.local/bin"
+  "$HOME/Library/Application Support/go/bin"
+  "$HOME/Library/Application Support/cargo/bin"
+  "$HOME/Library/Application Support/npm/bin"
+  "$HOME/Library/Application Support/pnpm/bin"
+)
+
+for ((i=${#_custom_paths[@]}-1; i>=0; i--)); do
+  _dir="${_custom_paths[i]}"
+
+  [ -d "$_dir" ] || continue
+
+  case ":$PATH:" in
+    *":$_dir:"*) ;;
+    *) PATH="$_dir:$PATH" ;;
+  esac
+done
+
+export PATH
+unset _custom_paths _dir i
+
 {{ end }}
 
 # kubernetes configuration

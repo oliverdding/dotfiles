@@ -1,10 +1,5 @@
 [paths]
 darwin = [
-    "$HOME/.local/bin",
-    "$HOME/Library/Application Support/go/bin",
-    "$HOME/Library/Application Support/cargo/bin",
-    "$HOME/Library/Application Support/npm/bin",
-    "$HOME/Library/Application Support/pnpm/bin",
     "/opt/homebrew/opt/curl/bin",
     "/opt/homebrew/opt/openjdk@11/bin",
     "/opt/homebrew/opt/llvm/bin",
