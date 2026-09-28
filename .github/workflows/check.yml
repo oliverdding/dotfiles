@@ -50,7 +50,7 @@ jobs:
             apply \
             --dry-run \
             --exclude scripts \
-            --refresh-externals never \
+            --refresh-externals=never \
             --no-tty \
             --no-pager
 

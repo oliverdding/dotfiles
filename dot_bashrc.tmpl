@@ -24,18 +24,18 @@ function y() {
     rm -f -- "$tmp"
 }
 
+# Aliases
+
+alias ls='eza'
+
 # https://github.com/junegunn/fzf#setting-up-shell-integration
 eval "$(fzf --bash)"
 
 # https://github.com/denisidoro/navi/blob/master/docs/installation.md#installing-the-shell-widget
 eval "$(navi widget bash)"
 
-# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
-eval "$(zoxide init bash)"
-
 # https://starship.rs/#bash
 eval "$(starship init bash)"
 
-# Aliases
-
-alias ls='eza'
+# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
+eval "$(zoxide init bash)"
