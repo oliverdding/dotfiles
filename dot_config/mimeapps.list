@@ -91,3 +91,6 @@ x-scheme-handler/rnio=raindrop.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/zcode=zcode.desktop
+x-scheme-handler/clash=flclash-url-handler.desktop
+x-scheme-handler/clashmeta=flclash-url-handler.desktop
+x-scheme-handler/flclash=flclash-url-handler.desktop
