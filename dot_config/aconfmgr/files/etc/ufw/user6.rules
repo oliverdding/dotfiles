@@ -50,6 +50,20 @@
 ### tuple ### allow udp 7000:7002 ::/0 any fc00::/7 in
 -A ufw6-user-input -p udp -m multiport --dports 7000:7002 -s fc00::/7 -j ACCEPT
 
+### LocalSend: allow link-local and unique-local IPv6 networks only
+
+### tuple ### allow tcp 53317 ::/0 any fe80::/10 in
+-A ufw6-user-input -p tcp --dport 53317 -s fe80::/10 -j ACCEPT
+
+### tuple ### allow tcp 53317 ::/0 any fc00::/7 in
+-A ufw6-user-input -p tcp --dport 53317 -s fc00::/7 -j ACCEPT
+
+### tuple ### allow udp 53317 ::/0 any fe80::/10 in
+-A ufw6-user-input -p udp --dport 53317 -s fe80::/10 -j ACCEPT
+
+### tuple ### allow udp 53317 ::/0 any fc00::/7 in
+-A ufw6-user-input -p udp --dport 53317 -s fc00::/7 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###

@@ -68,6 +68,26 @@
 ### tuple ### allow udp 7000:7002 0.0.0.0/0 any 192.168.0.0/16 in
 -A ufw-user-input -p udp -m multiport --dports 7000:7002 -s 192.168.0.0/16 -j ACCEPT
 
+### LocalSend: allow private IPv4 networks only
+
+### tuple ### allow tcp 53317 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p tcp --dport 53317 -s 10.0.0.0/8 -j ACCEPT
+
+### tuple ### allow tcp 53317 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p tcp --dport 53317 -s 172.16.0.0/12 -j ACCEPT
+
+### tuple ### allow tcp 53317 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p tcp --dport 53317 -s 192.168.0.0/16 -j ACCEPT
+
+### tuple ### allow udp 53317 0.0.0.0/0 any 10.0.0.0/8 in
+-A ufw-user-input -p udp --dport 53317 -s 10.0.0.0/8 -j ACCEPT
+
+### tuple ### allow udp 53317 0.0.0.0/0 any 172.16.0.0/12 in
+-A ufw-user-input -p udp --dport 53317 -s 172.16.0.0/12 -j ACCEPT
+
+### tuple ### allow udp 53317 0.0.0.0/0 any 192.168.0.0/16 in
+-A ufw-user-input -p udp --dport 53317 -s 192.168.0.0/16 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###
