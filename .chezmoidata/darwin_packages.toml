@@ -107,12 +107,12 @@ brews = [
 ]
 taps = [
     "lifedever/tap",
+    "chen08209/tap",
 ]
 casks = [
     "appcleaner",
     "bruno",
-    "clash-verge-rev",
-    "dbeaver-community",
+    "flclash",
     "font-iosevka-nerd-font",
     "font-iosevka-term-nerd-font",
     "font-noto-serif-cjk-sc",
@@ -122,7 +122,6 @@ casks = [
     "obsidian",
     "raindropio",
     "thaw",
-    "visual-studio-code",
     "wezterm",
     "xld",
     "zotero",
