@@ -75,6 +75,7 @@ brews = [
     "luarocks",
     "mas",
     "miniserve",
+    "mole",
     "navi",
     "ninja",
     "onefetch",
