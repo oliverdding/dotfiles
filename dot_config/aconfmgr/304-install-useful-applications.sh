@@ -26,6 +26,7 @@ AddPackage sweeper # System Cleaner
 AddPackage xorg-xwininfo # Command-line utility to print information about windows on an X server
 AddPackage zotero # Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research
 
+AddPackage --foreign dbx # Open-source database management tool (Tauri-based)
 AddPackage --foreign google-chrome # The popular web browser by Google (Stable Channel)
 AddPackage --foreign linuxqq # New Linux QQ based on Electron
 AddPackage --foreign lrcget-bin # Utility for mass-downloading LRC synced lyrics for your offline music library.
