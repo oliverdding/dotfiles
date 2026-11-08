@@ -6,7 +6,7 @@
   <string>custom.gpg.gpg-agent</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/local/bin/gpgconf</string>
+    <string>/opt/homebrew/bin/gpgconf</string>
     <string>--launch</string>
     <string>gpg-agent</string>
   </array>
