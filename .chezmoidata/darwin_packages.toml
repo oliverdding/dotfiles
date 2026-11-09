@@ -5,7 +5,6 @@ mas = [
     462058435, # Microsoft Excel
     6467176005, # 1Break
     1630034110, # Bob
-    6759334075, # Editorio
     462054704, # Microsoft Word
     462062816, # Microsoft PowerPoint
     1295203466 , # Windows App
@@ -17,8 +16,9 @@ mas = [
     # 6737194096, # AD Blocker
     6763280346, # AriaX
     1590273176, # Bee DICOM Viewer
-    571213070, # DaVinci Resolve
+    # 571213070, # DaVinci Resolve
     6754293545, # Sheepo Desktop
+    6793993952, # Markary
 ]
 brews = [
     "apfel",
