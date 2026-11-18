@@ -8,6 +8,8 @@ AddPackage fd # Simple, fast and user-friendly alternative to find
 AddPackage fwupd # Simple daemon to allow session software to update firmware
 AddPackage fzf # Command-line fuzzy finder
 AddPackage geoclue # Modular geoinformation service built on the D-Bus messaging system
+# geoclue is not used on this desktop: mask it to avoid boot-time timeouts
+CreateLink /etc/systemd/system/geoclue.service /dev/null
 AddPackage gopass # The slightly more awesome standard unix password manager for teams.
 AddPackage graphviz # Graph visualization software
 AddPackage helix # A post-modern modal text editor

@@ -2,6 +2,7 @@ AddPackage atac # A simple API client (postman like) in your terminal
 AddPackage bash-language-server # Bash language server implementation based on Tree Sitter and its grammar for Bash
 AddPackage d2 # A modern diagram scripting language that turns text to diagrams
 AddPackage binsider # A TUI for analyzing binaries like a boss
+AddPackage ccache # Compiler cache for fast recompilation of C/C++ code
 AddPackage direnv # A shell extension that manages your environment
 AddPackage duckdb # An analytical in-process SQL database management system
 AddPackage git # the fast distributed version control system
@@ -27,3 +28,6 @@ AddPackage vegeta # HTTP load testing tool
 AddPackage vscode-json-languageserver # JSON language server
 AddPackage yaml-language-server # YAML Language Server
 AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
+
+# --- makepkg: enable ccache for local builds
+CopyFile /etc/makepkg.conf.d/99-local.conf
