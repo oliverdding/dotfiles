@@ -17,6 +17,9 @@ CopyFile /etc/pacman.d/mirrorlist # aliyun mirror, see also: https://developer.a
 CopyFile /etc/pacman.conf # archlinuxcn for aliyun mirror, see also: https://developer.aliyun.com/mirror/archlinuxcn/
 AddPackage archlinuxcn-keyring # Arch Linux CN PGP keyring
 
+# --- pacman hook: allow non-root ping
+CopyFile /etc/pacman.d/hooks/50-setcap-iputils.hook
+
 # --- sshd
 CopyFile /etc/ssh/sshd_config.d/50-development.conf
 

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -eufo pipefail
+
+# pipewire-pulse is not enabled by the package preset for the user session.
+# Enable it here instead of tracking the generated .wants symlinks in chezmoi.
+if command -v systemctl >/dev/null 2>&1 && systemctl --user show-environment >/dev/null 2>&1; then
+  systemctl --user enable pipewire-pulse.service pipewire-pulse.socket
+fi
