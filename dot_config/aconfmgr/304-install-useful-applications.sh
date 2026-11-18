@@ -6,6 +6,8 @@ AddPackage fcitx5-gtk # Fcitx5 gtk im module and glib based dbus client library
 AddPackage fcitx5-qt # Fcitx5 Qt Library (Qt5 & Qt6 integrations)
 AddPackage fcitx5-rime # RIME support for Fcitx5
 AddPackage flclash # A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.
+CopyFile /etc/systemd/system/flclash-helper.service
+CreateLink /etc/systemd/system/multi-user.target.wants/flclash-helper.service /etc/systemd/system/flclash-helper.service
 AddPackage ghostwriter # Aesthetic, distraction-free Markdown editor
 AddPackage go-musicfox-git # Command-line Netease Cloud Music written in Go (git version).
 AddPackage kasts # Kirigami-based podcast player
@@ -31,6 +33,6 @@ AddPackage --foreign google-chrome # The popular web browser by Google (Stable C
 AddPackage --foreign linuxqq # New Linux QQ based on Electron
 AddPackage --foreign lrcget-bin # Utility for mass-downloading LRC synced lyrics for your offline music library.
 AddPackage --foreign omniget-bin # Media downloader. Paste a link. Get your file. Udemy, Hotmart, Telegram and 1000+ Downloader.(Prebuilt version)
-AddPackage --foreign qmplay2 # QMPlay2 is a video and audio player which can play most formats and codecs
+AddPackage --foreign qmplay2-git # QMPlay2 is a video and audio player which can play most formats and codecs (git version)
 AddPackage --foreign raindrop # All-in-one bookmark manager
 AddPackage --foreign ytdlp-gui-bin # a GUI for yt-dlp written in Rust

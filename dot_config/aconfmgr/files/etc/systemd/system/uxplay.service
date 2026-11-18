@@ -1,0 +1,14 @@
+[Unit]
+Description=UxPlay AirPlay Receiver
+After=avahi-daemon.service network.target dbus.service
+Requires=avahi-daemon.service
+
+[Service]
+Type=simple
+ExecStart=uxplay -async -p 7000
+Restart=on-failure
+RestartSec=5
+# StandardOutput=file:%h/uxplay.log
+
+[Install]
+WantedBy=default.target

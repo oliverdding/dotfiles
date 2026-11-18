@@ -1,0 +1,19 @@
+[Unit]
+Description=FlClash Helper starts the FlClash Core with the privileges TUN mode needs.
+After=network-online.target nftables.service iptables.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart="/usr/lib/flclash/FlClashHelperService"
+Group=1000
+Environment=FLCLASH_HELPER_OWNER_UID=1000
+Environment=FLCLASH_HELPER_OWNER_GID=1000
+RuntimeDirectory=flclash
+RuntimeDirectoryMode=0755
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

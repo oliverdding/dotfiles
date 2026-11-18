@@ -1,5 +1,5 @@
 # --- timezone, see also: https://wiki.archlinux.org/title/System_time#Time_zone
-CreateLink /etc/localtime /usr/share/zoneinfo/Asia/Shanghai
+CreateLink /etc/localtime /usr/share/zoneinfo/Asia/Kuala_Lumpur
 
 # --- locale, see also: https://wiki.archlinux.org/title/Locale
 CopyFile /etc/locale.conf
