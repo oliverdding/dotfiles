@@ -8,4 +8,4 @@ init-author-email={{ .gitmail }}
 init-author-url=https://charmer.fun
 
 # mirror config
-registry = http://mirrors.tencent.com/npm/
+registry = https://registry.npmmirror.com
