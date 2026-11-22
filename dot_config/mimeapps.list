@@ -40,7 +40,6 @@ video/x-ogm+ogg=QMPlay2.desktop;
 video/x-theora=QMPlay2.desktop;
 video/x-theora+ogg=QMPlay2.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
-x-scheme-handler/opencode=ai.opencode.desktop.desktop;
 
 [Default Applications]
 application/x-bittorrent=org.kde.ktorrent.desktop;
