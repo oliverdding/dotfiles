@@ -38,9 +38,6 @@
     "editor.fontSize": 16,
     "editor.renderLineHighlight": "none",
     "editor.renderWhitespace": "all",
-    "extensions.experimental.affinity": {
-        "jasew.vscode-helix-emulation": 1
-    },
     "files.autoSave": "onWindowChange",
     "files.eol": "\n",
     "files.exclude": {

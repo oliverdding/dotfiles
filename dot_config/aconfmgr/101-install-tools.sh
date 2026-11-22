@@ -12,7 +12,6 @@ AddPackage geoclue # Modular geoinformation service built on the D-Bus messaging
 CreateLink /etc/systemd/system/geoclue.service /dev/null
 AddPackage gopass # The slightly more awesome standard unix password manager for teams.
 AddPackage graphviz # Graph visualization software
-AddPackage helix # A post-modern modal text editor
 AddPackage jq # Command-line JSON processor
 AddPackage macchina # A system information fetcher, with an (unhealthy) emphasis on performance.
 AddPackage miniserve # Tool to serve files via HTTP
