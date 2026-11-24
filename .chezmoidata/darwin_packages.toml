@@ -12,7 +12,7 @@ mas = [
     1484048379, # 腾讯会议
     6698876601, # Folder Preview
     6670330650, # Rainbow PDF
-    1231336508, # 腾讯视频
+    # 1231336508, # 腾讯视频
     # 6737194096, # AD Blocker
     6763280346, # AriaX
     1590273176, # Bee DICOM Viewer
@@ -79,7 +79,6 @@ brews = [
     "ninja",
     "neovim",
     "onefetch",
-    "openjdk@11",
     "openssh",
     "openssl",
     "ouch",
@@ -107,11 +106,9 @@ brews = [
     "zoxide",
 ]
 taps = [
-    "lifedever/tap",
     "chen08209/tap",
 ]
 casks = [
-    "appcleaner",
     "bruno",
     "flclash",
     "font-iosevka-nerd-font",
